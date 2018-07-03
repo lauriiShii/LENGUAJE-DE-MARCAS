@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE peliculas SYSTEM "ejercicio02.dtd">
+
+<peliculas>
+	<pelicula pais="extranjero" anio="2000">
+		<titulo>Las dos caras de la verdad</titulo>
+		<tituloOriginal>Primal Fear</tituloOriginal>
+		<clasificacion publico="18"/>
+		<director>Gregory Hoblit</director>
+		<genero>drama, thriller</genero>
+		<resumen>
+			Martin Vail (Richard Gere) es un ambicioso y polmico abogado defensor de Chicago que centra su carrera en juicios de gran repercusin social con el objetivo de aparecer en prensa y televisin. Cuando escucha en las noticias que un aclito, Aaron Stampler (Edward Norton), ha sido acusado del asesinato del arzobispo Rushman, habla con ste y acaba convirtindose en su abogado. El inters de Vai en un principio es meramente publicitario pero tras varias conversaciones con el acusado, donde ste destapa los abusos sexuales del religioso, se implica emocionalmente como nunca antes lo haba hecho.
+		
+			Stampler es obligado a hablar con una psicloga que tras varias sesiones le diagnostica un desorden de personalidad mltiple. Aaron es un chico tmido que tiene dificultades para hablar mientras que su otra personalidad, Roy, es un psicpata amante de la violencia que reconoce el asesinato. Tras este descubrimiento la defensa cambia su argumento basndose en el trastorno de identidad disociativo e intenta convencer al juez de la absolucin por asesinato y el ingreso de su cliente en un centro psiquitrico.
+		</resumen>
+		<reparto>
+			<protagonista>Richard Gere</protagonista>
+		</reparto>
+	</pelicula>
+</peliculas>

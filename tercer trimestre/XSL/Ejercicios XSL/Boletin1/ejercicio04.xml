@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ejercicio04_part1.xsl"?>
+<addresbook>
+  <contact>
+     <name>Frank Rizzo </name>
+	 <address> 1212 W 30th Street</address>
+	 <city> New York </city>
+	 <state> New York </state>
+	 <zip> 10011 </zip>
+	 <phone>
+	    <voice> 212-555-1212 </voice>
+		<fax> 212-555-1213 </fax>
+	 </phone>
+	 <email> frizzo@fruity.com </email>
+	 <web> http://www.fruity.com </web>
+	 <company>Rossenberg</company>
+  </contact>
+  
+  <contact>
+     <name>Sol Rossenberg </name>
+	 <address> 1162 E 412th Street</address>
+	 <city> New York </city>
+	 <state> New York </state>
+	 <zip> 10011 </zip>
+	 <phone>
+	    <voice> 212-555-1212 </voice>
+		<fax> 212-555-1819 </fax>
+	 </phone>
+	 <email> frizzo@fruity.com </email>
+	 <web> http://www.fruity.com </web>
+	 <company>Rossenberg</company>
+  </contact>
+  
+ </addresbook>
+	 

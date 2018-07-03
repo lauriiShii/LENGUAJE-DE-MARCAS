@@ -1,0 +1,297 @@
+
+<xs:element name="" type=""  default="" ref="" fixed="" minOcurrs=""   maxoccurs="" 
+            form="" id=""   substituionGroup=""    nillable=""   abstract=""   final="" />
+			
+			
+<xs:attribute name="" type=""  default=""  ref=""  fixed=""  form=""  id=""  use="optional o required o prohibited" />
+
+<xs:simpleType name=""  id="">
+
+	<xs:restriction base =""  id="">
+		<xs:minInclusive  value=""/>
+		<xs:maxinclusive  value=""/>
+		<xs:minExclusive  value=""/>
+		<xs:maxExclusive  value=""/>
+		<xs:enumeration  value=""/>
+		<xs:whitespace  value=""/>
+		<xs:length  value=""/>
+		<xs:minLength  value=""/>
+		<xs:maxLength  value=""/>
+		<xs:fractiondigists  value=""/>
+		<xs:totaldigits  value=""/>
+		<xs:pattern  value=""/>
+	</xs:restriction>
+	
+	<xs:list>
+	   <xs:restriction base ="" id="">
+	       <xs:minInclusive  value=""/>
+		    ....
+		   <xs:pattern  value=""/>	
+		</xs:restriction>
+		
+	<xs:union membertypes="     "   />
+</xs:simpleType>	
+
+
+<xs:complexType  name=""  mixed="true o false"  id=""   abstract="true o false"    final="extension o restriction o all" >
+	
+	<xs:sequence> o  <xs:choice>  o   <xs:all>
+		
+		<xs:element name=""  type=""/>
+		<xs:element name=""  type=""/>
+		<xs:element name=""  type=""/>
+		
+	</xs:sequence>
+</xs:complexType>
+		
+
+
+EJEMPLOS CORTITOS:
+	
+COMO DECLARAR UN ELEMENTO DE TIPO SIMPLE. Existen dos casos:
+
+EJEMPLO 1:
+
+A. El elemento de tipo simple no tiene restriciones.
+
+<xs:element name="clave" type="xs:string">
+
+B.El elemento de tipo simple tiene restriciones. Hay dos formas de declarar el elemento.
+
+Ej: Definimos un elemento de tipo cadena que contenga entre 6 y 12 caracteres.
+
+B1.<xs:element name="clave" type="tipoclave"/> 
+   .....
+   <xs:simpleType name="tipoclave">
+	  <xs:restriction base="xs:string">
+	      <xs:minLength value="6">
+		  <xs:maxLength value="12">
+	  </xs:restriction>
+    </xs:simpleType>
+	
+
+B2. <xs:element name="clave">
+      <xs:simpleType >
+	      <xs:restriction base="xs:string">
+	           <xs:minLength value="6">
+		       <xs:maxLength value="12">
+	      </xs:restriction>
+      <xs:simpleType>
+	</xs:element>
+  
+A continuación voy a exponer mas ejemplos de declaraciones de tipo simple:
+
+EJEMPLO 2: Definimos un tipo de dato simple, que permita números con 2 dígitos decimales y 11 dígitos totales. 
+
+(He usado la forma B1)
+<xs:element name="numerodecimal" type="tipodenumero"/> 
+   .....
+ <xs:simpleType name="tipodenumero">
+	  <xs:restriction base="xs:decimal">
+	      <xs:totalDigits value="11">
+		  <xs:fractionDigits value="2">
+	  </xs:restriction>
+ </xs:simpleType>
+	
+	
+EJEMPLO 3: Definimos un tipo de dato simple, el cual debe ser un entero no negativo y debe tener un valor mínimo de 16 incluido y maximo de 70 no incluido.
+ 
+ (He usado la forma B2)
+ <xs:element name="edadlaboral"> 
+   <xs:simpleType>
+	  <xs:restriction base="xs:nonNegativeInteger">
+	      <xs:minInclusive value="16">
+		  <xs:maxExclusive value="70">
+	  </xs:restriction>
+    </xs:simpleType>
+ </xs:element> 
+ 
+ 
+  
+ EJEMPLO 4: Definimos un tipo de dato simple, el cual va a recoger una lista de 
+            valores enteros positivos que empiezan en el 1 y acaba en el 90. Para ello usamos el componente <xs:list>
+			
+(He usado la forma B1)
+
+<xs:element name="numerosganadores" type="ListaNumerosBingo"/>
+   .....
+ <xs:simpleType name="ListaNumerosBingo">
+    <xs:list>
+	  <xs:restriction base="xs:positiveInteger">
+	      <xs:maxInclusive value="90">
+	  </xs:restriction>
+	<xs:list>
+ </xs:simpleType>
+				
+ En el documento XML, se reflejaría así:
+ 
+  <numerosganadores> 1 7 25 30 45 80 85 </numerosganadores>  (Se puede poner todos aquellos números que deseemos, pero siempre separados por espacios.
+
+
+  EJEMPLO 5: Definimos un tipo de dato simple, el cual pretende reflejar que las tallas de ropa se puedan 
+             identificar por números (38,40,42) o por las letras (S,M,L). Para ello usamos el componente<xs:union>
+			
+(He usado la forma B2 (aunque aquí hay una mezcla de B1 y B2)
+
+<xs:element name="talla">
+   <xs:simpleType>
+        <xs:union membertypes="TipoTallaNumerica TipoTallaTextual"/>
+   </xs:simpleType>
+</xs:element>
+
+<xs:simpleType name="TipoTallaNumerica">
+   <xs:restriction base="xs:positiveInteger">
+      <xs:enumeration value="38"/>
+	  <xs:enumeration value="40"/>
+	  <xs:enumeration value="42"/>
+   </xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name="TipoTallaTextual">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="S"/>
+	  <xs:enumeration value="M"/>
+	  <xs:enumeration value="L"/>
+   </xs:restriction>
+</xs:simpleType>
+
+
+ En el documento XML, se reflejaría de cualquiera de estos dos fragmentos XML:
+ 
+  <talla> 42 </talla>
+  
+   o
+   
+  <talla> M </talla>
+  
+  
+	
+COMO DECLARAR UN ELEMENTO DE TIPO DE TIPO COMPLEJO. Existen dos formas de declararlo:
+
+B1.<xs:element name="persona" type="TipoPersona"> 
+   .....
+   <xs:complexType name="TipoPersona">
+	  <xs:sequence>
+	      <xs:element name="nombre type="xs:string">
+	      <xs:element name="primerapellido" type="xs:string">
+		  <xs:element name="segundoapellido" type="xs:string">
+		  <xs:element name="fechanacimiento" type="xs:date">
+	  </xs:sequence>
+   </xs:complexType>
+	
+
+B2.<xs:element name="persona"> 
+      <xs:complexType>
+	     <xs:sequence>
+	        <xs:element name="nombre type="xs:string">
+	        <xs:element name="primerapellido" type="xs:string">
+		    <xs:element name="segundoapellido" type="xs:string">
+		    <xs:element name="fechanacimiento" type="xs:date">
+	     </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+  
+
+  A continuación voy a exponer mediante ejemplos los distintos casos que nos podemos encontrar con tipos de datos complejos, dependiendo
+    si tienen contenido textual, atributos o descendientes.
+	
+	
+CASO 1: Declaración de elementos con contenido textual y atributos.
+
+<xs:element name="textarea">
+   <xs:complexType>
+       <xs:simpleContent>
+	       <xs:extension base="xs:string">
+		       <xs:atribute name="name" type="xs:string"/>
+			   <xs:atribute name="cols" type="xs:positiveInteger"/>
+			   <xs:atribute name="rows" type="xs:positiveInteger"/>
+		   </xs:extension>
+	   </xs:simpleContent>
+   <xs:complexType>
+ </xs:element>
+ 
+ En el documento XML se reflejaría así:
+  
+  <textarea name="comentarios"  cols="10"   rows="5">
+       Introduzca aquí sus comentarios
+  <textarea>
+  
+  
+CASO 2: Declaración de elementos solo con atributos.
+
+<xs:element name="img">
+   <xs:complexType>
+       <xs:atribute name="src" type="xs:string"/>
+	   <xs:atribute name="alt" type="xs:string"/>
+   <xs:complexType>
+ </xs:element>
+ 
+ En el documento XML se reflejaría así:
+ 
+   <img src="amanecer.jpg"  alt="sol naciente" />
+ 
+CASO 3: Declaración de elementos solo con elementos descendientes.
+
+<xs:element name="persona"> 
+     <xs:complexType>
+	     <xs:sequence>
+	        <xs:element name="nombre type="xs:string">
+	        <xs:element name="primerapellido" type="xs:string">
+		    <xs:element name="segundoapellido" type="xs:string">
+		    <xs:element name="fechanacimiento" type="xs:date">
+	     </xs:sequence>
+     </xs:complexType>
+</xs:element>
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+			   
+			   
+   
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+  
+  

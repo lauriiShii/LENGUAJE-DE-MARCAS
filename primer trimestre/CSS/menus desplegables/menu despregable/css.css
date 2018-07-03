@@ -1,0 +1,61 @@
+
+    *{/*para poner estilos universales usamos el asterisco (*) 
+          y son para darselos a todos los elementos del documento*/
+	   padding:0px;
+	   margin:0px;
+	   }
+	 
+	#header {
+	   margin:auto;
+	   width:500px;
+	   font-family:Arial, Helvetica, sans-serif;
+	}
+	
+	ul, ol { /*para dar atributos a las listas*/
+	   list-style:none; /*esto es que no queremos que tengan ningun estilo
+	                        lo que hara es desapareces los puntos de las listas*/
+	}
+	
+	/*ahora empezamos a agregar estilos para nuestro menu en si (nav)*/
+	
+	.nav li a{
+	    background-color:black;
+		color:white;
+		text-decoration:none; /*se quita el subrayado*/
+		padding:10px /*altura*/15px/*ancho*/;
+		display:block; /*para que los elementos se definan como un bloque y no como
+		                 inlime que es por lo que saldria solapado.*/
+	}
+	
+	.nav li a:hover {
+	    background-color:#434343; /*para que al pasar el raton por encima de la casilla
+		                            el fondo cambie a gris*/
+	}
+	
+	/*damos estilo a los items directos que tenemos dentro de nuestro menu*/
+	
+	.nav > li {
+	    float:left;
+	}
+	
+	.nav li ul {
+	    display:none;/*para que los submenus salgan ocultos*/
+		position:absolute; /*para que los submenus se podicionen donde deben y no se deformen*/
+		min-width:100px;
+	}
+	
+	.nav li:hover > ul {
+		display:block;
+		}/*con esto decimos que en las seudoclases li en el hover 
+	       cuando pasemos el raton aparezcan*/
+		 /*la > para que sean directos de ul*/
+		 
+	.nav li ul li { /*estamos diciendo que todos los li dentro de ul dentro de li que son los
+	             submenus tengan las siguientes caracteristicas*/
+		position:relative; /*para que puedan aparecer al lado*/
+	}
+	
+	.nav li ul li ul {
+	    right:-100px; /*para que aparezca a la derecha*/
+		top:0px;
+	}

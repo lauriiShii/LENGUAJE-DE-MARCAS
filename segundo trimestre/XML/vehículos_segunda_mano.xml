@@ -1,0 +1,20 @@
+<vehiculos>
+
+   <vehiculo nº="1">
+   
+   <marca>opel</marca>
+   <modelo>astra</modelo>
+   <tipo>berlina</tipo>
+   <combustible>gasolina</combustible>
+   <potencia unidad="caballos">24</potencia>
+   <año>2009</año>
+   <numero_puertas>5</numero_puertas>
+   <color tipo="interior">marron</color>
+   <color tipo="exterior">marron</color>
+   <tipo_cambio>manual</tipo_cambio>
+   <precio unidad="€">26.000</precio>
+   <tipo_vendedor>profesional</tipo_vendedor>
+   
+   </vehiculo>
+
+<vehiculos>

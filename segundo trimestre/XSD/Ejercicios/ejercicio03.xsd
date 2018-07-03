@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+<xs:element name="personas">
+	<xs:complexType>
+		<xs:element name="persona">
+			<xs:complexType>
+				<xs:attribute name="dni" type="id"/>
+				<xs:sequence>
+					<xs:element name="nombre" type="xs:string"/>
+					<xs:element name="apellido1" type="xs:string"/>
+					<xs:element name="apellido2" type="xs:string"/>
+					<xs:element name="estadoCiv">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="soltera">
+								<xs:enumeration value="casada">
+								<xs:enumeration value="viuda">
+								<xs:enumeration value="separada">
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="edad">
+						<xs:simpleType>
+							<xs:restriction base="xs:integer">
+								<xs:minInclusive value="0"/>
+								<xs:maxInclusive value="100"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+	</xs:complexType>
+</xs:element>

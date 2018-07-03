@@ -1,0 +1,29 @@
+body{
+    background: -moz-linear-gradient(left, pink, white) fixed;
+	color:pink;
+}
+
+table{
+	border: 3px solid;
+	border-color:red;
+	border-collapse:collapse;
+	background:white;
+}
+
+.titulito{
+	font-weight: bold;
+	color:red;
+	background:pink;
+}
+
+.titulo{
+	background-color:orange;
+	color:yellow;
+}
+
+td{
+	text-align:center;
+	border: 2px solid;
+	border-color:red;
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Formulario</title>
+        
+        <style>
+        </style>
+    </head>
+    
+    <body>
+
+        <form action="mailto:industriasfuerte@gmail.com"  method="post">
+            <fieldset>
+                <table>
+                    <legend>FORMULARIO DE PEDIDO</legend>
+                    <tr><td><b>Paso 1. Identificacion</b></td></tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <table>
+                                    <legend>Datos del Cliente</legend>
+                                    <tr>
+                                        <td>Correo Electronico <input type="email" name="email" size="12" placeholder="Ingrese su mail"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contraseña <input type="password" name="contraseña" size="6" placeholder="Ingrese su contraseña"></td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <table>
+                                    <legend>Tipo de Cliente</legend>
+                                    <tr>
+                                        <td><input type="radio" name="tipo" checked="checked">Particular <input type="radio" name="tipo">Asociacion</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="tipo">Empresa</td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr><td><b>Paso 2. Pedido</b></td></tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <table>
+                                    <legend>Datos del Pedido</legend>
+                                    <tr>
+                                        <td>Producto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="Producto">   
+                                                <option value="" selected="selected">dgzgdfg</option>   
+                                                <option value="dsgfdgrs">dsgfdgrs</option>
+                                                <option value="sdgdrgdh">sdgdrgdh</option>
+                                                <option value="srgdfhgg">srgdfhgg</option>   
+                                            </select> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <table>
+                                    <legend>Informacion del pedido</legend>
+                                    <tr>
+                                        <td>
+                                            <textarea cols="60" rows="10" placeholder="Escriba aqui su comentario" size="30"></textarea><br>
+                                            <input type="text" name="publicidad" size="2"> Acepto recibir publicidad
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <table>
+                                    <legend>Datos de Envio</legend>
+                                    <tr>
+                                        <td>Direccion <input type="text" name="direccion" size="18" placeholder="Ingrese su direccion"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Ciudad <input type="text" name="ciudad" size="6" placeholder="Ingrese su ciudad">
+                                            Codigo Psotal <input type="text" name="CP" size="5">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <table>
+                                    <legend>Datos bancarios</legend>
+                                    <tr>
+                                        <td>Nombre de la entidad <input type="text" name="nombank" size="22" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Numero de cuenta <input type="text" name="numbank" size="22" placeholder="Ingrese su IBAN bancario">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="ENVIAR PEDIDO"> 
+                        </td>	
+                         <td>	
+                            
+                             <input type="reset" value="RESET">
+                         </td>
+                    </tr>
+           </table>
+            </fieldset>
+        </form>
+    </body>
+</html>

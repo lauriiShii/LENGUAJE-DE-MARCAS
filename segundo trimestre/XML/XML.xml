@@ -1,0 +1,42 @@
+<!--Se quiere estructurar la informacion relativa a varias colecciones de medios audiovisuales, la coleccion podra estr formada por discos o libros.
+La informacion del libro sera un titulo, uno o mas autores, un resumen, un contenido.
+En caso de los discos se desea almacenar el tipo de disco, su titulo, sus autores, un contenido formado por canciones.
+Cada cancion debera especificar su nombre, duracion, autor de musica, autor de letra-->
+
+<coleccion> 
+
+   <libros>
+      <libro nº="1"> <!-- <libro1> es un error muy grave, esto solo se puede usar cuando tenemos un numero
+                          exacro de elementos, en este caso libros. -->
+		 <titulo>Uno</titulo>
+		 <autor>Pepe</autor>
+		 <autor>luis</autor>
+		 <contenido> ............................ </contenido> <!--contenido debe ser una etiqueta unica, es decir,
+		                                                            no la debemos repetir por que su informacion es unica-->
+		 <resumen> .............................. </resumen>
+		 
+   </libros>
+   
+   <discos>
+      <disco tipo="CD">
+	     <titulo>Uno</titulo>
+		 <autor>Pepe</autor>
+		 <autor>luis</autor>
+		 <Contenido> 
+		     
+			 <cancion nº="1">
+			 
+			     <nombre>luna</nombre>
+				 <duracion>3 min</duracion>
+				 <autor tipo="musica">pepita</autor_musica>
+				 <autor tipo="letra">rafita</autor_letra>
+			 
+			 </cancion>
+			 
+		 </Contenido>
+		 
+	  </disco>
+   
+   </discos>
+
+</coleccion>

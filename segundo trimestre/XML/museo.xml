@@ -1,0 +1,45 @@
+<museos>
+  <museo nombre="Museo_del_prado">
+  
+      <horas_visita>De lunes a sábado de 10.00 a 20.00h. Domingos y festivos de 10.00 a 19.00h</horas_visita>
+      
+	  <precio_entrada tipo="general" unidad="€">12</precio_entrada>
+	  <precio_entrada tipo="general+guia" unidad="€">22</precio_entrada>
+	  <precio_entrada tipo="Reducida" unidad="€">6</precio_entrada>
+	  <precio_entrada tipo="gratuita" unidad="€">0</precio_entrada>
+	  
+	  <cuadros>
+	    <cuadro n="1">
+	  
+	      <titulo>La familia de Carlos IV</titulo>
+		  <num_catagolo>P00726</num_catalogo>
+		  <autor>Francisco de Goya y Lucientes</autor>
+		  <cronologia>1800</cronologia>
+		  <tecnica>Oleo</tecnica>
+		  <soporte>Lienzo</soporte>
+		  <medidas unidad="cm"> 280 x 336 </medidas>
+		  <tema>retrato</tema>
+		  <expuesto>si</expuesto>
+		  
+		</cuadro>
+		<cuadro n="1">
+	  
+	      <titulo>Las menina, o la familia de de felipe IV</titulo>
+		  <num_catagolo>P1174</num_catalogo>
+		  <autor>Diego Rodriguez de Silva y Velazquez</autor>
+		  <cronologia>1656</cronologia>
+		  <tecnica>Oleo</tecnica>
+		  <soporte>Lienzo</soporte>
+		  <medidas unidad="cm"> 318 x 276 </medidas>
+		  <tema>retrato</tema>
+		  <expuesto>si</expuesto>
+		  
+		</cuadro>
+		  
+	  </cuadros>
+	  
+	  
+  </museo>
+
+
+</museos>

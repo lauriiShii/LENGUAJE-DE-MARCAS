@@ -1,0 +1,13 @@
+<!ELEMENT modelos (modelo*)>
+<!ELEMENT modelo (descripcion?, motor+)>
+
+<!ELEMENT descripcion (#PCDATA|tipoMotor|potencia|consumoMedio)*>
+<!ELEMENT tipoMotor (#PCDATA)>
+<!ELEMENT potencia (#PCDATA)>
+<!ELEMENT consumoMedio (#PCDATA)>
+<!ELEMENT motor EMPTY>
+
+<!ATTLIST modelo referencia ID #REQUIRED>
+<!ATTLIST modelo modeloRel IDREFS #IMPLIED>
+<!ATTLIST motor relacionadoCon IDREFS #REQUIRED>
+<!ATTLIST consumoMedio velocidad CDATA #IMPLIED>

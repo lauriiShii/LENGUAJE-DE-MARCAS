@@ -1,0 +1,24 @@
+<!DOCTYPE ejercicio2 [
+
+ <!--ELEMENTOS -->
+ <!ELEMENT peliculas (película)*>
+ <!ELEMENT película (título, título_original?, nacionalidad, género, (clasificación | sinClasificacion), sinopsis, director, reparto, web?, cartel?) >
+ <!ELEMENT título (#PCDATA)>
+ <!ELEMENT títuloOriginal (#PCDATA)>
+ <!ELEMENT nacionalidad (#PCDATA)>
+ <!ELEMENT genero (#PCDATA)>
+ <!ELEMENT clasificacion EMPTY>
+ <!ELEMENT sinClasificacion EMPTY>
+ <!ELEMENT sinopsis (#PCDATA)>
+ <!ELEMENT director (#PCDATA)>
+ <!ELEMENT reparto (actor)+>
+ <!ELEMENT web (#PCDATA)>
+ <!ELEMENT cartel (#PCDATA)>
+ <!ELEMENT actor (#PCDATA)>
+
+ <!-- ATRIBUTOS-->
+ <!ATTLIST pelicula id ID #REQUIRED>
+ <!ATTLIST pelicula duración CDATA "">
+ <!ATTLIST pelicula año CDATA "2003">
+ <!ATTLIST clasificación edadRecomendada (8 | 12 | 16 | 18 | tp) #REQUIRED>
+]>

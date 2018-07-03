@@ -1,0 +1,103 @@
+<universidad>
+
+	<alumnos>
+		<alumno tipo_nif="dni" nif="77200128F">
+			<nombre_alumno>Pepe</nombre_alumno>
+			<apellido1_alumno>Gomez</apellido1_alumno>
+			<apellido2_alumno/>
+			<fn_alumno>14-10-1193</fn_alumno>
+			<contactos_alumno>
+				<direccion_alumno>
+					<calle_alumno tipo="calle">El perceber</calle_alumno>
+					<numero_alumno>13</numero_alumno>
+					<ciudad_alumno>Huelva</ciudad_alumno>
+					<cp_alumno>39302</cp_alumno>
+				</direccion_alumno>
+				<telefono_alumno>889654321</telefono_alumno>
+				<email_alumno numero="1">ana.fdezgtrrez@hotmail.com</email_alumno>
+			</contactos_alumno>
+		</alumno>
+		
+		<alumno tipo_nif="dni" nif="77230128F">
+			<nombre_alumno>Pepita</nombre_alumno>
+			<apellido1_alumno>Gomez</apellido1_alumno>
+			<apellido2_alumno>Marquez</apellido2_alumno>
+			<fn_alumno>14-10-1195</fn_alumno>
+		</alumno>
+	</alumnos>
+	
+	<profesores>
+		<profesor asignatura="Informatica" tipo_nif="dni" nif="77700129F">
+			<nombre_profesor>Pepi</nombre_profesor>
+			<apellido1_profesor>Gomez</apellido1_profesor>
+			<apellido2_profesor/>
+			<fn_profesor>14-10-1180</fn_profesor>
+			<contactos_profesor>
+				<direccion_profesor>
+					<calle_profesor tipo="calle">El perce</calle_profesor>
+					<numero_profesor>13</numero_profesor>
+					<ciudad_profesor>Santander</ciudad_profesor>
+					<cp_profesor>39302</cp_profesor>
+				</direccion_profesor>
+				<telefono_profesor>989654321</telefono_profesor>
+				<email_profesor numero="1">ana.fdezgtrrez@hotmail.com</email_profesor>
+				<email_profesor numero="2">fdezgtrrez@hotmail.com</email_profesor>
+			</contactos_profesor>
+			<despacho nombre="Despacho informatica" planta="2" area="sur"></despacho>
+			<horario>
+				<lunes horas="2">Tercera y cuarta</lunes>
+				<martes horas="0"/>
+				<miercoles horas="1">primera</miercoles>
+				<jueves horas="2">primera y sexta</jueves>
+				<viernes horas="1">sexta</viernes>
+			</horario>
+		</profesor>
+
+		<profesor  asignatura="Matematicas" tipo="pasaporte " nif="7720034656128F" pais_procedencia="inglaterra">
+			<nombre_profesor>Pepe</nombre_profesor>
+			<apellido1_profesor>Gomez</apellido1_profesor>
+			<apellido2_profesor/>
+			<fn_profesor>14-10-1160</fn_profesor>
+			<contactos_profesor>
+				<direccion_profesor>
+					<calle_profesor tipo="calle">El perceber</calle_profesor>
+					<numero_profesor>13</numero_profesor>
+					<ciudad_profesor>Santander</ciudad_profesor>
+					<cp_profesor>39302</cp_profesor>
+				</direccion_profesor>
+				<telefono_profesor>999654321</telefono_profesor>
+			</contactos_profesor>
+			<despacho nombre="Despacho matematicas" planta="2" area="norte"></despacho>
+			<horario>
+				<lunes horas="2">quinta y sexta</lunes>
+				<martes horas="0"/>
+				<miercoles horas="1">segunda</miercoles>
+				<jueves horas="2">segunda y tercera</jueves>
+				<viernes horas="1">quinta</viernes>
+			</horario>
+		</profesor>
+	</profesores>
+	
+	<asignaturas>
+		<asignatura codigo="0001" num_creditos="20" carrera="Informatica" curso="1" tipo="optativa">
+			<profesor_asignatura nif="77700129F"/>
+			<alumnos_asignatura>
+				<alumno_asignatura nif="77200128F">
+					<nota>NP</nota>
+				</alumno_asignatura>
+				<alumno_asignatura nif="77230128F">
+					<nota>MH</nota>
+				</alumno_asignatura>
+			</alumnos_asignatura>
+		</asignatura>
+		<asignatura codigo="0002" num_creditos="23" carrera="Informatica" curso="2" tipo="obligatoria">
+		<profesor_asignatura nif="7720034656128F"/>/>
+			<alumnos_asignatura>
+				<alumno_asignatura nif="77200128F">
+					<nota>AP</nota>
+				</alumno_asignatura>
+			</alumnos_asignatura>
+		</asignatura>
+	</asignaturas>
+
+</universidad>

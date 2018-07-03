@@ -1,0 +1,33 @@
+<xs:simpleType name="temperaturas">
+	<xs:restriction base="xs:decimal">
+		<xs:minInclusive="-75"/>
+		<xs:maxInclusive="75"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="xstoken">
+	<xs:restriction base="xs:token">
+		<xs:length="2"/>
+		<xs:enumeration="ES"/>
+		<xs:enumeration="PR"/>
+		<xs:enumeration="FR"/>
+		<xs:enumeration="AN"/>
+	</xs:restriction>
+</xs:simpleType>
+
+los nombres vana tener hasta 10 caracteres
+los telefonos 9 cifras, y deben empezar con un 6 7 8 o 9 o +0034 (opcional)
+
+<xs:simpleType name="nombre">
+	<xs:restriction base="xs:token">
+		<xs:length="10"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="telefono">
+	<xs:restriction base="decimal">
+		<xs:minInclusive="999999"/>
+		
+	</xs:restriction>
+</xs:simpleType>
+
+

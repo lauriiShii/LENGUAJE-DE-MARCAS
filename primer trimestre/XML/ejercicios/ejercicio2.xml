@@ -1,0 +1,33 @@
+<coleccion> 
+
+   <libros>
+   
+      <libro nº="1">
+		 <titulo>Uno</titulo>
+		 <autor>Pepe</autor>
+		 <autor>luis</autor>
+		 <contenido> ............................ </contenido>
+		 <resumen> .............................. </resumen>
+	  </libro>
+	  
+   </libros>
+   
+   <discos>
+   
+      <disco tipo="CD">
+	     <titulo>Uno</titulo>
+		 <autor>Pepe</autor>
+		 <autor>luis</autor>
+		 <Contenido> 
+			 <cancion nº="1">
+			     <nombre>luna</nombre>
+				 <duracion>3 min</duracion>
+				 <autor tipo="musica">pepita</autor_musica>
+				 <autor tipo="letra">rafita</autor_letra>
+			 </cancion>
+		 </Contenido>
+		 
+	  </disco>
+   </discos>
+
+</coleccion>

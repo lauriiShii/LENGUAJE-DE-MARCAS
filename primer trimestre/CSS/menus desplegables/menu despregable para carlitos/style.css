@@ -1,0 +1,62 @@
+/*------------------------CUERPO ENTERO--------------------*/
+*{
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+	}
+/*------------------------MENU--------------------*/
+/*damos caracteristicas generales al menu*/
+.contenedormenu img{
+	width:12;
+	height:12;
+	}
+.contenedormenu{
+	background-color:#8A0829; /*para el color de fondo del menu*/
+	height:39px;
+	width:100%;
+	}
+/*comenzamos con la estructura del menu*/ 
+/*quitamos de las listas los puntos*/
+.contenedormenu ul{
+	list-style:none; /*para que se quiten los puntos del menu*/	
+	}
+/*le damos los estilos generales que queremos para los items en general*/
+#menu li a:hover {
+	background:#F7819F; /*para que al pasar el raton salga rosa claro*/
+	border-radius:8px;  /*para que la marca rosa sea obalada*/
+	text-decoration:underline; /*para que al pasar el cursor se subraye el item*/
+	} 	
+#menu a{
+	background-color:#8A0829;
+	color:white;
+	text-decoration:none; /*para que se quite el subrayado*/
+	padding:10px /*altura*/38px/*ancho*/;
+	display:block;/*para que los elementos se definan como un bloque y no como
+		            inline que es por lo que saldria solapado.*/
+	border-radius:8px; /*para que los items sean ovalados*/
+	}
+.contenedormenu li ul li img {
+	-webkit-transform: rotate(-90deg); /*para que la imagen de gominolas señale hacia la 
+	                                    derecha y no hacia abajo*/
+	}
+/*posicionamos los items de nuestro menu*/
+#menu li{
+	float:left; /*para que las casillas salgan seguidas*/
+	position:relative;/*muy importante, sin este relative las casillas no se posicionarian*/
+	margin-right:10px;
+	width:190px;
+	}
+		
+#menu ul{
+	position:absolute;/*para que los items se posicionen donde deben y no se deformen*/
+	left:0;
+	display:none;/*para que los submenus salgan ocultos*/
+	}
+#menu li:hover ul{
+	display:block;
+}/*esto es para que aparezcan los items al pasar el raton por encima de ellos*/
+
+/*--------------------------PROPIEDAD CLEAR----------------------------------------*/
+.clear{
+	clear:both;
+	}

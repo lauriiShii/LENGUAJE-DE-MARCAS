@@ -1,0 +1,240 @@
+----------XML----------
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+----------DTD----------
+En XML <!DOPTIPE empresa SYSTEM "doc.dtd">
+En DTD <!DOCTYPE restaurante [
+        . . .
+        ]
+        
+ELEMENTO --> <!ELEMENT nombreElemento tipoContenido>
+    TIPO CONTENIDO --> EMPTY (documento vacio)
+                       #PCDATE (datos que no tecojan etiquetas)
+                       DESCENDENCIA --> CARDINALIDAD --> ? (0-1)
+                                                         * (0-N)
+                                                         + (1-N)
+                                        SECUENCIA --> A,B (primero A y luego B)
+                                                      A|B (A o B)
+                                                      
+ATRIBUTO --> <!ATTLIST nombreAtributo tipoDato caracter>
+    CARACTER --> "valor" (Un valor predeterminado)
+                 #IMPLIED (opcional sin valor por defecto)
+                 #REQUIRED (Obligatorio sin valor por defecto)
+                 #FIXED (Obligatorio y con valor por defecto)
+                 
+    TIPO --> CDATA (No tiene etiquetas)
+             EMPTY (Nombre de una entidad)
+             ENTITIES (lista de nombres de entidades)
+             ID (Identificacion unica)
+             IDREF (Referencia a un ID existente)
+             IDREFS (Referencia a multiples ID separados por espacios)
+             NMTOKEN (Nombre sin espacios en balanco en su interior)
+             
+----------XSD----------
+En XML <elemento xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="doc.xsd">
+
+En XSD <?xml version="1.0"?>
+       <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+       . . .
+       </xs:schema>
+       
+ELEMENTO --> <xs:element atributos/>
+ATRIBUTOS --> <xs:attribute atributos/>
+
+TIPO DE ATRIBUTOS --> name (nombre del elemento o atributo)
+                      ref (la descripcion esta en otro lugar del XSD para elementos y atributos)
+                      type (tipo de elemento para elementos y atributos)
+                      defaul (valor que toma si no tiene valor en el XML siendo tipo texto para elemento y atributo)
+                      fixed (solo puede tener un valor en el XML para elemento y atributo de tipo texto)
+                      use (valor obligatorio o no solo para atributos) --> opcional
+                                                                           requiered
+                                                                           prohbited
+                      minOccurs (nº veces min que aparecera el elemento (0-N) para elementos)
+                      maxOccurs (nº veces max que aparecera el elemento (0-N) para elementos)
+
+TIPO DE DATOS (<xs:element type:" " />)--> 
+    NUMERICOS --> xs:byte (+- numero entero de 8 bits)
+                  xs:decimal (un numero decimal)
+                  xs:int (+- numero entero de 32 bits)
+                  xs:integer (numero entero)
+                  xs:long (+- numero entero de 64 bits)
+                  xs:negativeInteger (- numero entero)
+                  xs:nonNegativeInteger (+ numero entero)
+                  xs:nonPositiveInteger (- numero entero)
+                  xs:positiveInteger (+ numero entero)
+                  xs:short (+- numero entero de 16 bits)
+                  xs:unsignedLong (numero entero de 8 bits)
+                  xs:unsignedInt (numero entero de 32 bits)
+                  xs:unsignedShort (numero entero de 16 bits)
+                  xs:unsignedByte (numero entero de 8 bits)
+                  
+   FECHA --> xs:date (dd-mm-yy --> dias-meses-años)
+             xs:dateTime (DD-MM-YY hh:mm:ss --> año-mes-dia-hora-min-seg)
+             xs:gDay (valor de la fecha referente al día (dd))
+             xs:gMonth (valor de la fecha referente al mes (mm))
+             xs:gMonthDay (valor de la fecha referente al mes y al día (mm-dd))
+             xs:gYear (valor de la fecha referente al año (yy))
+             xs:gYearMonth (valor de la fecha referente al año y al mes (yy-mm)
+             xs:time (hh-mm-ss --> horas-minutos-segundos)
+   
+   BOOLEAN --> xs:boolean (verdadero o falso)
+   
+   TEXTO --> xs:string (cadena de texto)
+             xs:normalizadString (Cadena de texto donde los espacios se convirtieron en espacios simple)
+             xs:token (Cadena de texto sin espacios)
+             xs:NMTOKEN (nombre sin espacio en blanco)
+             xs:NMTOKENS (lista de nombres separada por espacios)
+             xs:ID (identificador unico)
+             xs:IDREF (Referencia a un ID)
+             xs:IDREFS (Referencia a varios ID separados por espacios)
+             xs:EMTITY (nombre de una entidad)
+             xs:EMTITIES (lista de nombre de entidades)
+             xs:NOTATION (notacion)
+       
+DECLARACIONES MAS IMPORTANTES:
+--> CONTENIDO TEXTUAL RESTRINGIDO
+
+        --> RANGO NUMERICO --> minInclusive, maxInclusive, minExclusive, maxExclusive
+        <xs:element name="edad" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="100"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        --> DIGITOS
+        <xs:element name="telefono" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:totalDigits value="9"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        --> LISTA DE VALORES
+        <xs:element name="coche" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Audi"/>
+              <xs:enumeration value="Golf"/>
+              <xs:enumeration value="BMW"/>
+              <xs:enumeration value=""/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        -->LONGITUD --> length (numero de caracteres fijos), minLength, maxLength
+        <xs:element name="clave" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:length value="5"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        -->PLANTILLA DE CARACTERES
+        <xs:element name="iniciales" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[A-Z][A-Za-z][A-Za-z]"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        
+        PATRONES --> . (cualquier caracter)                  \w (Cualquier letra)
+                     \d (Un digito)                          \D (Cualquier caracter no digito)
+                     \s (Cualquies caracter de espacio)      \S (Cualquier caracter de no espacio)
+                     \d{n} (nº digitos)                      \d {n,m} (de n a m digitos)
+                     \d{n,} (n o + digitos)                  [xyz] (uno de estos valores en minuscula)
+                     [A-Z] (de la A a la Z en mayuscula)     [^abc] (Negacion de un grupo de caracteres)
+                     [A-J-[H]] (Sustraccion de la H)         (a|b) (alternativa entre dos expresiones)
+                     b? (Sucesion de una o 0 ocurrencias de una cadena(En este caso de la b))
+                     I* (Sucesion de 0 o + ocurrencias de una cadena)
+                     (cd)+ (Sucesio de 1 o + ocurrencias de una cadena)
+                     
+        -->TRATAMIENTO DE ESPACIOS EN BLANCO (espacios, saltos de lineas y tabulaciones) --> preserve (Los respoeta), collapse (reduce a uno) , replace (los remplaza)
+        <xs:element name="direccion" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:whiteSpace value="preserve"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+                                                
+-->ELEMENTO VACIO
+<xs:element name="h1" minOccurs="1" maxOccurs="1">
+  <xs:complexType />
+</xs:element>
+
+--> ELEMENTO QUE CONTIENE ELEMENTOS
+<xs:element name="alumno" minOccurs="1" maxOccurs="1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="apellido" type="xs:string" minOccurs="2" maxOccurs="2"/>
+      </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+        --> DENTRO DE UN ELEMENTO PODEMOS ELEGIR UN ElEMENTO (Con choice)
+        <xs:element name="alumno" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1" />
+                <xs:element name="nombre_compuesto" type="xs:string" minOccurs="1" maxOccurs="1" />
+              </xs:choice>
+              <xs:element name="apellido" type="xs:string" minOccurs="2" maxOccurs="2" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+--> ELEMENTO QUE CONTIENE ELEMENTO Y ATRIBUTOS
+    -->SIN RESTRICCIONES
+    <xs:element name="alumno" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="apellido" type="xs:string" minOccurs="2" maxOccurs="2"/>
+          </xs:sequence>
+          <xs:attribute name="dni" type="xs:string" />
+      </xs:complexType>
+    </xs:element>
+    
+    -->CON RESTRICCIONES
+    <xs:element name="alumno" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="apellido" type="xs:string" minOccurs="2" maxOccurs="2"/>
+          </xs:sequence>
+          <xs:attribute name="dni" use="optional">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{8}[A-Z]" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+      </xs:complexType>
+    </xs:element>
+    
+--> ELEMENTO VACIO CON ATRIBUTO
+<xs:element name="producto" minOccurs="1" maxOccurs="1">
+  <xs:complexType>
+    <xs:attribute name="prodid" type="xs:integer" use="required" />
+    <xs:attribute name="catid" type="xs:integer" use="optional" />
+  </xs:complexType>
+</xs:element>
+
+--> ELEMENTO CON CONTENIDO TEXTUAL Y ATRIBUTOS
+<xs:element name="producto" minOccurs="1" maxOccurs="1">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="prodid" type="xs:integer" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>                                              

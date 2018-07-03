@@ -1,0 +1,41 @@
+<facturas>
+
+	<factura cod="123-DFG" fecha="02/02/1998">
+	
+		<dni>88200133-G</dni>
+		<nombre>Isabel Muñoz</nombre>
+		<direccion>Avenida Vanqueta nº18</direccion>
+		<cp>1300</cp>
+		<poblacion>Cadiz</poblacion>
+		
+		<productos>
+			<producto cantidad="5">
+				<denominacion>  Catalogo manga </denominacion>
+				<precio_unidad unidad="€"> 1.000.000</precio_unidad>
+			</producto>
+		</productos>
+		
+		<descuento></descuento>
+		
+	</factura>
+
+	<factura cod="122-DFG" fecha="02/02/2012">
+	
+		<dni>88233333-G</dni>
+		<nombre>Ivan Muñoz</nombre>
+		<direccion>Avenida Cornudo nº18</direccion>
+		<cp>1300</cp>
+		<poblacion>Cadiz</poblacion>
+		
+		<productos>
+			<producto cantidad="2">
+				<denominacion>  Coche </denominacion>
+				<precio_unidad unidad="€"> 1.000.000</precio_unidad>
+			</producto>
+		</productos>
+		
+		<descuento></descuento>
+		
+	</factura>
+	
+</facturas>

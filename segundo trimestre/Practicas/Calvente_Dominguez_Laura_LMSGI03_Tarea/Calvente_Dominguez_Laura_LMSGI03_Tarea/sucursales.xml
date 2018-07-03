@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--Asociacion con DTD-->
+<!DOPTIPE empresa SYSTEM "sucursal.dtd">
+
+<!--Asociacion con el SXD-->
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="sucursales.xsd"><!--es el elemento raiz->
+
+	<pedido codigo="F5344964" fecha="2013-20-11" observaciones="urgente"> <!--pedidos es una etiquea que tanto en el esquema
+	                                                                                                                      como en el dtd de establece que aparecera minimo
+																														  una vez y maximo todas las necesarias, y ademas sus 
+																														  atributos son los dos primeros obligatorios y el tercero opcional-->
+		<nom_empleado>Tamzin Otero</nom_empleado>
+		<sucursal>
+			<nombre>Isla Preferida</nombre>
+			<direccion>Argentina</direccion>
+		</sucursal>
+		<articulo codi="ESO-212" uni="255" precio="1.2"/>
+		<articulo codi="PDI-555" uni="555" precio="35"/>
+	</pedido>
+	
+	<pedido codigo="P5111111" fecha="2014-01-11">
+		<nom_empleado>Samuel Calvente</nom_empleado>
+		<sucursal>
+			<nombre>Isla Perdida</nombre>
+			<direccion>Rusia</direccion>
+		</sucursal>
+		<articulo codi="WWE-999" uni="399" precio="1.90"/>
+		<articulo codi="MNN-377" uni="4" precio="0.85" observaciones="peligroso"/>
+	</pedido>
+	
+</empresa>

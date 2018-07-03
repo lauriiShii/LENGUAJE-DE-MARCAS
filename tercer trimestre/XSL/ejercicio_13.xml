@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datos>
+	<publicacion codigo="RE001" tipo="Revista">
+		<nombre> Hola </nombre>
+		<fecha> 5/2010</fecha>
+		<editorial>una</editorial>
+		<articulo autor="ABC" numero="80">
+			<titulo>El principe solidario</titulo>
+			<tipo> Sociedad </tipo>
+			<paginas> 6 </paginas>
+			<documentosgraficos web="eps.html"/>
+		</articulo>
+	</publicacion>
+	<publicacion codigo="PE001" tipo="Periodico">
+		<nombre> Diario de Jerez </nombre>
+		<fecha> 1/2012</fecha>
+		<editorial>dos</editorial>
+		<articulo autor="ABC YZA" numero="120">
+			<titulo>Huelga de basuras</titulo>
+			<tipo> Actualidad </tipo>
+			<paginas> 2 </paginas>
+			<documentosgraficos web="huelga.html"/>
+		</articulo>
+		<articulo autor="CC" numero="120">
+			<titulo>Nueva victoria visitante</titulo>
+			<tipo> Deportes</tipo>
+			<paginas> 2 </paginas>
+		</articulo>
+	</publicacion>
+</datos>
+	
+

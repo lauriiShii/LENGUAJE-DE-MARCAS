@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cicloFormativo SYSTEM "ejercicio4.dtd">
+
+<cicloFormativo>
+    <modulos>
+        <modulo id="1" caracter="obligatorio">
+            <nombre>Lenguaje de marcas</nombre>
+            <horasSemanales>4</horasSemanales>
+            <fecha>
+				<fechaInicio>15 de septiembre de 2010</fechaInicio>
+				<fechaFin>30 de junio de 2011</fechaFin>
+			</fecha>
+        </modulo>
+    </modulos>
+    
+    <alumnos>
+        <alumno dni="16965696L" notas="SinInformacion">
+            <nombre>Ana Fernandez Gutierrez</nombre>
+            <telefono>789654321</telefono>
+            <email>ana.fdezgtrrez@hotmail.com,</email>
+            <direccion>C/ El Percebe, 13 de Santander CP 39302</direccion>
+			<faltas>
+				<faltasInjustificadas>0<faltasInjustificadas>
+				<faltasJustificadas>9</faltasJustificadas>
+			</faltas>
+            <modulosMatriculados>
+                <modulo id="1"/>
+            </modulosMatriculados>
+        </alumno>
+        <alumno dni="98765432H" notas="apto">
+            <nombre>Pepito Grillo</nombre>
+            <telefono>656566555</telefono>
+            <email>yhyh@yahoo.com,</email>
+            <direccion>Avd. El Pez, 5 de Suances CP 39401</direccion>
+			<faltas>
+				<faltasInjustificadas>0<faltasInjustificadas>
+				<faltasJustificadas>9</faltasJustificadas>
+			</faltas>
+            <modulosMatriculados>
+                <modulo referencia="1"/>
+            </modulosMatriculados>
+        </alumno>
+    </alumnos>
+</cicloFormativo>

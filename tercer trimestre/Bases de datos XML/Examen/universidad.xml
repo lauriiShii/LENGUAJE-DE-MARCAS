@@ -1,0 +1,109 @@
+<carrera>
+<materias>
+<materia nombre="Base de Datos Avanzada" cod="2ID45">
+  <profesor nombre="Carlos" apellido="Correa"/>
+  <profesor nombre="Juan" apellido="Paredes">
+       <universidad>Universidad de Madrid</universidad>
+  </profesor>
+  <jtp nombre="Carlos" apellido="Correa"/>
+  <material>
+    <obligatorio>
+        <m  codigo="23" />
+        <m  codigo="27" />
+    </obligatorio>
+     <m codigo="1"  />   
+   </material>
+   <aula> A7</aula>
+   <aula> A15</aula>
+</materia>
+<materia nombre="Arquitecturas Avanzadas" cod="2II15">
+   <profesor nombre="Carlos" apellido="Correa"/>
+   <material>
+       <obligatorio>
+          <m codigo="24" />
+       </obligatorio>
+       <m codigo="25" />
+   </material>
+   <aula>A8</aula>
+</materia>
+<materia nombre="Ingenieria del Software" cod="2ID05">
+   <profesor nombre="Claudia" apellido="Gomez">
+      <universidad>Universidad de Madrid</universidad>
+   </profesor>
+
+   <jtp nombre="Maria Ines" apellido="Lund"/>
+   <material>
+      <obligatorio>
+         <m codigo="26" />
+      </obligatorio>
+   </material>
+   <aula>A7</aula>
+   <aula> Matrix 1.60 </aula>
+</materia>
+<materia nombre="Ingenieria avanzada del Software" cod="2ID06">
+   <profesor nombre="Maria Ines" apellido="Lund"/>
+   <jtp nombre="Maria Ines" apellido="Lund"/>
+   <material>
+      <obligatorio>
+         <m codigo="26" />
+         <m codigo="29" />
+      </obligatorio>
+
+   </material>
+   <aula>A7</aula>
+   <aula> Matrix 1.60 </aula>
+</materia>
+
+</materias>
+<materiales>
+<libro codigo="23">
+    <titulo>Databases: System Concepts</titulo>
+    <autor>A. Silberschatz</autor>
+    <autor>H. F. Korth</autor>
+    <autor>S. Sudarshan</autor>
+    <edit>McGraw-Hill</edit>
+    </libro>
+<libro codigo="24">
+       <titulo>Introduction to Computing</titulo>
+       <autor>P.-N. Tan</autor>
+       <autor>M. Steinbach</autor>
+       <autor>V. Kumar</autor>
+       <edit>Pearson</edit>
+</libro>
+<libro codigo="25">
+   <titulo>Arquitecturas de Computadoras</titulo>
+      <autor>D. Hand</autor>
+      <autor>H. Mannila</autor>
+      <autor>P. Smyth</autor> 
+      <edit>The MIT press</edit>   
+</libro>
+<libro codigo="26">
+      <titulo>Design: System Concepts</titulo>
+      <autor>A. Silberschatz</autor>
+      <autor>H. F. Korth</autor>
+      <autor>S. Sudarshan</autor>
+      <edit>McGraw-Hill</edit>
+</libro>
+<libro codigo="29">
+      <titulo>Ingenieria del Software</titulo>
+      <autor>A. Silberschatz</autor>
+      <autor>H. F. Korth</autor>
+      <edit>McGraw-Hill</edit>
+</libro>
+<articulo codigo="27">
+           <titulo>LiXQuery: A formal foundation for XQuery research</titulo>
+           <autor>J. Hidders</autor>
+           <autor>P. Michiels</autor>
+           <autor>J. Paredaens</autor>
+           <autor>R. Vercammen</autor>
+           <revista>ACM SIGMOD Record</revista>
+</articulo>
+<wikipedia codigo="1" >
+        <url>http://en.wikipedia.org/wiki/XML</url>
+</wikipedia>
+<wikipedia codigo="2" >
+        <url>http://en.wikipedia.org/wiki/XHTML</url>
+</wikipedia>
+</materiales>
+</carrera>
+

@@ -1,0 +1,92 @@
+<!ELEMENT cantidadtotal (#PCDATA)>
+<!ELEMENT concepto (nombreconcepto, importe)*>
+<!ELEMENT bombreconcepto (#PCDATA)>
+<!ELEMENT IMPORTE (#PCDATA)>
+
+<banco>
+  <nombre>uinicaja</nombre>
+  <sucursal>algeciras</sucursal>
+  <logo>unicaja.png</logo>
+  <cuentabancaria>
+      <numcuenta>148735638756379539</numcuenta>
+	  <moneda tipo="euro"/>
+	  <titular>Sergio Borrego</titular>
+	  </cuentabancaria>
+	  <recibo>
+	       <entidad>
+		       <nif>B857860</nif>
+			   <ref>UY865KHG34</ref>
+		   </entidad>
+		   <fecha>2012-06-12</fecha>
+		   <cantidadtotal>2524.34</cantidadtotal>
+		   <concepto>
+		         <nombreconcepto>Impuestos de bienes inmuebles</nombreconcepto>
+				 <importe>34.23</importe>
+		   </concepto>
+	 </recibo>
+</banco>
+
+<xs:simpleType name="tipomoneda">
+<xs:restriction base="xs:string">
+   <xs:enumeration value="euro"/>
+   <xs:enumeration value="dolar"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:element name="banco">
+<xs:complexType>
+<xs:sequence>
+   <xs:element name="nombre" type="xs:string"/>
+   <xs:element name="sucursal" type="xs:string"/>
+   <xs:element name="logo" type="xs:string"/>
+   <xs:element name="cuentabancaria">
+   <xs:complexType>
+   <xs:sequence>
+      <xs:element name="numcuenta">
+	      <xs:simpleType>
+		  <xs:restriction base="xs:string">
+		    <xs:pattern value="\d{20}"> <!--la de marca que debe ser numero-->
+			<xs:lenght value="20"/>
+		  </resrinciones>
+		  </xs:simpleType>
+	  </xs:element>	
+	  <xs:element name="moneda">
+	     <xs:complexType>
+		     <xs:attribute name="tipo" type="xs:string"/>
+	     </xs:complexType>
+	  </xs:element>
+	  <xs:element name="titular" type="xs:string"/>
+   </xs:sequence>
+   
+   </xs:complexType>
+   </xs:element>
+   <xs:element name="recibo" maxOccurs="unbounded" minOccurs="0">
+   <xs:complexType>
+   <xs:sequence>
+       <xs:element name="rentidad">
+	   <xs:complexType>
+	   <xs:sequence>
+	       <xs:element name="nif" type="xs:string"/>
+		   <xs:element name="ref" type="xs:string"/>
+	   </xs:sequence>
+	   </xs:complexType>
+	   </xs:element>
+	     <xs:element name="fecha" type="xs:date"/>
+		 <xs:element name="cantidadtotal">
+		 <xs:simpleType>
+		  <xs:restriction base="xs:string">
+		      <xs:pattern value="\d{20}">
+			  <xs:lenght value="20"/>
+		  </resrinciones>
+		  </xs:simpleType>
+	     </xs:element>	
+		 <xs:element name="reconcepto" maxOccurs="unbounded">
+		 <xs:complexType>
+		 <xs:sequence>
+		     <xs:element name="nombredelconcepto" type="xs:string"/>
+		     <xs:element name="importe" type="xs:decimal"/>
+		 </xs:sequence>
+		 </xs:complexType>
+		 </xs:element>
+	   </xs:sequence>
+	   <xs:complexType>

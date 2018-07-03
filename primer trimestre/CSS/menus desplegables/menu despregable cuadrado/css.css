@@ -1,0 +1,72 @@
+﻿
+    *{
+	   padding:0px;
+	   margin:0px;
+	   font-family:Arial, Helvetica, sans-serif;
+	}
+	 
+	#contenedor_menu {
+	   margin:auto;
+       background-color:#8A0829;
+	   
+	   
+	}
+	
+	ul, ol { /*para dar atributos a las listas*/
+	   list-style:none; /*esto es que no queremos que tengan ningun estilo
+	                        lo que hara es desapareces los puntos de las listas*/
+	}
+	
+	/*ahora empezamos a agregar estilos para nuestro menu en si (nav)*/
+	
+	.menu li a{
+	    background-color:#8A0829;
+		color:white;
+		text-decoration:none; /*se quita el subrayado*/
+		padding:10px /*altura*/38px/*ancho*/;
+		display:block; /*para que los elementos se definan como un bloque y no como
+		                 inlime que es por lo que saldria solapado.*/
+	}
+	
+	.menu li a:hover {
+	    background-color:#F7819F; /*para que al pasar el raton por encima de la casilla
+		                            el fondo cambie a gris*/
+	}
+	
+	/*damos estilo a los items directos que tenemos dentro de nuestro menu*/
+	
+	.menu > li {
+	    float:left;
+	}
+	
+	.menu li ul {
+	    display:none;/*para que los submenus salgan ocultos*/
+		position:absolute; /*para que los submenus se posicionen donde deben y no se deformen*/
+		min-width:190px;
+	}
+	
+	.menu li:hover > ul {
+		display:block;
+		}/*con esto decimos que en las seudoclases li en el hover 
+	       cuando pasemos el raton aparezcan*/
+		 /*la > para que sean directos de ul*/
+		 
+	.menu li ul li { /*estamos diciendo que todos los li dentro de ul dentro de li que son los
+	             submenus tengan las siguientes caracteristicas*/
+		position:relative; /*para que puedan aparecer al lado*/
+	}
+	
+	.menu li ul li ul {
+	    left:190px; /*para que aparezca a la derecha*/
+		top:0px;
+	}
+	#contenedor_menu img {
+	    width:12;
+		height:12; 
+	}
+	
+	#contenedor_menu li {
+	    width:190px;
+	}
+    
+	.clear{clear:both;}

@@ -1,0 +1,28 @@
+<facturas>
+    <factura nFactura="00001" nCliente="001">
+        <InformacionEmpresa>
+            <nombre>IKE.S.L.</nombre>
+            <nTelefono>917776688</nTelefono>
+            <nFax>917776699</nFax>
+        </InformacionEmpresa>
+        <lineasProducto>
+            <lineaProducto>
+                <producto idProducto="0188">Raqueta</producto>
+                <cantidad>2</cantidad>
+                <PrecioUnidad unidad="€">12</PrecioUnidad>
+            </lineaProducto>
+        </lineasProducto>
+        <PrecioTotal unidad="€">24</PrecioTotal>
+        <precioTotalsinIva unidad="€">19.90</precioTotalsinIva>
+        <formaPago>Tarjeta</formaPago>
+    </factura>
+</facturas>
+<clientes>
+    <cliente nCliente="001">
+        <nombre>Julia</nombre>
+        <apellidos>Rodriguez Amena</apellidos>
+        <nTelefono>956769076</nTelefono>
+        <Direccion>C/Linea nº1</Direccion>
+        <cp>11340</cp>
+    </cliente>
+</clientes>

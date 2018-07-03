@@ -1,0 +1,62 @@
+#contenedor{width:1000px;
+            margin:auto;}
+			
+#cabecera{width:100%;
+          float: left;
+		  border:2px solid green;
+		  padding:0.5 em;}
+		  
+#cabecera datos_empresa{width:300px;
+                      height:100px;
+                      float:right;}
+	
+#cabecera busqueda{float: left;
+                  width:250px;
+				  height:100px;}
+				  
+#menu{width:250px;
+      float: left;
+	  height:30px;
+	  border: 2px solid white;}
+	  
+#menu ul {list-style:none;
+        margin:auto;
+		display:block;}
+		
+#menu ul li {display:inline; 
+         float:left; height:25px;
+		 width:120px;
+		 font: Verdana;
+         font-size:18px;}
+		 
+#menu ul li a{text-decoration: none;
+          padding:20px; 
+		  color:#DC8E0E;
+		  display: inline;}
+		  
+#menu ul li a:hover{background-image: url(flechanaranja.gif); 
+                background-repeat:no-repeat; 
+				border-radius:5px; 
+				box-shadow:5px #F9FC8D;}
+	  
+#lateral_izquierdo{float:right;
+                   width:245px;
+				   margin-left:5px;}
+				   
+#lateral_izquierdo noticia{}
+#lateral_izquierdo enlace{}
+#lateral_izquierdo publicidad{}
+
+#central{float:right;
+         width:400px;
+		 clear:none;}
+		 
+#central articulo1{}
+#central articulo2{}
+#central articulo3{}
+#lateral_derecho{float:left;
+                 width:245px;
+				 margin-right:5px;}
+				 
+#pie{width:100%;
+     clear: both;}

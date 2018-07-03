@@ -1,0 +1,72 @@
+﻿/*-----------------------------CSS de TU PASTELITO SABROSON------------------------*/
+/*caracteristicas universales para toda la pagina*/
+    *{
+	   padding:0px;
+	   margin:0px;
+	   font-family:Arial, Helvetica, sans-serif;
+	}
+/*------------------------------------MENU-----------------------------------------*/
+/*damos propiedades generales*/	 
+#contenedor_menu {
+   margin:auto;
+   background-color:#8A0829; 
+   width:100%;   
+	}
+#contenedor_menu ul li ul li img {
+	-webkit-transform: rotate(-90deg); /*para que la imagen de gominolas señale hacia la 
+	                                    derecha y no hacia abajo*/
+	}	
+#contenedor_menu img {
+    width:12;
+	height:12; 
+	}
+/*comenzamos con la estructura del menu*/
+ 									
+ul, li { /*para dar atributos a las listas*/
+    list-style:none;/*quitamos de las listas los puntos*/
+    }	
+.menu li a{
+    background-color:#8A0829;
+	border-radius:8px;/*para que salga la forma de la casilla del item obalada*/
+	color:white;
+	text-decoration:none; /*se quita el subrayado*/
+	padding:10px /*altura*/105px/*ancho*/;
+	display:block; /*para que los elementos se definan como un bloque y no como
+	                 inlime que es por lo que saldria solapado.*/
+	width:110px;
+	}
+	
+.menu li a:hover {
+    background-color:#F7819F; /*para que al pasar el raton por encima de la casilla
+		                            el fondo cambie a rosa claro*/
+	border-radius:8px;  /*para que la marca rosa sea obalada*/
+	}		
+/*damos estilo a los items directos que tenemos dentro de nuestro menu*/
+	
+.menu > li {
+    float:left;/*para que las cajas se queden pegadas a la derecha*/
+	}
+	
+.menu li ul {
+    display:none;/*para que los submenus salgan ocultos*/
+	position:absolute; /*para que los submenus se posicionen donde deben y no se deformen*/
+	min-width:190px;
+	}
+	
+.menu li:hover > ul {
+	display:block;
+	}/*con esto decimos que en las seudoclases li en el hover 
+       cuando pasemos el raton aparezcan*/
+	 /*la > para que sean directos de ul*/
+		 
+.menu li ul li { /*estamos diciendo que todos los li dentro de ul dentro de li que son los
+             submenus tengan las siguientes caracteristicas*/
+	position:relative; /*para que puedan aparecer al lado*/
+	}
+	
+.menu li ul li ul {
+    left:320px; /*para que aparezca a la derecha el submenu*/
+	top:0px;
+	}
+/*-------------------------------CLASS CLEAR---------------------------------------*/    
+.clear{clear:both;}

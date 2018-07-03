@@ -1,0 +1,40 @@
+<Modulo_ciclo_formativo>
+  <duracion_del_curso>
+    <fecha_de_comienzo>15 de septiembre de 2010</fecha_de_comienzo>
+    <fecha_de_finalizacion>30 de junio de 2011</fecha_de_finalizacion>
+  </duracion_del_curso>
+    <horas periodo="semanales">4</horas>
+    <Alumnos>
+        <Alumno>
+            <nombre>Ana</nombre>
+            <Apellido_primero>Fernandez</Apellido_primero>
+            <Apellido_segundo>Gutierrez</Apellido_segundo>
+            <nif>16965696L</nif>
+            <telefono>789654321</telefono>
+            <email>ana.fdezgtrrez@hotmail.com</email>
+            <direccion>
+                <calle>El Percebe</calle>
+                <numero>13</numero>
+                <localidad>Santander</localidad>
+                <CP>39302</CP>
+                <faltas_asistencia>No informacion</faltas_asistencia> 
+                <notas>no informacion</notas>
+            </direccion>
+        </Alumno>
+        <Alumno>
+            <nombre>Pepito</nombre>
+            <Apellido>Grillo</Apellido>
+            <nif>16965696L</nif>
+            <telefono>656566555</telefono>
+            <email>yhyh@yahoo.com</email>
+            <direccion>
+                <calle>Avenida El Pez</calle>
+                <numero>5</numero>
+                <localidad>Suances</localidad>
+                <CP>39401</CP>
+                <faltas_asistencia>No informacion</faltas_asistencia> 
+                <notas>apto</notas>
+             </direccion>
+        </Alumno>
+    </Alumnos>
+</Modulo_ciclo_formativo>

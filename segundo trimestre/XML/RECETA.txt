@@ -1,0 +1,35 @@
+<!DOCTYPE restaurante [
+<!ELEMENT restaurante (receta*)>
+<!ELEMENT receta (ingredientes, proceso)>
+<!ELEMENT ingredientes (ingrediente)+>
+<?xml version="1.0"?>
+<!ELEMENT proceso (paso)+>
+<!ELEMENT ingrediente (#PCDATA)>
+<!ELEMENT paso (#PCDATA)>
+<!ATTLIST receta comensales CDATA #REQUIRED
+				 nombre CDATA #REQUIRED>
+<!ATTLIST ingrediente cantidad NMTOKEN #IMPLIED
+					  medida CDATA #IMPLIED>
+<!ATTLIST paso orden NMTOKEN #REQUIRED>
+
+]>
+
+<restaurante>
+<receta comensales="4" nombre="sopa de cebolla">
+<ingredientes>
+<ingrediente cantidad="1" medida="kg">cebollas</ingrediente>
+<ingrediente cantidad="2" medida="l">caldo de carne</ingrediente>
+<ingrediente cantidad="100" medida="g">mantequilla</ingrediente>
+<ingrediente cantidad="1" medida="cucharada">harina</ingrediente>
+<ingrediente cantidad="100" medida="g">queso</ingrediente>
+<ingrediente medida="rebanada">pan tostado</ingrediente>
+<ingrediente>tomillo</ingrediente>
+<ingrediente cantidad 
+<ingrediente>pimienta</ingrediente>
+
+</ingredientes>
+<proceso>
+<paso orden="1">pelar y partir las cebollas en rodajas finas</paso>
+<paso 
+<paso 
+<paso 

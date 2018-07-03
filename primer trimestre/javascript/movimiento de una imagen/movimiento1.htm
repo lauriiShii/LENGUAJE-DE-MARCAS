@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Movimiento de capas</TITLE>
+<STYLE>INPUT {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BORDER-LEFT: 1px solid; CURSOR: hand; COLOR: black; BORDER-BOTTOM: 1px solid; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: 2px; HEIGHT: 30px; BACKGROUND-COLOR: white; TEXT-ALIGN: center
+}
+</STYLE>
+
+<SCRIPT language=javascript>
+function vaCapaH() {
+//Lleva la imagen a la derecha y le da la vuelta
+var x, tope=380;
+   x = parseInt (document.getElementById("capava").style.left);
+   if (x<tope) {
+	      document.getElementById("capava").style.left = x + 4;
+		setTimeout("vaCapaH()",5); }
+	return true;
+}
+
+function vieneCapaH(){
+   //Lleva la imagen a la izquierda y le da la vuelta
+var i, tope=29;
+	    i= parseInt(document.getElementById("capava").style.left);
+    if (i>tope){
+	document.getElementById("capava").style.left = i - 4;
+	setTimeout("vieneCapaH()",5);
+     }
+   return true;
+ }
+
+function coordenadas(event) {
+var i, tope;
+x=event.clientX;
+y=event.clientY;
+alert(x);
+
+
+i= parseInt(document.getElementById("capava").style.left);
+
+if (i>x) {
+  capahastaratonva(x);}
+else {capahastaratonviene(x);}
+
+ 
+ 
+}
+
+function capahastaratonviene(x){
+   //Lleva la imagen a la izquierda y le da la vuelta
+var i, tope=x;
+	    i= parseInt(document.getElementById("capava").style.left);
+    if (i>tope){
+	document.getElementById("capava").style.left = i - 4;
+	setTimeout("capahastaratonviene(x)",5);
+     }
+   return true;
+ }
+function capahastaratonva(x) {
+//Lleva la imagen a la derecha y le da la vuelta
+var i, tope=x;
+   i = parseInt (document.getElementById("capava").style.left);
+   if (x<tope) {
+	      document.getElementById("capava").style.left = x + 4;
+		setTimeout("capahastaratonva(x)",5); }
+	return true;
+}
+</script>
+
+
+
+</SCRIPT>
+<HEAD>
+<BODY onClick="coordenadas(event);">
+<h1>Movimiento de capas (horizontal)</h1>
+<TABLE align=left border=0>
+  
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD><INPUT onclick=vaCapaH() tabIndex=1 type=button value=Ida name=btn1></TD>
+    <TD width=35>&nbsp;</TD>
+    <TD><INPUT onclick=vieneCapaH() tabIndex=2 type=button value=Vuelta name=btn2>
+</TD></TR></TABLE><BR><BR><BR>
+
+<HR align=left width="70%">
+
+
+<DIV id=capava style="Z-INDEX: 1; LEFT: 30px; VISIBILITY: visible; POSITION: absolute; TOP: 365px">
+<IMG height=89 alt="Ida p'allá" src="va.gif" width=92 border=0></DIV>
+</BODY></HTML>

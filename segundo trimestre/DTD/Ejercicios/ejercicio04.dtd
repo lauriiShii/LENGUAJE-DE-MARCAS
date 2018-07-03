@@ -1,0 +1,26 @@
+<!ELEMENT alumnos (alumno)>
+<!ELEMENT alumno (nombre, telefono, email?, direccion, faltas?, notas?)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+
+<!ELEMENT faltas (faltasJustificadas?, faltasInjustificadas?)>
+<!ELEMENT fatasJustificadas (#PCDATA)>
+<!ELEMENT faltasInjustificadas (#PCDATA)>
+<!ELEMENT notas (#PCDATA)>
+
+<!ATTLIST alumno dni ID #REQUIRED>
+
+<!ELEMENT modulos (modulo)>
+<!ELEMENT modulo (nombre, numHoras, caracter, fecha)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT numhoras (#PCDATA)>
+<!ELEMENT caracter (opcional|obligatorio)>
+<!ELEMENT opcional EMPTY>
+<!ELEMENT obligatorio EMPTY>
+<!ELEMENT fecha (#PCDATA)>
+
+<!ATTLIST modulo id ID #REQUIRED>

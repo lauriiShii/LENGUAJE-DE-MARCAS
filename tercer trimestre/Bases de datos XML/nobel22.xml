@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<premios_nobel>
+  <individuos>
+    <individuo sexo="mujer">
+      <nombre>Maria Curie</nombre>
+      <nacido pais="Polonia" fecha="1867"/>
+    </individuo>  
+    <individuo sexo="hombre">
+      <nombre>Isaac Bashevis Singer</nombre>
+      <nacido pais="Polonia" fecha="1902"/>
+    </individuo>  
+    <individuo>
+      <nombre sexo="hombre">Mario Vargas Llosa</nombre>
+      <nacido pais="Peru" fecha="1936"/>
+    </individuo>
+    <individuo>
+      <nombre sexo="hombre">Gerhard Ertl</nombre>
+      <nacido pais="Peru" fecha="1836"/>
+    </individuo>
+  </individuos>
+  <premios>
+    <premio categoria="fisica">
+      <anio>1903</anio>
+      <premiado>Maria Curie</premiado>
+      <motivo>descubrimiento radioactividad</motivo>
+    </premio>
+    <premio categoria="quimica">
+      <anio>1911</anio>
+      <premiado>Maria Curie</premiado>
+      <motivo>descubrimiento radioactividad</motivo>
+    </premio>
+    <premio categoria="literatura">
+      <anio>1978</anio>
+      <premiado>Isaac Bashevis Singer</premiado>
+    </premio>
+    <premio categoria="fisica">
+      <anio>2007</anio>
+      <premiado>Gerhard Ertl</premiado>
+      <motivo>procesos quimicos en superficies solidas</motivo>
+    </premio>
+    <premio categoria="literatura">
+      <anio>2010</anio>
+      <premiado>Mario Vargas Llosa</premiado>
+    </premio>
+  </premios>
+</premios_nobel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumnos SYSTEM "ejercicio04.dtd">
+
+<alumnos>
+	<alumno dni="16965696L">
+		<nombre>Ana Fernandez Gutierrez</nombre>
+		<telefono>789654321</telefono>
+		<email>ana.fdezgtrrez@hotmail.com,</email>
+		<direccion>C/ El Percebe, 13 de Santander CP 39302</direccion>
+	</alumno>
+	<alumno dni="98765432H">
+		<nombre>Pepito Grillo</nombre>
+		<telefono>656566555</telefono>
+		<email>yhyh@yahoo.com,</email>
+		<direccion>Avd. El Pez, 5 de Suances CP 39401</direccion>
+		<notas>apto</notas>
+	</alumno>
+</alumnos>
+<modulos id="1">
+	<nombre>Lenguaje de marcas</nombre>
+	<numHoras>4</numHoras>
+	<caracter>obligatorio</caracter>
+	<fecha>15/09/2010 a 30/06/2011</fecha>
+</modulos>

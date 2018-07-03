@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!--Primero declaramos que lo que vamos a haces es un esquema-->
+
+	<xs:element name="empresa"><!--Declaramos el elemento raiz en este caso empresa-->
+		<xs:complexType><!--Cada vez que declaramos un elemento tenemos que decir si es complexType o simpleType, en este caso
+		                                  es de tipo complejo porque tiene elementos descendientes. La unica forma de que un elemento sea simpe es
+										  que su contenido sea simple y para ello solo puede tener contenido contextual-->
+		
+			<xs:sequence><!--Como dentro de empresa va a haber uno o mas elementos descendientes iniciamos una secuencia que contendra
+			                            estos elementos que en este caso seran las etiquetas de pedidos -->
+			
+				<xs:element name="pedido" minOccurs="1" maxOccurs="unbounded"><!--como el elemento pedido tiene que aparecer minimo 1 vez
+				                                                                                                            y maximo infinitas veces ponemos: minOccurs="1" 
+																															maxOccurs="unbounded" -->
+					<xs:complexType>
+					
+						<xs:sequence>
+						
+							<xs:element name="nom_empleado" type="xs:string"/><!--como el elemento nom_empleado va a ser una cadena de texto lo 
+							                                                                                     declaramos de tipo string-->
+							<xs:element name="sucursal" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+								
+									<xs:sequence>
+									
+										<xs:element name="nombre" type="xs:string"/>
+										<xs:element name="direccion" type="xs:string"/>
+										
+									</xs:sequence>
+									
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="articulo" maxOccurs="unbounded">
+								<xs:complexType>
+								
+									<xs:attribute name="codi"> <!--Cuando un elemento tiene atributos 1 o varios lo que hacemos es declararlos dentro de este
+									                                              directamente sin hacer ninguna secuencia-->
+										<xs:simpleType><!--Los atributos solo pueden tener contenido textual por lo que siempre sera simpleType-->
+										
+											<xs:restriction base="xs:string"><!--A veces se necesita crear restricciones que el usuario tendra que cumplir si o si
+											                                                    para lograr almacenar la informacion para ello creamos la etiqueta restriccion y dentro
+																								diremos los requesitos que queremos que nuestro dato tenga-->
+												<xs:pattern value="[A-Z]{3}-[0-9]{3}"/><!--Nuesta restriccion en este caso es un patron-->
+											</xs:restriction>
+											
+										</xs:simpleType>
+									</xs:attribute>
+									
+									<xs:attribute name="uni" type="xs:integer"/>
+									<xs:attribute name="precio" type="xs:float"/>
+									<xs:attribute name="observaciones" type="xs:string" use="optional"/>
+									
+								</xs:complexType>
+							</xs:element>
+							
+						</xs:sequence>
+						
+						<xs:attribute name="codigo">
+							<xs:simpleType>
+							
+								<xs:restriction base="xs:string">
+									<xs:pattern value="[A-Z][0-9]{7}"/>
+								</xs:restriction>
+								
+							</xs:simpleType>
+						</xs:attribute>
+						
+						<xs:attribute name="fecha"  type="xs:date"/>
+						<xs:attribute name="observaciones"  type="xs:string" use="optional"/><!--El uso es opcional porque puede aparecer o no relleno-->
+						
+					</xs:complexType>
+				</xs:element>
+				
+			</xs:sequence>	
+			
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

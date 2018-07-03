@@ -1,0 +1,35 @@
+*{ 
+font-family:Arial;
+padding:0px;
+margin:0px;
+}
+body{
+background-image: url("burj.jpg");
+}
+#tabla{
+margin:2%;
+}
+table{
+border:5px solid;
+border-color:#3B170B;
+width:35%;
+}
+#tabla tr td{
+top:0px;
+left:0px;
+background-color:#9193F9;
+}
+th{
+text-align:center;
+background-color:black;
+color:white;
+text-decoration:underline;
+font-size:22px;
+}
+.input{
+text-align:right;
+width:60%;
+}
+.input2{
+text-align:left;
+}

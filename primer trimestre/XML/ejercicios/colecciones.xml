@@ -1,0 +1,46 @@
+<colecciones>
+<libros>
+<libro>
+<titulo>La regenta</titulo>
+<autor>Galdos</autor>
+<resumen>sdddsdsfsdfs</resumen>
+<contenido>
+   <indice>
+     <capitulo n="1" pag="1"/>
+     <capitulo n="2" pag="10"/>
+     <capitulo n="3" pag="20"/>
+     <capitulo n="4" pag="30"/>
+   </indice>
+   <preambulo>dddddd
+   </preambulo>
+</contenido>    
+
+</libro>
+</libros>
+
+
+<discos>
+  <disco>
+  <tipo>maxi</tipo>
+  <titulo>uno</titulo>
+  <autor>Estopa</autor>
+  <canciones>
+  <cancion n="1">
+    <nombre>Vino Tinto</nombre>
+    <duracion tiempo="3" medida="minutos" />
+    <autormusica>Estopa</autormusica>
+    <autorletra>Estopa</autorletra>
+  </cancion>
+  </canciones>
+
+
+</disco>
+
+
+</discos>
+
+
+
+</colecciones>
+
+

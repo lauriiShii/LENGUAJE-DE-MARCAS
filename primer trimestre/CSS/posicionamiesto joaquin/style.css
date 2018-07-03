@@ -1,0 +1,236 @@
+body
+{
+	font-family: arial;
+	color: #1C1C1C;
+	background-image: url(imagenes/fondo.jpg);
+}
+#contenedor
+{
+	width: 70%;
+	margin:0 auto 0 auto;
+}
+#cabecera
+{
+	height: 170px;
+	line-height: 280px;
+	padding-left: 10px;
+	border: 1px solid #A4A4A4;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	/*background: white;*/
+	background-image: url(imagenes/cabecera.bmp);
+}
+
+.contenedormenu ul
+{
+	list-style:none;	
+	margin:0;
+	padding:0;
+}
+li
+{
+width: 150px;
+}
+#menu li
+{
+	float: left;
+	position: relative;
+	margin-right: 10px;
+}
+#menu a
+{
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+}
+#menu ul
+{
+	position:absolute;
+	left:0;
+	display:none;
+}
+#menu li:hover ul
+{
+	display:block;
+}
+#menu li:hover ul li
+{
+	margin:0;
+}
+#menu li:hover ul li a
+{
+	width:135px;
+	border: 1px solid #A4A4A4;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	margin: 2px;
+	background: white;
+}
+#menu li:hover ul a:hover
+{
+	background: #A4A4A4;
+}
+.clear
+{
+	clear:both;
+}
+a:link
+{
+	color: #1C1C1C;
+}
+a:visited
+{
+	color: #1C1C1C;
+}
+a:active
+{
+	color: #1C1C1C;
+}
+a:hover
+{
+	color: #1C1C1C;
+	background: #A4A4A4;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+#izquierda
+{
+	border: 1px solid #A4A4A4;
+	width: 200px;
+	height: 500px;
+	padding: 5px;
+	float:left;
+	margin: 2px;
+	margin-top: 0px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background: white;
+}
+#centro
+{
+	border: 1px solid #A4A4A4;
+	width: 485px;
+	height: 500px;
+	padding: 5px;
+	float: left;
+	margin: 2px;
+	margin-top: 0px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background: white;
+}
+#centro3
+{
+	border: 1px solid #A4A4A4;
+	width: 485px;
+	height: 500px;
+	padding: 5px;
+	float: left;
+	margin: 2px;
+	margin-top: 0px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background-image: url(imagenes/pedido.bmp);
+}
+#derecha
+{
+	border: 1px solid #A4A4A4;
+	width: 200px;
+	height: 500px;
+	padding: 5px;
+	float:right;
+	margin: 2px;
+	margin-top: 0px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background: white;
+}
+.pie
+{
+	clear: both;
+	text-align: center;
+	height: 50px; 
+	line-height: 50px;
+
+	margin-top: 520px; 
+
+	font-size: 15;
+	padding: 5px;
+	border: 1px solid #A4A4A4;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background: white;
+	font-size: 10px;
+}
+.fijo 
+{
+	position: fixed; 
+	right: 0px; 
+	top: 0px; 
+	z-index: 10;
+}
+img.color
+{
+	border: 1px solid #A4A4A4;
+}
+#sub1
+{
+	width: 100%;
+	height: 50%;
+}
+#sub2
+{
+	margin-top: 50px;
+	width: 100%;
+	height: 50%;
+}
+textarea 
+{
+  	resize: none;
+	width: 97%;
+}
+input#nombre
+{
+	width: 98%;
+}
+p
+{
+	text-align: justify;
+	font-size: 12px;
+}
+#centro2
+{
+	border: 1px solid #A4A4A4;
+	width: 485px;
+	height: 500px;
+	padding: 5px;
+	float: left;
+	margin: 2px;
+	margin-top: 0px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background: white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+td.pedido
+{
+	width: 450px;
+	text-align: left;
+}
+select.color
+{
+	width: 100px;
+}
+select.talla
+{
+	width: 50px;
+}
+font.prec
+{
+	font-size: 10px;
+}
+table#galeria td
+{
+	width: 70%;
+}

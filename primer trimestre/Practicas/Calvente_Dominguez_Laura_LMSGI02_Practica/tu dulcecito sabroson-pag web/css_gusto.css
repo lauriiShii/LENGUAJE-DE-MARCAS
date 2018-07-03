@@ -1,0 +1,235 @@
+﻿/*-------------------CSS de TU PASTELITO SABROSON (tu cuenta)------------------*/
+/*caracteristicas universales para toda la pagina*/
+*{
+    font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+  }
+body{
+	 border-top:8px solid;/*borde superior de la pag*/
+	 border-color:#8A0829;
+   }/*---------------------------------CABEZERA---------------------------------------*/	
+/*carazteristicas generales de la cabezera*/
+#cabecera{
+    background-image:url(fondito00.PNG);/*fondo de cabezera*/
+    height:100px;/*los tantos porcientos son utiles por el tipo de resolucion*/
+    overflow:hidden; /*para que el logo se ajustes al tamaño que tome la imagen*/
+	}
+/*posicionamiento del logo a la derecha*/		  
+#cabecera a  { 
+   font-size:100px;
+   text-align:left;
+   float:left;
+   margin-left:3%;
+   color:white;
+   z-index:3;
+   }
+			
+#cabecera img{ 	
+   position:relative; 
+   height:100%;
+   float:right;
+   }
+/*--------------------------------------------MENU------------------------------------------*/		
+/*damos propiedades generales*/	 
+#contenedor_menu {
+   margin:auto;
+   background-color:#8A0829; 
+   width:100%; 
+   height:40px; /*este se pone en px porque nos interesa que tenga un tamaño fijo sin importar la resolucion*/
+	}
+#contenedor_menu ul li ul li img {
+	-webkit-transform: rotate(-90deg); /*para que la imagen de gominolas señale hacia la 
+	                                    derecha y no hacia abajo*/
+	}	
+ 									
+.menu li { /*para dar atributos a las listas*/
+    list-style:none;/*quitamos de las listas los puntos*/
+    }	
+.menu a{
+    background-color:#8A0829;
+	border-radius:8px;/*para que salga la forma de la casilla del item obalada*/
+	color:white;
+	text-decoration:none; /*se quita el subrayado*/
+	padding:10px; /*altura de cada cajita del menu*/
+	display:block; /*para que los elementos se definan como un bloque y no como
+	                 inlime que es por lo que saldria solapado.*/
+	}
+	
+.menu li a:hover {
+    background-color:#F7819F; /*para que al pasar el raton por encima de la casilla
+		                            el fondo cambie a rosa claro*/
+	border-radius:8px;  /*para que la marca rosa sea obalada*/
+	text-decoration:underline; /*para que al pasar el cursor se subraye el item*/
+	}		
+/*damos estilo a los items directos que tenemos dentro de nuestro menu*/
+	
+.menu > li {
+    float:left;/*para que las cajas se queden pegadas a la derecha*/
+	width:20%;/*para que los li directos del menu principal se posicionen en cada 20%
+	            del total de la barra de menu*/
+    text-align:center;
+	}
+	
+.menu li ul {
+    display:none;/*para que los submenus salgan ocultos*/
+	position:absolute; /*para que los submenus se posicionen donde deben y no se deformen*/
+	width:20%;/*para que las cajas tengan todas la misma anchura*/
+	}
+	
+.menu li:hover > ul {/*la > para que sean directos de ul*/
+	display:block;/*con esto decimos que en las seudoclases li en el hover 
+                    cuando pasemos el raton aparezcan*/
+	z-index:1; /*para que quede por ecima de cualquier contenido de la pag web*/
+	}
+		 
+.menu li ul li { /*estamos diciendo que todos los li dentro de ul dentro de li que son los
+             submenus tengan las siguientes caracteristicas*/
+	position:relative; /*para que puedan aparecer al lado*/
+	}
+	
+.menu li ul li ul {
+    left:100%; /*para que aparezca a la derecha el submenu*/
+	top:0px;
+	width:100%; /*tamaño del submenu*/
+	}
+/*---------------------------------CONTENIDO------------------------------------------*/
+/*propiedades generales del contenido*/
+#contenido{
+    width:100%;
+	height:829px;
+	margin-bottom:10px;
+	margin-top:10px;
+    }
+#entorno{
+    width:65%;
+	height:820px;
+	border-radius:10px;
+	border-color:#FA5858;
+	color:#FA5858;
+	border:5px solid;
+	overflow-x:auto; 
+	overflow-y:scroll;/*ponemos el overflow asi para que aparezca el strollbar solo vertical*/
+	background-image:url(pasteles.PNG);/*fondo*/
+	}
+/*propiedades de las letras del contenido*/
+#contenido p{
+	text-indent:15px;/*se usa para tabular las lineas*/
+	margin:5%;
+	font-size:120%;
+	color:#61210B;
+	text-align:left;
+	}
+#titilito{
+     font-size:300%;
+	 color:#8A0829;
+	 text-align:center;
+	 font-weight:bold;
+	 }
+/*damos caracteristicas a las img*/
+/*las imagenes se ponen en grande al hacer clipk en ellas por lo que queremos 
+que la opacidad del fondo sea alta y exixtente*/
+.fondo_translucido{
+display: none;
+position: fixed;/*para que cuando salga la imagen aumentada el fondo ocupe la pantalla y la imagen se quede
+                  en la posicion que queremos*/
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background-color: black;
+z-index:1001;
+-moz-opacity: 0.8;
+opacity:.80;
+}
+.imagen_abierta {
+display: none;
+position:fixed;
+top:18%;
+left:35%;
+padding:10px;
+background-color:black;
+z-index:1002;
+overflow: auto;
+}
+a{
+list-style:none;
+font-size:20px;
+color: white;
+text-decoration:none;
+}
+table{
+border:0px;
+}
+/*------------------------------------PIE------------------------------------------*/
+/*------PIE NORMAL------*/
+/*propiedades generales del pie*/
+#pie{
+    height:320px;
+    background-image:url(fondito001.PNG);/*fondo*/
+    border-top:8px solid;/*borde decorativo*/
+	border-color:#8A0829;
+	width:100%;
+	bottom:0px;
+	 }
+/*definimos los tipos de letras*/
+.nombre{
+    color:#61210B;
+	font-size:120%;
+	text-decoration:underline;
+	font-weight:bold; /*para que salga la letra en negrita*/
+	position:relative;
+	margin:2%;
+
+	}
+#pie p, ul li a {
+    color:#B43104;
+	font-size:105%;
+	text-decoration:none;
+	}
+#pie ul {
+    list-style:none;
+	} /*para quitar los puntos de la lista*/
+/*damos posicion a los div */
+
+#oficina_central{
+    margin-left: 17%;
+    position:absolute;
+    width: 18%;
+	margin-top:5%;
+    }
+#menu_productos{ 
+    margin-left: 35%;
+    position:absolute;
+    width: 18%;
+	margin-top:5%;
+
+    }
+#social_media{  
+    margin-left: 53%;
+    position:absolute;
+    width: 18%;
+	margin-top:5%;
+
+	}
+#menu_principal{  
+    margin-left: 71%;
+    position:absolute;
+    width: 18%;
+	margin-top:5%;
+
+    }
+/*-----PIE FIJO---------*/
+/*propiedades generales del pie fijo*/
+#pie_fijo{
+    height:2.5%;
+	width:100%;
+	background-color:#8A0829;
+	text-align:center;
+	color:white;
+	margin:0%; 
+	position:fixed;
+	bottom:0%;
+	}
+/*-------------------------------CLASS CLEAR---------------------------------------*/
+.clear{clear:both;}

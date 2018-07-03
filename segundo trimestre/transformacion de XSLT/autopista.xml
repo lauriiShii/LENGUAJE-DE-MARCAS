@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="autopista.xsl"?>
+
+<evento>
+
+   <senal tipo="obra">obra.gif</señal>
+   <km numero="42,200"/>
+   <nombre_via>A-49</nombre_via>
+   <sentido>Huelva</sentido>
+   <corte_via unidad="carril">1</corte_via>
+   <fecha_hora>2012-03-12 12:53</fecha_hora>
+   <retencion>si</retencion>
+   <km_retencicion km="8"/>   
+
+</evento>
+
+<evento>
+
+   <senal tipo="retencion">retencion.gif</señal>
+   <km numero="500"/>
+   <nombre_via>A-4</nombre_via>
+   <sentido>Sevilla</sentido>
+   <fecha_hora>2012-02-29 18:38</fecha_hora>
+   <retencion>si</retencion>
+   <km_retencicion km  ="3">
+
+</evento>
+
+<evento>
+
+   <senal tipo="retencion">parada.gif</señal>
+   <km numero="5300"/>
+   <nombre_via>A-43</nombre_via>
+   <sentido>Malaga</sentido>
+   <fecha_hora>2012-02-05 18:10</fecha_hora>
+   <retencion>si</retencion>
+   <km_retencicion km  ="20">
+
+</evento>
+
+<evento>
+
+   <senal tipo="retencion">retencion.gif</señal>
+   <km numero="60"/>
+   <nombre_via>B-4</nombre_via>
+   <sentido>Madrid</sentido>
+   <fecha_hora>2012-03-02 15:38</fecha_hora>
+   <retencion>si</retencion>
+   <km_retencicion km  ="50">
+
+</evento>

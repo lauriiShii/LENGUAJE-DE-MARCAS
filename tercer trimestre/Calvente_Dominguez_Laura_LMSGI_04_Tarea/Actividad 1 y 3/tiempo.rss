@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+	
+		<title>eltiempo24</title>
+		<link>https://www.eltiempo24.es</link>
+                <generator>Laura Calvente Domínguez</generator>
+		
+		<description>Aqui encontraras toda la información meteorologica de una forma rapia
+		y fiable 100%. No solo podras saber si llueve o hace sol en tu ciudad si no  que tambien 
+		podras saber si hace calor o frio y si hay alertas de riesgo o cosas similares.</description>
+                <language>es-ES</language>
+		
+	        <image>
+                        <title>eltiempo24</title>
+                        <link>https://www.eltiempo24.es</link>    
+                        <url>http://www.palomos.es/img/spain_color.png</url>
+                </image>
+
+		<item>
+			
+						<title>Informacion meteorologica</title>
+			<link>http://www.eltiempo24.es/climatologia/mundo/</link>
+			<description>Si necesitas informacion meteorologica solo tienes que pulsar el titulo y te llevara a una de las
+			paginas de eltiempo24.com donde la podras oobtener, actualizada y fiable.</description>
+			
+		</item>
+		
+		<item>
+			
+			<title>Temperaturas</title>
+			<link>https://www.eltiempo24.es</link>
+			<description> ¿Quieres saber si hara frio o calor ? aqui tienes la respuesta.</description>
+			
+		</item>
+		
+		<item>
+			
+			<title>Alertas</title>
+			<link>http://www.eltiempo24.es/el_tiempo/avisos_meteorologicos/</link>
+			<description> Es importante saber cuando hay mal tiempo o hace mucha calor si tu zona esta en riesgo
+			por ello te facilitamos la información.</description>
+			
+		</item>
+		
+		<item>
+			
+			<title>Radar de lluvias</title>
+			<link>http://www.eltiempo24.es/el_tiempo/radar_de_lluvia/Espana/</link>
+			<description>Usa el radar de lluvias para saber si hay borrascos cerca de tu ciudad, y si los hay estimar 
+			el tiempo que tardaran en llegar o si llegaran a donde estas.</description>
+			
+		</item>
+		
+		<item>
+			
+			<title>Trayectos y distancias</title>
+			<link>http://www.eltiempo24.es/rutas/</link>
+			<description>¿quieres saber cuanto se tarda en ir de una ciudad a otra por carretera?¿Si? 
+			Este es tu lugar entonces .</description>
+			
+		</item>
+		
+		<item>
+			
+			<title>Informacion meteorologica</title>
+			<link>http://www.eltiempo24.es/climatologia/mundo/</link>
+			<description>Si necesitas informacion meteorologica solo tienes que pulsar el titulo y te llevara a una de las
+			paginas de eltiempo24.com donde la podras oobtener, actualizada y fiable.</description>
+			
+		</item>
+		
+	</channel>
+</rss>

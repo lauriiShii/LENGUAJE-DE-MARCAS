@@ -1,0 +1,29 @@
+<Agenda>
+     <Telefono>
+          <Nombre>Pepita</Nombre>
+          <apellidos>
+              <apellido numero="1">Grilla</apellido>
+              <apellido numero="2">Perez</apellido>
+          </apellidos>
+          <Direccion calle="Padre Pandero" numero="18"/>
+          <Numero_de_telefono campo="movil">671901630</Numero_de_telefono>
+     </Telefono>
+     <Telefono>
+          <Nombre>Juanito</Nombre>
+             <apellidos>
+              <apellido numero="1">Rodrigez</apellido>
+              <apellido numero="2">San</apellido>
+          </apellidos>
+          <Direccion calle="Isabel la Catolica" numero="20"/>
+          <Numero_de_telefono campo="Telefono de casa">956769076</Numero_de_telefono>
+     </Telefono>
+     <Telefono>
+          <Nombre>Juanito</Nombre>
+             <apellidos>
+              <apellido numero="1">Gomez</apellido>
+              <apellido numero="2">Perez</apellido>
+          </apellidos>
+          <Direccion calle="avenida ana guerrero" urbanizacion="azal" portal="13" numero="primero B"/>
+          <Numero_de_telefono campo="Telefono del trabajo">856224543</Numero_de_telefono>
+     </Telefono>
+</Agenda>

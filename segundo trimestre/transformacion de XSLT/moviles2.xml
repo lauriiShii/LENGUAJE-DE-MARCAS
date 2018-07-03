@@ -1,0 +1,63 @@
+
+<?xml-stylesheet type="text/xsl" href="moviles.xsl" ?>
+<dbmoviles>
+<movil>
+<marca>samsung</marca>
+<nombre>samsung galaxy s3 mini blanco</nombre>
+<sistop version="4.1">android </sistop>
+<pantalla medida="pulgadas">4</pantalla>
+<caracteristicas>bluetooth/wifi/gps</caracteristicas>
+<camara>
+  <resolucion medida="mpx">5</resolucion>
+  <opcion>flash led</opcion>
+</camara>
+<precio moneda="euro">
+  <operador>0</operador>
+  <libre>319</libre>
+</precio>
+<opcion>80euros descuento portabilidad vodafone
+</opcion>
+<disp opcion="si"></disp>
+<web>samsung-galaxy-s3.html</web>
+<foto>sgsii.jpg</foto>
+</movil>
+<movil>
+<marca>nokia</marca>
+<nombre>nokia luminia 920 blanco</nombre>
+<sistop version="8">microsoft windows phone</sistop>
+<pantalla medida="pulgadas">4.5</pantalla>
+<caracteristicas>bluetooth/wifi/gps</caracteristicas>
+<procesador>1.5 ghz</procesador>
+<ram medida="mb">768</ram>
+<camara>
+  <resolucion medida="mpx">8</resolucion>
+</camara>
+<precio moneda="euro">
+  <operador>0</operador>
+  <libre>249</libre>
+</precio>
+<disp opcion="si"></disp>
+<web>nokia-luminia-920.html</web>
+<foto>nl920.jpg</foto>
+</movil>
+<movil>
+<marca>HTC</marca>
+<nombre>HTC Desire X Blanco</nombre>
+<sistop version="8">microsoft windows phone</sistop>
+<pantalla medida="pulgadas">4.5</pantalla>
+<caracteristicas>bluetooth/wifi/gps</caracteristicas>
+<procesador>1.5 ghz</procesador>
+<ram medida="mb">768</ram>
+<camara>
+  <resolucion medida="mpx">8</resolucion>
+</camara>
+<precio moneda="euro">
+  <operador>0</operador>
+  <libre>249</libre>
+</precio>
+<disp opcion="si"></disp>
+<web>htc-desire-x.html</web>
+<foto>desirex.jpg</foto>
+</movil>
+
+</dbmoviles>

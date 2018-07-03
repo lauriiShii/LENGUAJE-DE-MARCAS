@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<instituto>
+	<alumnos>
+		<alumno dni="">
+			<datosPersonales>
+				<nombre></nombre>
+				<apellido1></apellido1>
+				<apellido2></apellido2>
+				<fechaNac></fechaNac>
+			</datosPersonales>
+			<datosAcademicos>
+				<curso></curso>
+				<grupo></grupo>
+				<matriculas>
+					<asig referencia=" "/>
+					<asig referencia=" "/>
+				</matriculas>
+			</datosAcademicos>
+		</alumno>
+	</alumnos>
+	<asignaturas>
+		<asignatura id="">
+			<nombre></nombre>
+			<numHoras></numHoras>
+			<profesor referencia=""/>
+		</asignatura>
+	</asignaturas>
+	<profesores>
+		<profesor dni="">
+			<nombre></nombre>
+			<apellido1></apellido1>
+			<apellido2></apellido2>
+		</profesor>
+	</profesores>
+</instituto>

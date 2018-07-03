@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE publicaciones [
+<!ELEMENT publicaciones (publicacion+)>
+<!ELEMENT publicacion (nombre, fecha, editorial, articulos*)>
+<!ELEMENT nombre(#PCDATA)>
+<!ELEMENT fecha(#PCDATA)>
+<!ELEMENT editorial(#PCDATA)>
+<!ELEMENT articulos (articulo)>
+<!ELEMENT articulo (titulo, tipo, pagina, documentosgraficos?)>
+<!ELEMENT titulo(#PCDATA)>
+<!ELEMENT tipo(#PCDATA)>
+<!ELEMENT pagina(#PCDATA)>
+<!ELEMENT documentosgraficos EMPTY>
+<!ATTLIST publicacion codigo NMTOKEN #REQUIRED
+					   tipo  NMTOKEN (revista|periodico|otro) "otro">
+<!ATTLIST articulo autor CDATA #REQUIRED
+				   numero CDATA #REQUIRED>
+<!ATTLIST documentosgraficos web CDATA #REQUIRED>
+]>
+
+<publicaciones>
+	<publicacion codigo="RE0001" tipo="revista">
+		<nombre>Hola</nombre>
+		<fecha>5/2010</fecha>
+		<editorial>una</editorial>
+		<articulos>
+			<articulo autor="ABC" numero="80">
+				<titulo>El principe solidario</titulo>
+				<tipo>Sociedad</tipo>
+				<paginas>6</paginas>
+				<documentosgraficos web="esp.html"/>
+			</articulo>
+			<articulo autor="CCC YZA" numero="81">
+				<titulo>Horoscopo</titulo>
+				<tipo>Astrologia</tipo>
+				<paginas>1</paginas>
+			</articulo>
+		</articulos>
+	</publicacion>
+		
+	<publicacion codigo="PE0001" tipo="periodico">
+		<nombre>Diario de Jerez</nombre>
+		<fecha>1/10/12</fecha>
+		<editorial>dos</editorial>
+		<articulos>
+			<articulo autor="ABC YZA" numero="120">
+				<titulo>Huelga de basuras</titulo>
+				<tipo>actualidad</tipo>
+				<paginas>2</paginas>
+				<documentosgraficos web="huelga.html"/>
+			</articulo>
+			<articulo autor="CCC" numero="120">
+				<titulo>Nueva victoria visitante</titulo>
+				<tipo>Deportes</tipo>
+				<paginas>2</paginas>
+			</articulo>
+		</articulos>
+	</publicacion>
+</publicaciones>
+			

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>	
+   <title>pag frames</title>	
+</head>
+<frameset cols="20%,*">
+  <frame scr="indice.html" name="1">
+  </frame>
+  <frame scr="pagina.html" name="2">
+  </frame>
+</frameset>
+
+si quiero una linea orizontal pongo como atributo de framesset cols, como la he puesto a un 20% mni pagina quedara dividida en dos y la parte izquierda ocupara el 20% total.
+frame es para indicar lo que hay en cada parte.
+
+<frameset rows="20%,*">
+  <frameset cols=50%,*>
+    <frame scr="indice.html" name="1">
+    </frame>
+    <frame scr="pagina.html" name="2">
+    </frame>
+  </frameset>
+</frameset>  
+
+si quiero una linea horizontal ponemos el atributo rows y el porcentaje que queremos en frameset.
+si queremos una linea vertical debajo de la horizontal ponemos dentro de frameset otra etiqueta frameset.
+en frame se le puden añadir los atributos frameborder, 0 si no los queremos , 1 si si los queremos. marginwidth, marginheight para los margenesa la derecha y arriba. noresize para agrandar y achicar las cosas. scrolling (auro,yes,no) para las barras desplazadoras.
+alos frameset siempre se les pone nombres
+
+
+</html>

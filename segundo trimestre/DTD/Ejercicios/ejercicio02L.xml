@@ -1,0 +1,33 @@
+<peliculas> 
+    <película id="0001" duración="152" año="1988"> 
+        <título>fin del mundo</título> 
+        <título_original>finish of the wold</título_original> 
+        <nacionalidad>Inglaterra</nacionalidad> 
+        <género>Comedia/Drama</género>
+        <SinClasificacion/>
+        <sinopsis> 
+            habia una vez una lampara voladora que se removio en las samanas y quemo el mundo.
+        </sinopsis> 
+        <director>Idiota Tomson</director> 
+        <reparto> 
+            <actor>Lisa Merquel</actor> 
+            <actor>Carlos Rodriguez</actor> 
+            <actor>BlaBLa Blas</actor> 
+        </reparto> 
+        <web>http://www.cartelera.com</web> 
+        <cartel>findelmundo.png</cartel> 
+    </película> 
+    <película id="p17" duración="06"> 
+        <título>Soy un vividor</título> 
+        <nacionalidad>España</nacionalidad> 
+        <género>Comedia</género> 
+        <clasificacion edadRecomendada="12"/>
+        <sinopsis> 
+            Julio es un inutil que va haciendo locuras por la vida.
+        </sinopsis> 
+        <director>Julio Marquez</director> 
+        <reparto> 
+            <actor>Julio Marquez</actor> 
+        </reparto> 
+    </película> 
+</peliculas>

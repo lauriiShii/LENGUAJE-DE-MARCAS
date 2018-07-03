@@ -1,0 +1,57 @@
+/*
+** General (Cuerpo de la página y otros)
+*/
+body{
+	background:#CCC;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	}
+.clear{
+	clear:both;
+	}
+img{
+	border:none;
+	}
+/*
+** Menu
+*/
+.contenedormenu{
+	background:#09F;
+	}
+#menu a:hover, ul#menu ul, ul#menu li:hover{
+	background:#F90;
+	} 
+.contenedormenu ul{
+	list-style:none;	
+	margin:0;
+	padding:0;
+	}
+#menu li{
+	float:left;
+	position:relative;
+	margin-right:10px;
+	}
+#menu a{
+	color:#FFF;
+	text-decoration:none;
+	padding:10px;
+	display:block;
+	}
+#menu ul{
+	position:absolute;
+	left:0;
+	display:none;
+	}
+#menu li:hover ul{
+	display:block;
+}
+/*#menu li:hover ul li{
+	margin:0;
+}
+#menu li:hover ul li a{
+	width:150px;
+	}
+#menu li:hover ul a:hover{
+	background:#0C3;
+}*/
+

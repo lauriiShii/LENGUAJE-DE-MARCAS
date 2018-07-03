@@ -1,0 +1,201 @@
+
+/*-------------------CSS de FRIKIJUEGOS.COM ------------------*/
+/*caracteristicas universales para toda la pagina*/
+*{
+    font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+    }
+	
+body{
+	 border-top:8px solid;
+	 border-color:#04B4AE;
+	 background-color:#424242;
+	 background:linear-gradient( #424242, #424242, #084B8A);
+   }
+
+   /*---------------------------------CABEZERA---------------------------------------*/
+/*carazteristicas generales de la cabezera*/
+#cabecera{
+    height:300px;
+	width:100%;
+    overflow:hidden;
+	margin-bottom:2%;
+	background:linear-gradient( #084B8A, #424242, #424242);
+	}
+	
+/*posicionamiento del logo*/
+#cabecera img{ 	
+   position:relative; 
+   height:100%;
+   margin-left:38%;
+   margin-width:35%;
+   }
+   
+/*--------------------------------------------MENU------------------------------------------*/
+/*damos propiedades generales*/	 
+#contenedor_menu {
+   margin-left:17%;
+   margin-width:15%;
+   margin-bottom:3%;
+   background-color:#084B8A; 
+   width:65%; 
+   height:16%;
+   border-radius:8px;
+	}
+ 	
+.menu li { 
+    list-style:none;
+    }	
+.menu a{
+    background-color:#084B8A;
+	border-radius:8px;
+	color:white;
+	text-decoration:none; 
+	padding:7%;
+	display:block;
+	}
+	
+.menu li a:hover {
+    background-color:#04B4AE; 
+	border-radius:8px;
+	text-decoration:underline;
+	}		
+/*damos estilo a los items directos que tenemos dentro de nuestro menu*/
+	
+.menu > li {
+    float:left;
+	width:20%;
+    text-align:center;
+	}
+	
+.menu li ul {
+    display:none;
+	position:absolute;
+	width:13%;
+	}
+	
+.menu li:hover > ul {
+	display:block;
+	z-index:1; 
+	}
+		
+.menu li ul li {
+	position:relative;
+	}
+	
+.menu li ul li ul {
+    left:100%;
+	top:0px;
+	width:100%;
+	}
+	
+/*---------------------------------CONTENIDO------------------------------------------*/
+/*propiedades generales del contenido*/
+.contenedor{
+	margin-bottom:30px;
+	margin-top:10px;
+    width:70%;
+	border-radius:10px;
+	border-color:#0080FF;
+	color:#0080FF;
+	border:5px solid;
+	overflow-x:auto; 	
+	box-shadow: 10px 10px 5px #2E2E2E;
+	background-color:#E0ECF8;
+	}
+	
+/*propiedades de las letras del contenido*/
+.contenedor p{
+	text-indent:15px;
+	margin:5%;
+	color:#61210B;
+	text-align:left;
+	}
+
+/*Propiedades rss*/
+#sindicacion{
+	width:70%;
+	}
+
+#sindicacion p{
+	margin:0;
+	font-size:120%;
+	color:#61210B;
+	}
+	
+#sindicacion a{
+   margin-left:25%;
+	}
+	
+/*damos caracteristicas a las img*/
+/*las imagenes se ponen en grande al hacer clipk en ellas por lo que queremos 
+que la opacidad del fondo sea alta y exixtente*/
+.fondo_translucido{
+	display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	}
+	
+.imagen_abierta {
+	display: none;
+	position:fixed;
+	top:18%;
+	left:35%;
+	padding:10px;
+	background-color:black;
+	z-index:1002;
+	overflow: auto;
+	}
+	
+a{
+	list-style:none;
+	font-size:20px;
+	color: white;
+	text-decoration:none;
+	}
+	
+table{
+	border:0px;
+	}
+
+/*------------------------------------PIE------------------------------------------*/
+/*------PIE NORMAL------*/
+/*propiedades generales del pie*/
+#pie{
+	width:70%;
+	margin-left:14%;
+    margin-width:14%;
+	margin-bottom:5%;
+	 }
+	 
+
+#pie a {
+	margin-left:3%;
+	margin-bottom:3%;
+	margin-top:4%;
+	background:none;
+	}
+	
+/*-----PIE FIJO---------*/
+/*propiedades generales del pie fijo*/
+#pie_fijo{
+    height:3.5%;
+	width:100%;
+	background-color:#04B4AE;
+	text-align:center;
+	color:white;
+	margin:0%;
+	position:fixed;
+	bottom:0%;
+	}
+	
+/*-------------------------------CLASS CLEAR---------------------------------------*/
+.clear{clear:both;}

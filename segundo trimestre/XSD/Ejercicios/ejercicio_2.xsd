@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+	<xs:element name="hojaPedido">
+		<xs:complexType>
+		
+			<xs:sequence>
+				<xs:element name="enviarA" type="datos" minOccurs="1" maxOccurs="unbounded">	
+					<xs:complexType>
+					
+						<xs:sequence>
+							<xs:element name="nombre" type="xs:string"/>
+							<xs:element name="calle" type="xs:string"/>
+							<xs:element name="ciudad" type="xs:string"/>
+							<xs:element name="estado" type="xs:string"/>
+							<xs:element name="zip">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:maxLength value="5">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+						
+						<xs:attribute name="pais" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="elementos">
+					<xs:complexType>
+					
+						<xs:sequence>
+							<xs:element name="elemento" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nombreProducto" type="xs:string"/>
+										<xs:element name="cantidad" type="xs:intenger"/>
+										<xs:element name="precioEEUU" type="xs:float"/>
+										<xs:element name="comentario" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:attribute name="numProducto"> 
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[0-9]{2}-[A-Z]{3}"/>
+									</xs:restriction>	
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:sequence>
+						
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>	
+			
+			<xs:attribute name="fechaPedido" base="xs:date"/> 
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

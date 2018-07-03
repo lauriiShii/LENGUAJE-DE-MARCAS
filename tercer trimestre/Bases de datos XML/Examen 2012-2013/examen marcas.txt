@@ -1,0 +1,35 @@
+1.
+	//pais [habitantes c // pais [nombre= //individuo[nomnre=//premio [@categoria=”Fisica”][2]/premiado]/nacido/@pais]/habitantes]/nombre
+2.	
+	// país[not(nombre=//individuo[nombre=//premio/premiado]/nacido/@pais)]/capital
+3.
+	<nobel>
+			<premiados>
+					{for $c in doc () //primios/premio 
+					where $c[premiado=//individuos/individuo/nombre]
+					return <premiado><nombre premios="{data(count($c))}">
+					{data($c/premiado)}</nombre></premiado>}
+			</premiados>
+	</nobel>
+4.
+	for $a in doc("premios2)//paises
+	let $b:=distinct-values(doc("premios2")//individuos[nombre=//premiados]
+	/nacido/@pais)
+	let $c:=//paises/pais [nombre=$b]
+	let $d:= min($c/habitantes)
+	return <premiado><pais>{data($c[habitantes=$d]/nombre)}
+			</pais><capital{data($c [habitantes=$d]/capital)}
+			</capital><premiado>
+5.
+	<html>
+	<body>
+	<table border="1">
+	<tr><td>nombre</td><td>pais</td><td>capital</td></tr>
+	{for $a in distinct-values (doc("premio")//premiados)
+	let $b := doc("premio")//individuo[nombre=$a]/nacido/@pais
+	let $c = doc("premio")//paises/pais[nombre=$b]
+	order by $c/habitantes
+	return <tr><td> {data($c/capital))}</td></tr>}
+	</table>
+	</body>
+	</html>

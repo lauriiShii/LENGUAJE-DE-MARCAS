@@ -1,0 +1,37 @@
+<!DOCTYPE ejercicio4 [
+    
+    <!--ELEMENTOS -->
+    <!ELEMENT cicloFormativo (modulos, alumnos)>
+    
+    <!ELEMENT modulos (modulo)>
+    <!ELEMENT modulo (nombre, horasSemanales, fecha)>
+
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT horasSemanales (#PCDATA)>
+    <!ELEMENT fecha (fechaInicio, fechaFin)>
+	<!ELEMENT fechaInicio (#PCDATA)>
+	<!ELEMENT fechaFin (#PCDATA)>
+    
+    <!ELEMENT alumnos (alumno)>
+    <!ELEMENT alumno (nombre, telefono, email?, direccion, faltas, modulosMatriculados*)>
+
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+
+    <!ELEMENT faltas (faltasJustificadas, faltasInjustificadas)>
+    <!ELEMENT faltasJustificadas (#PCDATA)>
+    <!ELEMENT faltasInjustificadas (#PCDATA)>
+	<!ELEMENT modulosMatriculados (modulo)>
+	<!ELEMENT modulo EMPTY>
+    
+    <!-- ATRIBUTOS-->
+    <!ATTLIST alumno dni ID #REQUIRED> 
+	<!ATTLIST alumno notas (Apto|noApto|SinInformacion) "SinInformacion">
+    <!ATTLIST modulo id ID #REQUIRED>
+	<!ATTLIST modulo referencia IDREF #REQUIRED>
+	<!ATTLIST modulo caracter(Obligatorio|Opcional) "Obligatorio">
+    
+
+]>

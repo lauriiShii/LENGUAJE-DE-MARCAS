@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+	<xs:element name="matricula">
+		<xs:complexType>
+		
+			<xs:sequence>
+				<xs:element name="persona" minOccurs="1" maxOccurs="unbounded">	
+					<xs:complexType>
+					
+						<xs:sequence>
+							<xs:element name="personal">
+								<xs:complexType>
+					
+									<xs:sequence>
+									
+										<xs:element name="dni">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{8}-[A-Z]{1}"/>
+												</xs:restriction>	
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="nombre" type="xs:string"/>
+										<xs:element name="titulacion" type="xs:string"/>
+										<xs:element name="curso_academico" type="xs:string"/>
+										<xs:element name="domicilios" type="xs:integer">
+											<xs:complexType>
+												
+												<xs:sequence>
+													<xs:element name="domicilio" type="xs:string">
+														<xs:complexType>
+														
+															<xs:sequence>
+																<xs:element name="nombre" type="xs:string"/>
+															</xs:sequence>
+															
+														</xs:complexType>
+													</xs:element>"
+												</xs:sequence>
+												
+												<xs:attribute name="tipo"> 
+													<xs:simpleType>
+														<xs:restriction base="token">
+															<xs:enumeration value="familiar">
+															<xs:enumeration value="individual">
+															<xs:enumeration value="pareja">
+														</xs:restriction>	
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="pago" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+								
+									<xs:sequence>
+										<xs:element name="tipo_matricula" type="xs:string"/>
+											<xs:simpleType>
+												<xs:restriction base="token">
+													<xs:enumeration value="Matricula Ordinaria">
+													<xs:enumeration value="Matricula Extraordinaria">
+												</xs:restriction>
+											</xs:simpleType>
+									</xs:sequence>
+									
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						
+					</xs:complexType>
+			</xs:sequence>	
+			
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,24 @@
+<!--actividad 4.6-->
+<!--A-->
+
+<?xml version="1.0"?>
+<!DOCTYPE publicaciones [
+<!ELEMENT publicaciones (publicacion+)>
+<!ELEMENT publicacion (nombre, fecha, editorial, articulos*)>
+<!ELEMENT nombre(#PCDATA)>
+<!ELEMENT fecha(#PCDATA)>
+<!ELEMENT editorial(#PCDATA)>
+<!ELEMENT articulos (articulo)>
+<!ELEMENT articulo (titulo, tipo, pagina, documentosgraficos?)>
+<!ELEMENT titulo(#PCDATA)>
+<!ELEMENT tipo(#PCDATA)>
+<!ELEMENT pagina(#PCDATA)>
+<!ELEMENT documentosgraficos EMPTY>
+<!ATTLIST publicacion codigo NMTOKEN #REQUIRED
+					   tipo  NMTOKEN (revista|periodico|otro) "otro">
+<!ATTLIST articulo autor CDATA #REQUIRED
+				   numero CDATA #REQUIRED>
+<!ATTLIST documentosgraficos web CDATA #REQUIRED>
+]>
+
+<temperatura unidad="Cº"></temperatura>

@@ -1,0 +1,31 @@
+<!DOCTYPE Empresa [
+<!ELEMENT Cruceros (Crucero)*>
+<!ELEMENT Crucero (nombre, fecha+, escala+)>
+<!ELEMENT Nombre (#PCDATE)>
+<!ELEMENT Fecha (precio)>
+<!ELEMENT Precio (#PCDATE)>
+<!ELEMENT Fecha (Escalas)>
+<!ELEMENT Escalas(Dia)+>
+
+<!ATTLIST Crucero id ID #REQUIRED>
+<!ATTLIST Crucero tipo (Mediterraneo|Caribe|America) #REQUIRED>
+<!ATTLIST Fecha fecha CDATA #IMPLIED>
+<!ATTLIST Escalas numDia CDATA #REQUIRED>
+<!ATTLIST Escalas ciudad CDATA #IMPLIED>
+
+<!ELEMENT Opiniones(Opinion)*>
+<!ELEMENT Opinion(Autor, Descripcion)>
+<!ELEMENT Autor(Nombre, Apellido, FechaNacimimento)>
+<!ELEMENT Nombre(#PCDATE)>
+<!ELEMENT Apellido (#PCDATE)>
+<!ELEMENT FechaNacimiento (#PCDATE)>
+<!ELEMENT Descripcion (#PCDATE)>
+
+<!ATTLIST Opinion idref IDREF #REQUIRED>
+<!ATTLIST Opinion fecha CDATA #IMPLIED>
+<!ATTLIST Opinion puntuacion CDATA #IMPLIED>
+<!ATTLIST FechaNacimiento dia CDATA #IMPLIED>
+<!ATTLIST FechaNacimiento mes CDATA #IMPLIED>
+<!ATTLIST FechaNacimiento año CDATA #IMPLIED>
+        ]
+

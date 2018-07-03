@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+<xs:element name="instituto">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="alumnos">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="alumno" minOccurs="1" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:atribute name="dni" type="xs:string"/> <!-- asi los id's -->
+								<xs:sequence>
+									<xs:element name="datosPersonales">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="nombre" type="xs:string"/>
+												<xs:element name="apellido1" type="xs:string"/>
+												<xs:element name="apellido2" type="xs:string"/>
+												<xs:element name="fechaNac" type="xs:date"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="datosAcademicos">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="curso" type="xs:integer"/>
+												<xs:element name="grupo" type="xs:string"/>
+												<xs:element name="matriculas">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="asig" minOccurs="1" maxOccurs="unbounded"/> 
+																<xs:complexType>
+																	<xs:attribute name="referencia"/> <!-- asi los idref por ahora -->
+																</xs:complexType>
+														</xs:sequence>
+													</xs:complexType>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="asignaturas">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="asignatura" minOccurs="1" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="id" type="xs:string"/> <!-- asi los id's -->
+								<xs:sequence>
+									<xs:element name="nombre" type="xs:string"/>
+									<xs:element name="numHoras" type="xs:positiveInteger"/>
+									<xs:element name="profesor">
+										<complexType>
+											<xs:attribute name="referencia"/> <!-- asi los idref -->
+										</complexType>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="profesores">
+				<xs:complexType>
+					<xs:element name="profesor">
+						<xs:complexType>
+							<xs:atribute name="dni" type="xs:string"/> <!-- asi los id's -->
+							<xs:sequence>
+								<xs:element name="nombre" type="xs:string"/>
+								<xs:element name="apellido1" type="xs:string"/>
+								<xs:element name="apellido2" type="xs:string"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>

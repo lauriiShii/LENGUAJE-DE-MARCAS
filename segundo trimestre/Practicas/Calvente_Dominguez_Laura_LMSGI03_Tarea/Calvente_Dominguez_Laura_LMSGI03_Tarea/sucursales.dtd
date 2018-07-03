@@ -1,0 +1,25 @@
+
+	<!ELEMENT empresa (pedido+)> <!--Para declarar un elemento unamos la etiqueta <!ELEMENT> y dentro de ella ponemos el nombre
+                                                           que le damos al elemento y el tipo de datos que es, en este caso es una descendencia por lo que
+                                                           se pone entre parentesis sus descendientes (pedido+), el más indica que minimo habra uno y máximo
+                                                           todos los que sea necesarios.-->
+	<!ELEMENT pedido (nom_empleado, sucursal, articulo+)>
+	
+	<!ATTLIST pedido codigo NMTOKEN #REQUIRED> <!--NMTOKEN quiere decir que la informacion guardada no puede tener espacios en blanco.-->
+	<!ATTLIST pedido fecha CDATA #REQUIRED> <!-- cuando un campo es obligatorio diremos que es de tipo #REQUIRED, como lo que almacena en 
+                                                                                 este caso es un dato diremos que es de tipo CDATA.	-->
+	<!ATTLIST pedido observaciones (urgente|incompleto) #IMPLIED> <!-- Cuando ponemos  A|B estamos diciendo que aparecera un dato u otro pero
+	                                                                                                         no los dos. Estos siempre seran de tipo #IMPLIED ya que es una optativa.-->
+	
+	<!ELEMENT nom_empleado (#PCDATA)> <!-- Cuando un elemento va a contener informacion de caracter contextual diremos que es de tipo #PCDATA.-->
+	<!ELEMENT sucursal (nombre, direccion)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT direccion (#PCDATA)>
+	<!ELEMENT articulo EMPTY> <!--Decimos que es de tipo EMPTY porque es una etiqueta totalmente vacia, es decir no tiene ni contenido textual
+	                                                  ni descendientes.-->
+	
+	<!ATTLIST articulo codi NMTOKEN #REQUIRED>
+	<!ATTLIST articulo unid NMTOKEN #REQUIRED>
+	<!ATTLIST articulo precio NMTOKEN #REQUIRED>
+	<!ATTLIST articulo observaciones CDATA #IMPLIED>
+	

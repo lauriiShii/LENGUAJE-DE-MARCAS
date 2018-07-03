@@ -1,0 +1,65 @@
+! <DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.01 Transitional / / EN"
+        "Http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	
+<head>	
+   <title>formulario</title>	
+</head>
+<body>
+   <form action="manejadox.php" method="post">
+   <input type="text" maxlength="5" size="30" value="raloc" name="1">
+   <input type="password">
+   <input type="checkbox" name="socio" checked>
+   <input type="radio" name="sexo" value="hombre">
+   <input type="radio" name="sexo" value="mujer">
+   <unput type="file" name="fichero">
+   <input type="submit" value="enviar">
+   <input type="reset" value="reset">
+   <input type="button" value="salir" onclick="window.close(),">
+
+
+
+action es a donde se envian a ese vinculo en forma de variables y ahi ya sabra que hacer.
+method es para asignar la forma en la que mandara las variables. posth de forma interna.
+input es para que se habra una ventanita y yo pueda meter un texto, más larga o corta dependiendo de los valores que yo les de.
+maxlenght sirve para marcar el máximo de palabras en una frase.
+si sice en menor que maxlenght solo podremos llegar a ver el máximo de carazteres que marque size.
+name es el valor de la variable para que el navegador la reciba que tendra el valor que yo habre metido en la etiqueta en value.
+password se usa como text con los mismos atributos solo que saldra el texto encriptado.
+checkbox se usa para poner opciones a rellenar que puede ser si o no que se expresara en variables de 0 y 1, esto puede esar checkeado o no apareciendo o no la palabra checked, el nombre que aparece al lado de la opcion no tiene nada que ver con el nombre de la etiqueta, el nombre que aparece lo ponemos nosotros mismo al lado.
+el nombre de la checkbox no se puede repetir tenga o no checked.
+el radio se usa para escoger una de todas las opciones que me da desmarcando la que marque anteriormente. para ello se hacen varias etiquetas de radio con el mismo nombre porque quiero que sea una opción u otra y que las otras queden fuera.
+file sirve para meter fichero.
+submit va a ejecutar la accion que haya puesto en formulario.
+resest va a borrar los valores que haya puesto en el formulario.
+button va a ejecutar una acción que yo pida en ese momento.
+    
+
+
+     <button type="bubmit, reset o button">
+                    img src="imagen.jpg"></img></button>
+     <select size="5" multiple>
+       <option value="uno">
+       <option value="dos">
+       <option value="tres">
+     <textarea name="texto" rows=5 cols=50>
+         Escribe comentario
+     </textarea>
+
+
+button igual que lo que hemos visto antes, hacen las mismas funciones dependiendo del tipo solo que en vez de texto saldra una imagen por lo general chica.
+select para abrir una ventana donde se puedan pinchar varias cosas en apartados, los apartados los marca size la cantidad y podremos pinchar más de uno si ponemos múltipe.
+textarea es para qque aparezcaa un recuadro grande para escribir comentarios o observaciones.
+
+     <fieldsed>
+       <legend>formulario</legend>
+
+esto sirve para que el formulario salga en marcado, se enmarca el formulario, por algo visual.
+
+   </form>
+
+
+
+
+</body>
+</html>

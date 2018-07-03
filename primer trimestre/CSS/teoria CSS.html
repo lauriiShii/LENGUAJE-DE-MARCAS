@@ -1,0 +1,233 @@
+CSS
+los comentarios aqui y en html  son /* comentario */
+forma de meter estilos en una pagina html.
+
+   En linea:
+   
+   <body>
+      <p style="font-family:verdana; font-size:medium;">
+	  hola mundo
+	  </p>
+   </body>
+   
+   Interno:
+   
+   <html>
+   <head>
+      <style type="text/CSS">
+	     bdy{font-family: couriec New;}
+		 h1{font-family:Arial; font-size: x-large;}
+	  </style>
+   </head>
+   </html>
+   
+   Externo: la extension debe ser CSS en un fichero a parte.
+   
+   body{macgin:Opx;}
+   td{color:#ff0000;
+      font-size:12px;}
+   a{color:#FF6600;
+     font-weight: bold;}
+   a: hover /*el enlace cambiara de color cuando pase el cursor por encima de el */{color:#3366CC;}
+   
+   como cargar el documento de html:
+   
+   <head>
+     <link rel="stylesheet"
+	  type="text/CSS"
+	  href="estilo.css"> /*nombre con el que he guardado el fichero*/
+   </head>
+   
+   tambien se puede poner en vez del link poniendo:
+   
+   <style type=text/css">
+    @import "estilos.css"
+   </style>
+   
+   si yo quiero darle un caracter, por ejemplo un color a mas de una cosa se podria poner:
+   td,h1{color:#FF0000}
+   si se lo quiero dar a todo el documento o declaro en el body.
+   
+   tamaño de letras:
+   
+   <p>texto1</p> 
+   <p><a>texto2</a></p>
+   <p><span><a>texto3</a></span></p> 
+   
+   estas son las posivilidades de textos que hay , en funcion de estas el texto saldra de una manera u otro.
+   
+   p a
+   p>a
+   p*a
+   
+   selec1tor de clase, esto requiere que la hayamos declarado previamente.
+   
+   <h3 class= "grandote">texto1</h3>
+   <p class="grandote">texto2</p>
+   <p class="peque">texto3</p>
+   
+   .grandote{color:#FF&&00}
+   
+   si en vez de class ponemos id se puede usar, en un documento html deben ser unicos en todo el documento por lo que aqui no lo podemos hacer, aqui solo usamos cuando solo se lo queremos dar a una sola etiqueta, esto se usa mucho para declarar bloques como cabezeras o pies de paginas.
+   
+   <h3 id= "grandote">texto1</h3>
+   <p id="grandote">texto2</p>
+   <p class="peque">texto3</p>
+  
+   
+   #grandote1{color:#FF&&00}  /* aqui hay que enumerar las declaraciones */
+   
+   una seudoclase es defenir eventos en vez de caracteristicas a una etiqueta:
+   
+   a:hover {color:#FF&&00} /*cuando paso por encima el raton*/
+    :link /*enlaces que nunca se han visitado*/
+	:visited /*enlaces visitados*/
+	:active /*presionando el boton*/
+	:focus /*cuando le das con el teclado parpadea*/
+	
+   si yo pongo una pag html normal y en body esto:
+
+   <h1>caja1</h1>
+   <h2>caja2</h2>
+   <h3>caja3</h3>
+   
+   si en vez de h3 ponemos <p>caja3<br>linea2</p>
+   si queremos bordes en las cajas debemos poner en el head una etiqueta style
+   
+   <style>
+     html{border:1px solid;}
+   </style>
+   
+   si queremos el borde en body ponemos:
+   
+   <style>
+     body{border:3px dotted;
+	      margin: 10px;
+	      text-align:center;}
+   </style>
+   
+   si le queremos dar borde a cada caja
+   
+   p,h1,h2{border:1px dotted;
+           margin:10px}
+		    
+   la caja siempre va a tener una zona central que sea el contenido ,, alrededor el relleno y el padding encierra al relleno y el contenido dando el borde, si digo que padding es 0 empieza a escribir en la linea de arriba
+   por ultimo esta el margen que es lo que hay entre la caja y las cajs subyacentes, si no le pongo margen (margin) saldra cero, este se pone en los cuatro lados.
+   cuando pongo imagen de fondo queda detras del contenido y espacio de relleno, al igual que el color de fondo.
+   
+   atributos que se les puede poner a una caja:
+   
+   p{width:180px;height=600px;} /*ancho y alto con width y height*/
+    margin /* si pongo solo margin se lo doy a las cuatro zonas*/
+	margin:0 10px; /*arriba y abajo*/
+	margin 0 1 0 3 px /* se lo doy ariiba abajo izquierda y derecha*/
+	margin-top: 4
+    margin-sight: 4
+    margin-bottom: 4
+    margin-left: 4	/*podemos especificar al que se lo queremos dar, tambien lo podemos dar en % en auto o en inherit, esto ultimo es que hereda los valores de la caja madre html.*/
+	margin-left: auto
+	
+   igual hablamos de padding, se emplea igual (espacio entre contenido y borde
+   
+   el borde tendra ancho:
+   
+   p{border-width
+     border-top-width
+	 border-bottom-with
+	 border-left-with}
+	 
+  los valores que les podremos dar seran thin medium thick o inhent , sino lo podre poner en pixeles.
+  el borde tendra color: le puedo poner un color diferente a cada borde.
+  
+    p{border-color
+     border-top-color
+	 border-bottom-color
+	 border-left-color}  
+	 
+  se le pueden poner colores en letras, hexadecimal acortado (#FF0) o (#FFF00) con rsb(255,255,0) y rgb ( 100%,100%,0).
+  al borde tambien se le puede dar un stylo.
+  
+    p{border-style
+     border-top-syle
+	 border-bottom-style
+	 border-left-style}    
+	 
+  valores que se le puede dar a style: none, dotted para puntitos, dashed, solid, double, groove, ridge, inset, outset, inherit.
+  El borde tendra fondo bien un color o una imagen:
+  
+     p{background-color
+	   background-imagen
+	   background-repeat:/*no repit o el valor de cuantas veces quiero que se repita*/
+	     repeat/ repeat -x, repeat-
+		 no-repeat/inherit
+	   background-position:
+                        %,px,fetf/center/right}
+	   background- attachment: fixed/scroll /*comportamiento que quiero que tenga cuando hay barras de desplazamiento*/
+	 
+  para posicionar las cajas
+  
+  position
+  valores: static es el predeterminado ignora top botton etc/relative hace caso a top y eso sobre la posicion que debe ocupar / absolute hace caso a top y eso pero su posicion es sobre la caja contenedora, la cja que la contiene/fixed se queda fijada a esa posicion respecto a la ventana aunque haya lineas de desplazamiento que las mueva. apricable a todos los elementos. static es el valor por defecto.
+  
+  top,bottom,right,left.
+  
+  float: sus valores left/right/none. Esto lo que hace es ignorar su posicion predeterminada y situarse en donde entre seguido a las cajas anteriores.
+  
+   p{position:static; top=50px} /*no funcionara el top, sera ignorado porque el valor es static, si quiero que funcione debo ponerle relative o absolute*/
+   
+   
+   ejemplo.
+   
+   <H1>menu</H1> 
+   <H2>caja2</H2> /*ancha y flotante a la izquierda*/
+   <H3>caja3</H3> /*estrecha para que se pueda situar debajo y no flotando*/
+   
+   h1{position:fixed;top=0;}
+   h2{position:relative; float:left; widht=15%}
+   h3{width:80%; float:left position:relative;}
+   
+   nota: en el pie de pagina se pone clear:both para romper todos los float anteriores y que quede debajo.
+   
+   display:inline
+   
+   hay que tener claro si estamos haciendo un elemto en bloque o en linea, si lo hacemos en linea el siguiente elemento aparece seguido <a>....</a>, si lo hago en bloque el elemento siguiente saldra debajo <p>...</p>
+   esto se pone en las declaraciones de estilo
+   el display:inline se usa para hacer listas en forma de menu normalmente.
+   
+     <ul>
+	    <li>uno</li>
+		<li>dos</li>
+		<li>tres</li>
+	 </ul>
+	 
+si lo habro en html se vera :
+	 
+	    · uno
+		· dos
+		· tres
+		
+si aplicamos display saldria 
+	
+	  uno  dos   tres
+	  
+podemos poner atributos para darle tamaño margen colores y etc.
+
+si pongo display:block se hace lo contrario , fuerzo a que cumpla con lo anterior
+
+visibility: visible (propiedad por defecto), hidden (oculta la caja dejando espacio de modo que el resto de las cajas no se oculten.
+
+para ocultar las cajas.
+
+para el contenido de una caja que sobresale se usa :
+
+overflow: visible (se va a mostrar el contenido por fuera de la caja), hidden ( no se ve lo que no entre denro de la caja), sccoll (para que aparezcan barras de desplazamiento), auto.
+
+sirve para decir si tengo varias cajas solapadas cual es la que se muetra delante.
+
+z-index: auto o nº
+
+
+propiedades de un texto en CSS ( ya lo dara ....)
+
+diseño "layout" lo va a subir (pag 152)
+   

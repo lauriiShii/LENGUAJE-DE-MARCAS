@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="ejemplo.xsl"?>
+<alumnos>
+   <alumno>
+      <nombre>Pepe</nombre>
+	  <ap>Lopez</ap>
+	  <edad>20</edad>
+   </alumno> 
+   <alumno>
+      <nombre>Pepe</nombre>
+	  <ap>Lopez</ap>
+	  <edad>20</edad>
+   </alumno>     
+</alumnos>
+
+
+
+		<xs:element name="empresa">
+			<xs:extension base="xs:string">
+				<xs:attribute name="nombre"/>
+				<xs:attribute name="nombre_sucursal"/>
+			</xs:extension>
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="sucursal" maxOccurs="unbounded">
+						<xs:extension base="xs:string">
+							<xs:attribute name="nombre"/>
+						</xs:extension>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="zona">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="exposicion">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="articulos" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="codigoarticulo">
+																	<xs:complexType>
+																	<xs:simpleContent>
+																		<xs:extension base="xs:string">
+																			<xs:attribute name="devolucion">
+																				<xs:restriction base="xs:string"/>
+																				<xs:enumeration value="si"/>
+																				<xs:enumeration value="no"/>
+																			</xs:restriction>
+																			</xs:attribute>
+																			<xs:attribute name="cantidad">
+																				<xs:restriction base="xs:integer">
+																					<xs:minInclusive value="0"/>
+																					<xs:maxExclusive value="1000"/>
+																				</xs:restriction>
+																				</xs:attribute>
+																			<xs:attribute name="preciounidad"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															<xs:element name="observacionesarticulo"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="gestion">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="pedidos" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+															<xs:element name="destino"/>
+															<xs:element name="codigopedido"/>
+															<xs:element name="nombretrabajador"/>
+															<xs:element name="fechapedido">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="fechaemision">
+																			<xs:restriction base="xs:dateTime"/>
+																		</xs:element>
+																		<xs:element name="fechaentrega">
+																			<xs:restriction base="xs:dateTime"/>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="observacionespedido">
+																<xs:complexType>
+																	<xs:restriction base="string">
+																		<xs:enumeration value="urgente"/>
+																	<xs:enumeration value="incompleto"/>
+																</xs:restriction>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="preciopedido">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="fecharevision">
+																			<xs:restriction base="xs:dateTime"/>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>

@@ -1,0 +1,20 @@
+<!ELEMENT peliculas (pelicula*)>
+<!ELEMENT pelicula (titulo, tituloOriginal?, clasificacion?, infoWeb?, director, resumen, genero, cartelGrafico?, reparto)>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT tituloOriginal (#PCDATA)>
+<!ELEMENT clasificacion EMPTY>
+<!ELEMENT infoWeb (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT cartelGrafico (#PCDATA)>
+
+<!ELEMENT reparto (protagonista+, secundario*)>
+<!ELEMENT protagonista (#PCDATA)>
+<!ELEMENT secundario (#PCDATA)>
+
+<!ATTLIST pelicula id CDATA #REQUIRED>
+<!ATTLIST pelicula pais (españa|extranjero) "españa" #REQUIRED>
+<!ATTLIST pelicula anio CDATA "2003">
+<!ATTLIST clasificacion publico (tp|8|12|16|18) #REQUIRED>

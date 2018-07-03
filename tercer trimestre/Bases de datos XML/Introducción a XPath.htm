@@ -1,0 +1,1290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0070)http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><script async="" src="http://www.google-analytics.com/urchin.js?_=1399997309409"></script><script src="./Introducción a XPath_files/cb=gapi.loaded_1" async=""></script><script src="./Introducción a XPath_files/cb=gapi.loaded_0" async=""></script><script id="LR1" type="text/javascript" async="" src="./Introducción a XPath_files/client.js"></script><script type="text/javascript" src="./Introducción a XPath_files/plusone.js" gapi_processed="true"></script><link rel="stylesheet" type="text/css" href="./Introducción a XPath_files/widget120.css" media="all">
+        <title>Introducción a XPath</title>
+        
+        <meta name="keywords" content=", Ajax, Android, Applets/Swing, ASP/.NET, BBDD, Big Data, BPM, C / C++, CRM, Cultura de Empresa / Efectividad personal, DCOM / ActiveX, Diseño Gráfico, Dispositivos móviles, EJBs/RMI, ESB, Gestión Contenidos, Herramientas, Hibernate, HTML5, IDEs, Informes, iOS, Java Estándar, Javascript / JQuery, JBoss Seam, JDBC/JDO, JSF, JSPs/Servlets, Juegos y 3D, Linux/Unix, Mac, Maven, Media, Metodología, Mysql, Navegadores, OpenGL, Otras Técnicas, Patrones, Patrones de Integración, PHP, Pruebas, Rendimiento, Seguridad, Servidores, Sistemas Operativos, SOA, Sockets, Spring, Struts, Técnicas Avanzadas, TNTConcept, UML, WebServices, Wireless/Wap, www.adictosaltrabajo.com, XML/XSL, ZK">
+        <meta name="description" content="" introducción="" a="" xpath"="">
+  		<link href="./Introducción a XPath_files/SpryRating.css" rel="stylesheet" type="text/css">
+        <link href="./Introducción a XPath_files/general.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="./Introducción a XPath_files/thumbnailviewer.css" type="text/css">
+        <link rel="stylesheet" href="http://www.adictosaltrabajo.com/scripts/cmotion_gallery/gallerystyle2.css">
+
+        <script type="text/javascript" src="./Introducción a XPath_files/pestanya.js"></script><style type="text/css"></style>
+        <script type="text/javascript" src="./Introducción a XPath_files/SpryRating.js"></script>
+        <script src="./Introducción a XPath_files/thumbnailviewer.js" type="text/javascript" language="javascript"></script></head><body data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./Introducción a XPath_files/hub(1).htm" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" src="./Introducción a XPath_files/hub.htm" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><div id="thumbBox" onclick="thumbnailviewer.closeit()"><div id="thumbImage"></div><div class="footerbar">CLOSE X</div></div><div id="thumbLoading">Loading Image...</div>
+ 		<script type="text/javascript" src="./Introducción a XPath_files/dojo.xd.js" djconfig="parseOnLoad: true"></script>
+        <script type="text/javascript" src="./Introducción a XPath_files/home.js"></script><style type="text/css">.switchcontent{display:none;}</style>
+        <!-- <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script> -->
+		<script src="./Introducción a XPath_files/jquery-1.6.2.min.js"></script>
+		<script src="./Introducción a XPath_files/widgets.js" type="text/javascript"></script>
+
+
+                <script src="./Introducción a XPath_files/cookies.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(window).ready(function(){
+
+                function afterPolicy(){
+                    $.getScript('http://www.google-analytics.com/urchin.js',function(){
+                        _uacct = "UA-1265115-1";
+                        urchinTracker();
+                    })
+                }
+
+                cookiePolicy.showPolicyBanner(afterPolicy);
+            })
+
+
+
+        </script>
+
+
+        <script src="./Introducción a XPath_files/tiny_mce.js" type="text/javascript" language="JavaScript"></script>
+        <script language="javascript" type="text/javascript">
+            //<![CDATA[
+            tinyMCE.init({
+            	mode : "specific_textareas",
+            	editor_selector : "tiny",
+            	editor_deselector : "notiny",
+                theme : "simple"
+            });
+            //]]>
+        </script>
+
+
+<div id="layout">
+            <div id="header" class="wrapper">
+				<div id="logo">
+					<a href="http://www.adictosaltrabajo.com/index.php">
+ 						</a><a href="http://www.autentia.com/index.php" target="_blank"><img src="./Introducción a XPath_files/bannerAdictosCompletaTerrakas.png" alt="Adictos al Trabajo" title="Adictos al Trabajo"></a>
+                    
+                </div>
+				<div class="patrocinio">
+		                 <div class="autentia">
+		                  	<a href="http://www.autentia.com/" target="_blank"><img src="./Introducción a XPath_files/autentia_new.png" alt="Logotipo Autentia" title="Logotipo Autentia" style="margin-left:-50px;"></a>
+		                 </div>
+		                 <div class="enredados">
+		                  	<a href="http://www.enredados.com/" target="_blank"><img src="./Introducción a XPath_files/enredados_new.png" alt="Adictos al Enredados" title="Logotipo Enredados"></a>
+		                 </div>
+	            </div>
+                <div id="login_panel_new">
+	
+<form name="loginForm" action="http://www.adictosaltrabajo.com/login_panel.php" method="post">
+	<input name="login_form_sended" value="1" type="hidden">
+	<span class="mensajeerror">
+			</span>
+	<div>
+				<p style="float:left; font-size:0.9em; color:#01527F; margin: 9px 0 13px 0;">Entra en Adictos a través de</p>
+
+				<a id="login_facebook" href="https://www.facebook.com/dialog/oauth?client_id=352394641441455&redirect_uri=http%3A%2F%2Fwww.adictosaltrabajo.com%2Fsocial-sas%2Flogin-from-facebook-callback.php&state=6690a588ec5a0385d50b2cd0f33876f2" title="Entrar con Facebook"><img style="margin-top:3px;" src="./Introducción a XPath_files/icono_facebook.png" alt="Entrar con Facebook" title="Entrar con Facebook" width="22px" height="22px"></a>
+ 				</div><div colspan="2"><input id="login_email" name="login_email" type="text" title="E-mail" placeholder="E-mail"></div><div colspan="2"><input id="login_pwd" name="login_pwd" type="password" title="Contraseña" placeholder="Contraseña"></div><div><input id="login_enter" name="login_enter" value="Entrar" type="submit"></div><div colspan="2">
+					<ul style="margin-top:5px;list-style-type:none; font-size:0.9em;">
+                      	<li><a href="http://www.adictosaltrabajo.com/social-sas/gui/register.inc.php">Deseo registrarme</a></li>
+                      	<li><a href="http://www.adictosaltrabajo.com/forgot_password.php">Olvidé mi contraseña</a></li>
+					</ul>
+				</div><table>
+		<tbody>
+
+				
+
+				
+
+
+				
+
+
+				
+
+
+
+				
+			
+		</tbody>
+	</table>
+</form>
+	</div>
+            </div>
+
+            <div class="bloque_menu">
+  <div id="menu-right" class="wrapper"></div>      
+         
+  <div id="menu" class="wrapper">
+  <ul>
+       <li><a href="http://www.adictosaltrabajo.com/index.php">Inicio</a></li>
+       <li><a href="http://www.adictosaltrabajo.com/quienes-somos.php">Quiénes somos</a></li>
+       <li><a href="http://www.autentia.com/cursos.php" target="_blank">Formación</a></li>
+       <li><a href="http://www.adictosaltrabajo.com/comunidad/comunidad.php">Comparador de salarios</a></li>
+       <li><a href="http://www.adictosaltrabajo.com/books.php">Nuestros libros</a></li>
+       <li onmouseover="showPestanya(&#39;menu_mas&#39;)" onmouseout="hidePestanyaDelay(&#39;menu_mas&#39;)"><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#">Más</a></li>
+       <li>
+       		<form method="get" action="http://www.adictosaltrabajo.com/buscador.php" target="_top">
+       			<input type="hidden" name="domains" value="www.adictosaltrabajo.com">     
+       			<input type="hidden" name="client" value="pub-7938614058147015">
+                <input type="hidden" name="forid" value="1">
+                <input type="hidden" name="ie" value="ISO-8859-1">
+                <input type="hidden" name="oe" value="ISO-8859-1">
+                <input type="hidden" name="flav" value="0000">
+                <input type="hidden" name="sig" value="b6bhFcismdVAhLp7">
+                <input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:0;LW:0;L:http://www.adictosaltrabajo.com/imagenes/adic000.jpg;S:http://www.adictosaltrabajo.com;FORID:11">
+                <input type="hidden" name="hl" value="es">               
+                <input type="hidden" name="sitesearch" value="www.adictosaltrabajo.com">                        
+                <input type="text" name="q" size="23" maxlength="255" value="" id="sbi">
+                <input type="image" src="./Introducción a XPath_files/lupa.gif" alt="buscar" id="sb">
+            </form>
+       </li>
+     </ul>     
+  </div>
+  <div id="menu-left" class="wrapper"></div>
+</div>
+<div id="menu_mas" onmouseover="showPestanya(&#39;menu_mas&#39;)" onmouseout="hidePestanyaDelay(&#39;menu_mas&#39;)">
+  	<ul>
+  	   <li><a href="http://www.adictosaltrabajo.com/libros/libros.php">Libros</a></li>
+  	   <li><a href="http://www.adictosaltrabajo.com/charlas/charlas.php">Charlas</a></li>
+	   <li><a href="http://www.adictosaltrabajo.com/chistes/chistes.php">Chistes</a></li>
+  	   <li><a href="http://www.adictosaltrabajo.com/empleo/empleo.php">Empleo</a></li>
+	   <li><a href="http://www.adictosaltrabajo.com/libro_visitas/libro_visitas.php">Libro de Visitas</a></li>
+       <li><a href="http://www.adictosaltrabajo.com/colaboradores.php">Colabora</a></li>
+	</ul>  
+</div>
+
+
+  				
+	<div id="migas">
+	<ul>
+		<li><span class="xx">» Estás en:</span></li>
+		<li><a href="http://www.adictosaltrabajo.com/index.php">Inicio</a> </li>
+<li><a href="http://www.adictosaltrabajo.com/tutoriales.php">Tutoriales</a> </li><li>Introducción a XPath</li>	</ul>
+	</div>
+
+
+<div id="kernel" class="wrapper">
+<div id="highlights">
+				<div class="caja">
+				    <div class="border-top">
+							<div class="indent-caja">
+				            	<h2><a href="http://www.autentia.com/index.php">Catálogo de servicios Autentia</a></h2>
+				                <div class="bloquecomic">
+				                	<img src="./Introducción a XPath_files/moscaBanner.gif" width="200px" alt="Mosca de AdictosAlTrabajo">
+				               	</div>
+
+				          	</div>
+
+				    </div>
+
+				</div>
+
+
+
+<div class="monosylagartos">
+<a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=356"><img src="./Introducción a XPath_files/prohibidos-monos-lagartos-300x300.gif" alt="Prohibido monos y lagartos">
+</a>
+</div>			<div class="caja">
+			    <div class="border-top">
+			        <div class="border-bottom">
+			            <div class="border-right">
+			                <div class="border-left">
+			                    <div class="corner-top-right">
+			                        <div class="corner-top-left">	
+			                            <div class="corner-bottom-left">
+			                                <div class="corner-bottom-right">
+			                                    <div class="indent-caja_facebook">
+			                                        <h2><a href="http://www.facebook.com/group.php?gid=117232791654259">Síguenos a través de:</a></h2>
+			                                        <div class="bloqueredes">
+			                                        	<a target="_blank" href="http://www.adictosaltrabajo.com/feeds.php"><img title="RSS" alt="RSSe" src="./Introducción a XPath_files/rss_new.png"></a>
+			                                         	<a target="_blank" href="http://twitter.com/adictosaltrabaj"><img title="twitter" alt="twitter" src="./Introducción a XPath_files/icono_twiter.png"></a>
+			                                         	<a target="_blank" href="http://www.facebook.com/pages/AdictosAlTrabajo/353360561767"><img title="facebook" alt="facebook" src="./Introducción a XPath_files/icono_facebook.png"></a>
+														<a target="_blank" href="http://www.linkedin.com/groups?mostPopular=&gid=2768318"><img title="linkedid" alt="linkedid" src="./Introducción a XPath_files/icono_linkedin.png"></a>
+														<a target="_blank" href="https://www.xing.com/net/pri9ab884x/econ_trabajoadicto"><img title="xing" alt="xing" src="./Introducción a XPath_files/xing_logo.png"></a>														
+														<a target="_blank" href="http://www.youtube.com/user/AutentiaMedia"><img title="youtube" alt="youtube" src="./Introducción a XPath_files/icono_youtube.png"></a>
+			                                         </div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div><div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><a href="http://www.adictosaltrabajo.com/historico-home.php"><span class="titulo_normal">Últimas</span> Noticias</a></h2>
+                                        <div class="bloquenoticias">
+                                        											<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=429">Concurso del Día de la Madre:</a></p>
+																					<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=428">Aprende gratis ReactiveCocoa</a></p>
+																					<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=426">Checklist de Scrum de Autentia</a></p>
+																					<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=425">Autentia estrena web y celebra el X Cycling Day</a></p>
+																					<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=424">Buscamos personal para Autentia y nuestros clientes (10-Marzo-2014)</a></p>
+												
+  											<p><a href="http://www.adictosaltrabajo.com/historico-home.php">Histórico de noticias</a></p>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+<div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><span class="titulo_normal">Últimos </span>Tutoriales</h2>
+                                        <div class="bloquenoticias">
+                                        										  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=Scratch">SCRATCH, aprende a programar desde pequeño</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=finalcut">Final Cut Pro X vs iMovie 10.1</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=pig_udf">Implementar una función UDF de Apache Pig</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=bonita_bpm_primeros_pasos">Primeros pasos con Bonita BPM Community 6.2.6</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=Nueva_Web_Autentia">Lanzamos nuevo site en Autentia.com</a></p>
+										                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+	
+<div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><span class="titulo_normal">Últimos </span>Tutoriales del Autor</h2>
+                                        <div class="bloquenoticias">
+                                        										  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=phonegap">Introducción a PhoneGap</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=jbossESB">JBossESB y JBDS</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=hadoopFS">Apache Hadoop - HDFS</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=hadoop">Apache Hadoop-MapReduce</a></p>
+																				  	<p>»&nbsp;<a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=camel">Apache Camel, primeros pasos</a></p>
+										                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+<div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><span class="titulo_normal">Categorías del Tutorial</span></h2>
+                                        <div class="bloquenoticias">
+                                        										  	<p>
+										    	<img src="./Introducción a XPath_files/ulttuto.png"><a href="http://www.adictosaltrabajo.com/tutoriales.php?id=31"> Otras Técnicas</a>
+										    </p>
+																				  	<p>
+										    	<img src="./Introducción a XPath_files/ulttuto.png"><a href="http://www.adictosaltrabajo.com/tutoriales.php?id=10"> XML/XSL</a>
+										    </p>
+										                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+<div id="content">
+	<div class="separador" style="clear:both"></div>
+    <div class="content_autor">
+		<div class="image_autor" style="float:left;clear:left;width:150px;padding:1em">
+<a href="http://www.adictosaltrabajo.com/usuarios/francisco-javier-martinez"><img src="./Introducción a XPath_files/fjmpaez.jpg" class="img-izquierda_descripcion"></a>
+
+
+		</div>
+	    <div class="descripcion-info" style="padding:1em;width:700px;">
+				<a href="http://www.adictosaltrabajo.com/usuarios/francisco-javier-martinez">Francisco Javier Martínez Páez</a><div class="info"><p>Consultor tecnológico de desarrollo de proyectos informáticos.</p><p>&nbsp;Ingeniero Técnico en Telecomunicaciones</p><p>Puedes encontrarme en <a href="http://www.autentia.com/" target="_blank">Autentia</a>: Ofrecemos servicios de soporte a desarrollo, factoría y formación</p><p>Somos expertos en Java/J2EE</p></div>        		<p style="float:right"><a href="http://www.adictosaltrabajo.com/index.php?filter=tutorials&autor=21">Ver todos los tutoriales del autor</a></p>
+	    </div>
+</div><div style="text-align:center;margin:.3em">
+	<script type="text/javascript">
+<!--
+			google_ad_client = "pub-7938614058147015";
+
+			/* 468x60 grafico. creado 04/04/11 */
+			google_ad_slot ="5573441302";google_ad_width = 468;google_ad_height = 60;	
+//-->
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>	<div class="separador" style="clear:both"></div> 
+	<div style="margin:1em 0 1em 0">
+		<h3 style="float:left;padding:0em;margin:0em">Fecha de publicación del tutorial: 2006-11-02</h3>
+		<div class="iconos" style="float:right;clear:right">
+			<span>Tutorial visitado 23.628 veces</span>
+			<a href="http://www.adictosaltrabajo.com/tutoriales/retornapdf.php?pdf=XPATH" target="_blank">Descargar en PDF</a>
+		</div>
+	</div>
+	
+	<div class="separador" style="clear:both"></div> 
+	
+
+
+
+  
+  
+
+
+  
+  <meta content="Introducción a XPath" name="title">
+
+
+  
+  <meta content="Introducción a XPath" name="DC.Title">
+
+
+  
+  <meta http-equiv="title" content="Introducción a XPath.">
+
+
+  
+  <meta content="Introducción a XPath." name="description">
+
+
+  
+  <meta content="Introducción a XPath." name="DC.Description">
+
+
+  
+  <meta http-equiv="description" content="Introducción a XPath">
+
+
+  
+  <meta content="XPath, XML, Java, Autentia" name="keywords">
+
+
+  
+  <meta content="XPath, XML, Java, Autentia" name="DC.keywords">
+
+
+  
+  <meta http-equiv="keywords" content="XPath, XML, Java, Autentia">
+
+
+  
+  <meta content="all" name="robots">
+
+
+  
+  <meta content="es" name="language">
+
+
+  
+  <meta content="Spanish" name="DC.Language">
+
+
+  
+  <meta http-equiv="language" content="es">
+
+
+  
+  <meta name="Author" content="Francisco Javier Martinez Paez">
+
+  
+  <title>INTRODUCCIÓN A XPATH</title>
+
+
+
+
+
+
+<h1>INTRODUCCIÓN A XPATH</h1>
+
+
+
+<font face="Arial, sans-serif">Los
+ejemplos de este tutorial están hechos con el siguiente
+entorno de desarrollo:</font>
+<ul>
+
+
+  <li style="text-align: justify;">
+    
+    <p><font face="Arial, sans-serif">Jboss Eclipse
+IDE Milestone 5.</font></p>
+
+
+  </li>
+
+
+  <li style="text-align: justify;">
+    
+    <p><font face="Arial, sans-serif">JDK 1.5</font></p>
+
+
+  </li>
+
+
+</ul>
+
+
+<big style="font-weight: bold; text-decoration: underline;"><span style="font-family: Arial;"><br>
+
+
+</span></big>
+<div style="text-align: justify;"><big><span style="font-family: Arial;"><small>Hemos
+visto a lo largo de estos últimos años
+como&nbsp;XML se
+ha ido imponiendo poco a poco, como un lenguaje válido para
+intercambio de datos, debido entre otras cosas a su sencillez y
+flexibilidad. También hemos visto aparecer gran cantidad de
+estándares, herramientas, interfaces, librerías,
+etc...,
+todas ellas relacionadas con éste metalenguaje. &nbsp;Os
+propongo en este tutorial dar a conocer un poco, otro
+estándar
+surgido alrededor de todo este mogollón y una
+librería
+que lo implementa. <br>
+
+
+<br>
+
+
+XPath no es más que un lenguaje que nos permite buscar
+información dentro de un XML, navegar entre etiquetas y
+atributos de una manera relativamente sencilla, etc... , en definitiva,
+algo que nos hará la vida más fácil a
+la hora de
+tratar con documentos XML. XPath es uno de los elementos principales
+del estándar XSLT del W3C: <a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a><br>
+
+
+<br>
+
+
+XPath incluye:<br>
+
+
+</small></span></big>
+<ul>
+
+
+  <li><span style="font-family: Arial;">Una
+sintáxis para definir las partes de un documento XML.</span></li>
+
+
+  <li><span style="font-family: Arial;">Un conjunto
+de expresiones para seleccionar partes de un documento XML.</span></li>
+
+
+  <li><span style="font-family: Arial;">Un conjunto
+de funciones estándar para tratamiento de cadenas, fechas,
+valores numéricos, etc....<br>
+
+
+    </span></li>
+
+
+</ul>
+
+
+<big><span style="font-family: Arial;"><small>Alguno
+quizá se esté preguntando todavía:
+¿Pero para que sirve esto?<br>
+
+
+<br>
+
+
+Lo mejor, es un ejemplo:<br>
+
+
+<br>
+
+
+Supongamos que tenemos un documento XML de este tipo:<br>
+
+
+<br>
+
+
+<span style="color: rgb(0, 0, 153);">&lt;libros&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;autor&gt;Soren
+Kierkegaard&lt;/autor&gt;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;titulo&gt;Fear and
+Trembling&lt;/titulo&gt;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;precio&gt;50.0&lt;/precio&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;/libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;autor&gt;Miguel de
+Unamuno&lt;/autor&gt;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;titulo&gt;Niebla&lt;/titulo&gt;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;precio&gt;40.0&lt;/precio&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;/libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;autor&gt;Miguel de
+Unamuno&lt;/autor&gt;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;titulo&gt;La tía
+tula&lt;/titulo&gt;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;precio&gt;23.0&lt;/precio&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;/libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;autor&gt;George
+Orwell&lt;/autor&gt;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;titulo&gt;1984&lt;/titulo&gt;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&nbsp;&nbsp;&nbsp;
+&lt;precio&gt;20.0&lt;/precio&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;/libro&gt;</span><br style="color: rgb(0, 0, 153);">
+
+
+<span style="color: rgb(0, 0, 153);">&lt;/libros&gt;</span><br>
+
+
+<br>
+
+
+Ahora, imaginad las siguientes preguntas:<br>
+
+
+</small></span></big>
+<ul>
+
+
+  <li><span style="font-family: Arial;">¿
+Qué libros son de Miguel de Unamuno?</span></li>
+
+
+  <li><span style="font-family: Arial;">¿
+Qué libros tienen un precio menor a 30 euros ?</span></li>
+
+
+  <li><span style="font-family: Arial;">¿
+Hay algún libro que tenga como parte del título
+la palabra "Fear" ?</span></li>
+
+
+</ul>
+
+
+<big><span style="font-family: Arial;"><small>Seguro
+que se os ocurren
+muchas más, pero la pregunta es,
+&nbsp;¿cómo lo
+hacemos? Probablemente, nos recorreríamos todo el documento
+mediante algun parser XML y buscaríamos cuales de ellos
+cumplen
+las condiciones. Si hiciesemos la analogía con una consulta
+SQL en una tabla de base de datos, hacer esto sería como
+hacer un SELECT * FROM LIBROS y posteriormente recorrer todos los
+registros para ver cuales son aquellos que cumplen las condiciones
+(poco eficiente me atrevería a decir). Pero, ¿no
+hay algo entonces que lo haga por nosotros? la
+respuesta es fácil: XPath. <br>
+
+
+<br>
+
+
+<span style="font-weight: bold;">Nota</span>: <span style="font-style: italic;">No debemos confundir no obstante
+XPath con XQuery, y no explico nada más porque lo
+dejaré para tutoriales posteriores, aunque ya os digo que
+XQuery es a XML lo que SQL a tablas de&nbsp;base de datos, y
+la&nbsp;confusión puede venir debido a que XQuery se
+apoya en XPath.</span><br>
+
+
+<br>
+
+
+</small></span></big><big style="font-weight: bold; text-decoration: underline;"><span style="font-family: Arial;">ENTRANDO EN MATERIA<br>
+
+
+</span></big><big><span style="font-family: Arial;"><small><br>
+
+Vamos a preparar primero lo necesario para empezar. Primero nos
+crearemos un nuevo proyecto dentro de eclipse que llamaremos XPATH:<br>
+
+<br>
+
+</small></span></big>
+<div style="text-align: center;"><big><span style="font-family: Arial;"><small><img style="width: 450px; height: 540px;" alt="Creando el proyecto XPath" src="./Introducción a XPath_files/xpath1.gif"></small></span></big><br>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"><small>
+<br>
+
+</small></span></big><big><span style="font-family: Arial;"><small>Después
+necesitaremos alguna librería java que nos implemente todo este
+mogollón, me voy a google y busco "xpath + java".<br>
+<br>
+El primer resultado de la búsqueda nos remite al api de Java 5: javax.xml.xpath.<br>
+Pensaba haceros los ejemplos con la solución de apache (dentro
+de xalan) que ya he utilizado con éxito, pero probemos la otra
+(así aprendemos todos).<br>
+<br>
+Vamos a escribir primero una clasecita de utilidades para facilitarnos
+el trabajo. La llamamos UtilidadesXML: (esta os la regalo)<br>
+<br>
+</small></span></big>
+<div style="width: 550px;"><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>package autentia.tutoriales.xml;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import java.io.StringWriter;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import java.net.URL;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import javax.xml.parsers.DocumentBuilderFactory;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import javax.xml.transform.OutputKeys;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import javax.xml.transform.Transformer;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import javax.xml.transform.TransformerFactory;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import javax.xml.transform.dom.DOMSource;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import javax.xml.transform.stream.StreamResult;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import org.w3c.dom.Document;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import org.w3c.dom.NamedNodeMap;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import org.w3c.dom.Node;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import org.w3c.dom.NodeList;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import org.xml.sax.InputSource;</small></span></big><br>
+<big><span style="font-family: Arial;"></span></big><br>
+<div style="text-align: left;"><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>public class UtilidadesXML {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 153, 0);">/**</span></small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* Este método busca un fichero de tipo XML en el classpath crea un objeto </small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* de tipo org.w3c.dom.Document.</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param fichero: El nombre del fichero a procesar.</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @return</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @throws Exception</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;*/</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; public static Document File2Document(String fichero) throws Exception {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DocumentBuilderFactory factory
+=&nbsp;DocumentBuilderFactory.newInstance();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;</small></span></big><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp; ClassLoader loader=(UtilidadesXML.class).getClassLoader();</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL urlfichero=loader.getResource(fichero);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp; Document XMLDoc=factory.newDocumentBuilder().parse(new &nbsp; InputSource(urlfichero.openStream()));</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return XMLDoc;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 153, 0);">/**</span></small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* Este método convierte un objeto de tipo org.w3c.dom.Node a String</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nodo</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @return</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @throws Exception</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;*/</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; public static String Node2String (Node nodo) throws Exception {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; StringWriter sw = new StringWriter();&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; StreamResult sR=new
+StreamResult(sw);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; Transformer transformer = &nbsp; &nbsp;
+&nbsp;TransformerFactory.newInstance().newTransformer();</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; transformer.setOutputProperty(OutputKeys.INDENT, "yes");</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; transformer.transform(new
+DOMSource(nodo),sR);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return sw.toString();&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; <br>
+<span style="color: rgb(0, 153, 0);">/**</span><br style="color: rgb(0, 153, 0);">
+<span style="color: rgb(0, 153, 0);">&nbsp;&nbsp;&nbsp; &nbsp;* Este método convierte un objeto de tipo org.w3c.dom.NodeList a String</span><br style="color: rgb(0, 153, 0);">
+<span style="color: rgb(0, 153, 0);">&nbsp;&nbsp;&nbsp; &nbsp;* Este método solo sirve para pintar los resultados.</span><br style="color: rgb(0, 153, 0);">
+<span style="color: rgb(0, 153, 0);">&nbsp;&nbsp;&nbsp; &nbsp;* @param nodo</span><br style="color: rgb(0, 153, 0);">
+<span style="color: rgb(0, 153, 0);">&nbsp;&nbsp;&nbsp; &nbsp;* @return</span><br style="color: rgb(0, 153, 0);">
+<span style="color: rgb(0, 153, 0);">&nbsp;&nbsp;&nbsp; &nbsp;* @throws Exception</span><br style="color: rgb(0, 153, 0);">
+<span style="color: rgb(0, 153, 0);">&nbsp;&nbsp;&nbsp; &nbsp;*/</span><br>
+&nbsp;&nbsp;&nbsp; public static String Nodes2String (NodeList nodes) throws Exception {<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; StringBuffer lista = new StringBuffer(); <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; for(int i=0;i&lt;nodes.getLength();i++) {<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Node node = (Node)nodes.item(i);<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+lista.append(UtilidadesXML.Node2String(node));&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return lista.toString();<br>
+&nbsp;&nbsp;&nbsp; }<br>
+<br style="color: rgb(0, 0, 153);">
+</small></span></big><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 153, 0);">/**</span></small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* Devuelve true si el nodo es de tipo Node.ELEMENT_NODE y se llama "nombre"</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nodo</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nombre</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @return</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;*/</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; public static boolean esNodo(Node nodo, String nombre) {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return (esNodo(nodo) &amp;&amp; (nodo.getNodeName().equalsIgnoreCase(nombre)));</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 153, 0);">/**</span></small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* Devuelve true si el nodo es de tipo Node.ELEMENT_NODE</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nodo</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nombre</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @return</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;*/</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; public static boolean esNodo(Node nodo) {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return (nodo.getNodeType() == Node.ELEMENT_NODE);</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 153, 0);"> /**</span></small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* Devuelve true si el nodo es de tipo TEXT_NODE</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nodo</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @return</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;*/</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; public static boolean esTexto(Node nodo) {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return (nodo.getNodeType() == Node.TEXT_NODE);</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 153, 0);">/**</span></small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* Devuelve el texto de un nodo: &lt;tag&gt;TEXTO&lt;/tag&gt;</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param n</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @return</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;*/</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; public static String getTexto (Node n) {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; NodeList nl = n.getChildNodes();</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Node act=null;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int i=0; i &lt; nl.getLength(); i++) {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; act = nl.item(i);</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (act == null) return null;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if ((act.getNodeType() == Node.CDATA_SECTION_NODE)||(act.getNodeType()
+== Node.TEXT_NODE)) return act.getNodeValue();</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return "";</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp; &nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 153, 0);">/**</span></small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* Devuelve el valor del atributo "nombre" de un nodo</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nombre</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @param nodo</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;* @return</small></span></big><br style="color: rgb(0, 153, 0);">
+<big style="color: rgb(0, 153, 0);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;*/</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; public static String dameAtributoNodo(String nombre, Node nodo) {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; NamedNodeMap mapa = nodo.getAttributes();</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; String valor = null;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if(mapa!=null) {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Node nodoAt = mapa.getNamedItem(nombre);</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if(nodoAt!=null)</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; valor = nodoAt.getNodeValue();</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return valor;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>}</small></span></big><br>
+</div>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"><small><br>
+Ahora nos crearemos otra clase de utilidades que denominaremos
+UtilidadesXPath, que nos servirá de base para nuestros ejemplos:<br>
+<br>
+</small></span></big>
+<div style="text-align: center;"><big><span style="font-family: Arial;"><small><img style="width: 443px; height: 533px;" alt="Clase UtilidadesXPath" src="./Introducción a XPath_files/xpath2.gif"></small></span></big><br>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"><small><br>
+<br>
+Nos creamos un XML como el que pusimos de ejemplo (el de los libros) y
+lo colocamos en el classpath (directamente sobre src para que lo copie
+a bin) y le llamamos libros.xml:<br>
+<br>
+</small></span></big>
+<div style="text-align: center;"><big><span style="font-family: Arial;"><small><img style="width: 466px; height: 419px;" alt="Los libros" src="./Introducción a XPath_files/xpath3.gif"></small></span></big><br>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"><small><br>
+Empecemos con una pequeña prueba para comprobar que nos
+funcionan algunos métodos de la clase UtilidadesXML (vamos a
+leer el fichero libros.xml y lo vamos a imprimir en la consola): <br>
+<br>
+ </small></span></big>
+<div style="margin-left: 40px;"><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>package autentia.tutoriales.xml.xpath;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import org.w3c.dom.Document;</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>import autentia.tutoriales.xml.UtilidadesXML;</small></span></big><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small><br>
+public class UtilidadesXPath {</small></span></big><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;&nbsp;</small></span></big><big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;public static void main(String[] args) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; try {</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Document doc =
+UtilidadesXML.File2Document("libros.xml");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+System.out.println(UtilidadesXML.Node2String(doc.getDocumentElement()));&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } catch (Exception e) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; e.printStackTrace();</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>&nbsp;&nbsp;&nbsp; }</small></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"></span></big><br style="color: rgb(0, 0, 153);">
+<big style="color: rgb(0, 0, 153);"><span style="font-family: Arial;"><small>}<br>
+<br>
+</small></span></big></div>
+<big><span style="font-family: Arial;"><small>Ejecutamos y mostramos la consola:<br>
+<br>
+</small></span></big>
+<div style="text-align: center;"><big><span style="font-family: Arial;"><small><img style="width: 500px; height: 408px;" alt="Resultado" src="./Introducción a XPath_files/xpath4.gif"></small></span></big><br>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"><small><br>
+</small></span></big><span style="font-family: Arial;"><br>
+</span><big><span style="font-family: Arial;"><small>Empecemos a usar XPath. Primero vamos a recordar las preguntas que nos hicimos:<br>
+</small></span></big>
+<ul>
+  <li><span style="font-family: Arial;">¿
+Qué libros son de Miguel de Unamuno?</span></li>
+  <li><span style="font-family: Arial;">¿
+Qué libros tienen un precio menor a 30 euros ?</span></li>
+  <li><span style="font-family: Arial;">¿
+Hay algún libro que tenga como parte del título
+la palabra "Fear" ?</span></li>
+</ul>
+<big><span style="font-family: Arial;"><small>Traduzcamos a expresiones XPath:<br>
+</small></span></big>
+<ul>
+  <li><span style="font-family: Arial; color: rgb(153, 0, 0);">/libros/libro[autor="Miguel de Unamuno"]</span></li>
+  <li><span style="font-family: Arial; color: rgb(153, 0, 0);">/libros/libro[precio &lt; 30.0]</span></li>
+  <li><span style="font-family: Arial; color: rgb(153, 0, 0);">/libros/libro[contains(titulo,"Fear")]</span></li>
+</ul>
+<big><span style="font-family: Arial;"><small><span style="font-weight: bold;">Nota: </span><span style="font-style: italic;">Mi
+intención no es explicar exhaustivamente todas las posibilidades
+de las expresiones, operadores y funciones de XPath, sino hacer
+aparecer en el lector&nbsp;el deseo de aprenderlas al contemplar
+&nbsp;lo que facilita el trabajo.<br>
+<br>
+</span></small></span></big><big><span style="font-family: Arial;"><small>Usemos las expresiones:<br>
+<br>
+</small></span></big><span style="font-family: Arial;">¿
+Qué libros son de Miguel de Unamuno?:<br>
+<br>
+</span>
+<div style="text-align: left; color: rgb(0, 0, 153);"><span style="font-family: Arial;">public static void main(String[] args) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; try {</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Document doc = UtilidadesXML.File2Document("libros.xml");</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; XPath xpath = XPathFactory.newInstance().newXPath();</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">String expression = "/libros/libro[autor=\"Miguel de Unamuno\"]";</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;"> NodeList nodes = (NodeList) xpath.evaluate(expression, doc.getDocumentElement(), XPathConstants.NODESET);</span><br>
+</span><span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; System.out.println(UtilidadesXML.Nodes2String(nodes));</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } catch (Exception e) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; e.printStackTrace();</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; }</span><big><span style="font-family: Arial;"></span></big><br>
+</div>
+<big><span style="font-family: Arial;"><small><span style="font-style: italic;"><br>
+</span></small></span></big><big><span style="font-family: Arial;"><small>Ejecutamos y mostramos la consola:<br>
+<br>
+</small></span></big>
+<div style="text-align: center;"><big><span style="font-family: Arial;"><small><img style="width: 500px; height: 258px;" alt="Resultado" src="./Introducción a XPath_files/xpath5.gif"></small></span></big><br>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"><small><br>
+</small></span></big><span style="font-family: Arial;">¿
+Qué libros tienen un precio menor a 30 euros ?<br>
+<br>
+</span>
+<div style="text-align: left; color: rgb(0, 0, 153);"><span style="font-family: Arial;">public static void main(String[] args) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; try {</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Document doc = UtilidadesXML.File2Document("libros.xml");</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; XPath xpath = XPathFactory.newInstance().newXPath();</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">String expression = "/libros/libro[precio &lt; 30.0]";</span> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;"> NodeList nodes = (NodeList) xpath.evaluate(expression, doc.getDocumentElement(), XPathConstants.NODESET);</span><br>
+</span><span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; System.out.println(UtilidadesXML.Nodes2String(nodes));</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } catch (Exception e) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; e.printStackTrace();</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; }</span><big><span style="font-family: Arial;"></span></big><br>
+</div>
+<big><span style="font-family: Arial;"><small><span style="font-style: italic;"><br>
+</span></small></span></big><big><span style="font-family: Arial;"><small>Ejecutamos y mostramos la consola:<br>
+<br>
+</small></span></big>
+<div style="text-align: center;"><big><span style="font-family: Arial;"><small><img style="width: 513px; height: 320px;" alt="Resultado" src="./Introducción a XPath_files/xpath6.gif"><br>
+<br>
+</small></span></big>
+<div style="text-align: justify;"><span style="font-family: Arial;">¿
+Hay algún libro que tenga como parte del título
+la palabra "Fear" ?</span><br>
+<big><span style="font-family: Arial;"></span></big></div>
+<div style="text-align: justify;"><big><span style="font-family: Arial;"></span></big><br>
+<div style="text-align: left; color: rgb(0, 0, 153);"><span style="font-family: Arial;">public static void main(String[] args) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; try {</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Document doc = UtilidadesXML.File2Document("libros.xml");</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; XPath xpath = XPathFactory.newInstance().newXPath();</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">String expression = "/libros/libro[contains(titulo,\"Fear\")]";</span> &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-weight: bold;"> NodeList nodes = (NodeList) xpath.evaluate(expression, doc.getDocumentElement(), XPathConstants.NODESET);</span><br>
+</span><span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; System.out.println(UtilidadesXML.Nodes2String(nodes));</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } catch (Exception e) {&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; e.printStackTrace();</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</span><br>
+<span style="font-family: Arial;">&nbsp;&nbsp;&nbsp; }</span><big><span style="font-family: Arial;"></span></big><br>
+</div>
+<big><span style="font-family: Arial;"><small><span style="font-style: italic;"><br>
+</span></small></span></big><big><span style="font-family: Arial;"><small>Ejecutamos y mostramos la consola:<br>
+<br>
+</small></span></big>
+<div style="text-align: center;"><big><span style="font-family: Arial;"><small><img style="width: 500px; height: 199px;" alt="Resultado" src="./Introducción a XPath_files/xpath7.gif"><br>
+</small></span></big>
+<div style="text-align: justify;"><big><br>
+<span style="font-family: Arial;"></span></big><big><span style="font-family: Arial;"><small>Creo que con esto es suficiente para hacernos una idea de lo que se puede hacer con XPath. <br>
+<br>
+Nos hemos dejado muchos operadores por usar, no hemos buscado en los
+atributos, no hemos usado "axes", pero eso lo dejo para la inquietud
+del lector, yo ya me lo sé.<br>
+<br>
+Si necesitas que te echemos una mano, pues ya sabes, a eso nos dedicamos en Autentia.<br>
+</small></span></big><big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"></span></big></div>
+<big><span style="font-family: Arial;"></span></big></div>
+<span style="font-family: Arial;"><br>
+</span><big><span style="font-family: Arial;"><small></small></span></big><big style="font-weight: bold; text-decoration: underline;"><span style="font-family: Arial;"></span></big><big style="font-weight: bold; text-decoration: underline;"><span style="font-family: Arial;"></span></big></div>
+
+
+
+
+	<div id="single_vote" style="align:left;float:none;clear:both;margin-left:0px;margin-top:18px;margin-bottom:18px;height:100px;padding:8px;padding-bottom:20px;border-style:solid;border-width:1px;border-color:darkgray" class="ratingReadOnlyState">
+	<h2>A continuación puedes evaluarlo: </h2>	
+<p style="clear:both;display:block;margin-top: 20px;margin-bottom:20px"><a href="http://www.adictosaltrabajo.com/register.inc.php">Regístrate para evaluarlo</a></p>	<form action="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" method="post" name="votacion">
+		<input type="hidden" name="add_voto_form_sended" value="1">
+		<input type="hidden" name="tutorial_id" value="XPATH"> 
+		<input type="hidden" name="voto" value="0">
+	    <span class="ratingButton ratingEmpty"></span>
+	    <span class="ratingButton ratingEmpty"></span>
+	    <span class="ratingButton ratingEmpty"></span>
+	    <span class="ratingButton ratingEmpty"></span>
+	    <span class="ratingButton ratingEmpty"></span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	var single_vote = new Spry.Widget.Rating("single_vote", {rateHandler: handlerVotacion, readOnly:true});
+	function handlerVotacion () {	
+		fvotacion = document.forms['votacion'];
+		if (fvotacion) {
+			fvotacion.voto.value = single_vote.getValue();
+			fvotacion.submit();
+		}
+	}
+</script>
+	
+	
+	<div id="tuto_social_share" style="margin-top:18px;margin-bottom:18px;padding:8px;border-style:solid;border-width:1px;border-color:darkgray">
+		<h2>Por favor, vota +1 o compártelo si te pareció interesante</h2>
+		<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+	<a href="http://addthis.com/bookmark.php?v=250&username=xa-4bea90cb722c861e" class="addthis_button_compact at300m"><span class="at16nc at300bs at15nc at15t_compact at16t_compact"><span class="at_a11y">More Sharing Services</span></span>Share</a>
+	<span class="addthis_separator">|</span>
+	<a class="addthis_button_facebook at300b" title="Facebook" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#"><span class="at16nc at300bs at15nc at15t_facebook at16t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+	<a class="addthis_button_twitter at300b" title="Tweet" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#"><span class="at16nc at300bs at15nc at15t_twitter at16t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+	<a class="addthis_button_linkedin at300b" href="http://www.addthis.com/bookmark.php?v=300&winname=addthis&pub=xa-4bea90cb722c861e&source=tbx-300&lng=es&s=linkedin&url=http%3A%2F%2Fwww.adictosaltrabajo.com%2Ftutoriales%2Ftutoriales.php%3Fpagina%3DXPATH&title=Introducci%C3%B3n%20a%20XPath&ate=AT-xa-4bea90cb722c861e/-/-/53724342a2fddc5e/2&frommenu=1&uid=537243424e0f73d6&ct=1&pre=https%3A%2F%2Fwww.google.es%2F&tt=0&captcha_provider=nucaptcha" target="_blank" title="LinkedIn"><span class="at16nc at300bs at15nc at15t_linkedin at16t_linkedin"><span class="at_a11y">Share on linkedin</span></span></a>
+	<a class="addthis_button_email at300b" target="_blank" title="Email" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#"><span class="at16nc at300bs at15nc at15t_email at16t_email"><span class="at_a11y">Share on email</span></span></a>
+	<a class="addthis_button_favorites at300b" title="Favorites" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#"><span class="at16nc at300bs at15nc at15t_favorites at16t_favorites"><span class="at_a11y">Share on favorites</span></span></a>
+	<a class="addthis_button_print at300b" title="Print" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#"><span class="at16nc at300bs at15nc at15t_print at16t_print"><span class="at_a11y">Share on print</span></span></a>
+	<a class="addthis_button_google_plusone at300b"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 70px; height: 15px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 70px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1399997253399" name="I0_1399997253399" src="./Introducción a XPath_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div></a>
+<div class="atclear"></div></div>
+<script type="text/javascript" src="./Introducción a XPath_files/addthis_widget.js"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh415" title="AddThis utility frame" src="./Introducción a XPath_files/sh158.htm" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;"></iframe></div><script type="text/javascript" src="./Introducción a XPath_files/core131.js"></script>
+<!-- AddThis Button END -->	</div>
+	 
+	<div class="content_comentario">
+	<div class="content_titulo_tutorial">
+		Anímate y coméntanos lo que pienses sobre este <span class="negrita">TUTORIAL: </span>
+	</div>
+	<div class="comentario">
+      
+        <form action="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" method="POST" id="sendCommentForm">
+        	<input type="hidden" name="add_comentario_form_sended" value="1">
+		  	<input type="hidden" name="comment_ref_type" value="t">
+		  	<input type="hidden" name="comment_ref_id" value="XPATH">
+		  	
+          	<textarea name="comment_panel_text" id="comment_panel_text" rows="5" cols="102" style="width:100%" title="Escribe tu comentario" disabled="disabled"> </textarea>
+			
+				<h3><a href="http://www.adictosaltrabajo.com/register.php"><span class="negra">» Registrate</span> <span class="normal">y accede a esta y otras ventajas</span> <span class="negra">«</span> </a></h3>
+        </form>
+      </div>
+      <div class="content_pie_tutorial"></div>	
+</div>
+	
+<div id="tutorials">
+	<div class="block_comentarios">
+	
+			<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="./Introducción a XPath_files/kanon87.jpg" style="width:100px;height:128px; margin:8px" align="left">
+				<p class="fecha">Fecha publicación: <strong>2011-09-07-22:35:48</strong></p>
+			    <p class="autorcomentario">Autor:  <strong>kanon87</strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				Gracias por el tutorial, me ayudara en la implementacion de un Cliente WS ...			</div>
+	            
+		</div>	
+
+				<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="./Introducción a XPath_files/foto-anonimo_thumbail.png" style="width:100px;height:128px; margin:8px" align="left">
+				<p class="fecha">Fecha publicación: <strong>2011-02-22-13:00:08</strong></p>
+			    <p class="autorcomentario">Autor:  <strong>bsp10</strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				MUY WENAS,<br><br>EXCELENTE EXPLICACION.<br>¿COMO SERÍA LA BUSQUEDA MEDIANTE ATRIBUTOS CON ID POR EJEMPLO?. ESTOY TENIENDO PROBLEMAS CON ELLO.<br>UNA AYUDA POR FAVOR.<br><br>SALUDOS			</div>
+	            
+		</div>	
+
+				<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="./Introducción a XPath_files/foto-anonimo_thumbail.png" style="width:100px;height:128px; margin:8px" align="left">
+				<p class="fecha">Fecha publicación: <strong>2011-02-22-12:43:16</strong></p>
+			    <p class="autorcomentario">Autor:  <strong>bsp10</strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				MUY WENAS,<br><br>EXCELENTE EXPLICACION.<br>¿COMO SERÍA LA BUSQUEDA MEDIANTE ATRIBUTOS CON ID POR EJEMPLO?. ESTOY TENIENDO PROBLEMAS CON ELLO.<br>UNA AYUDA POR FAVOR.<br><br>SALUDOS			</div>
+	            
+		</div>	
+
+				<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="./Introducción a XPath_files/foto-anonimo_thumbail.png" style="width:100px;height:128px; margin:8px" align="left">
+				<p class="fecha">Fecha publicación: <strong>2010-11-14-13:46:52</strong></p>
+			    <p class="autorcomentario">Autor:  <strong>marchsot</strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				Gracias por la informacion muy detallado y exacto, lo que buscaba.			</div>
+	            
+		</div>	
+
+				<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="./Introducción a XPath_files/foto-anonimo_thumbail.png" style="width:100px;height:128px; margin:8px" align="left">
+				<p class="fecha">Fecha publicación: <strong>2009-05-12-03:38:04</strong></p>
+			    <p class="autorcomentario">Autor:  <strong></strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				[JoseC] Muy Bueno !!!! 
+
+Hago mis primeros pasos en el tema y fue de una claridad meridiana..
+
+Muchas Gracias			</div>
+	            
+		</div>	
+
+				<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="./Introducción a XPath_files/foto-anonimo_thumbail.png" style="width:100px;height:128px; margin:8px" align="left">
+				<p class="fecha">Fecha publicación: <strong>2006-11-02-02:58:32</strong></p>
+			    <p class="autorcomentario">Autor:  <strong></strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				[Jose] Bueno tutorial amigo.
+
+Enhorabuena.			</div>
+	            
+		</div>	
+
+					</div>
+</div>
+	
+</div>	
+	<div id="tutorialFoot">
+	  <!--Creative Commons License-->
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/2.5/es/" target="_blank"><img src="./Introducción a XPath_files/somerights20.png" name="graphics1" alt="Creative Commons License" align="bottom" width="88" height="31" border="0" class="img-licencia"></a>
+Esta obra está licenciada bajo <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/es/" target="_blank">licencia Creative Commons de 
+Reconocimiento-No comercial-Sin obras derivadas 2.5</a></p><!--/Creative Commons License-->
+<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+<license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/2.5/es/" />
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+</Work>
+<License rdf:about="http://creativecommons.org/licenses/by-nc-nd/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/></License></rdf:RDF> -->	</div>
+    <div style="width: 75%">
+      <div class="kcy_karmacracy_widget_h_ID" style="width: 100%; padding-top: 1.5em;padding-bottom: 1.5em"><style type="text/css">/* COLORES GLOBALES */
+.kcy-top-tab {background:#74a3be;}
+.kcy-sections-tab { background:#01527F; color:#e6e6e6;}
+.kcy-main-tab {background:#e6e6e6;}
+.kcy-push input {background:#040404; color:#ffffff;}
+.kcy-sections-tab a {color:#e6e6e6;}
+.kcy-main-tab, .kcy-footer {color:#040404;}
+.kcy-main-tab a, .kcy-footer a {color:#01527F;}
+/* TAMANOS DINAMICOS */
+.kcy-main-two-right,.kcy-sections-tab { width: 316px; }
+.kcy-container { width:450px; }
+/* BORDES REDONDEADOS */
+.kcy-rounded-all {border-radius: 5px 5px 5px 5px; -ms-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px;}
+.kcy-rounded-top {border-radius: 5px 5px 0 0; -ms-border-radius: 5px 5px 0 0; -moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0;}
+/* FONTS */
+/* GLOBALES */
+.kcy-wrapper {float:left; width:100%;}
+.kcy-sections-tab a, .kcy-main a, .kcy-footer a {text-decoration:underline;}
+.kcy-sections-tab a:hover, .kcy-main-tab a:hover, .kcy-footer a:hover {text-decoration:none}
+.kcy-section-selected a:hover,.kcy-section-selected a { text-decoration:none !important; }
+/**/
+.kcy-container {margin:0 auto;list-style:none;font-family:Helvetica,Arial,sans-serif !important;}
+.kcy-top-tab {padding-top:10px;}
+.kcy-push {float:left; width:125px;}
+.kcy-button {text-align:center;}
+.kcy-button input {padding:10px 10px 8px 10px; font-size:13px; border:none !important; font-weight:bold;-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);box-shadow:0 0 5px rgba(0, 0, 0, 0.5); outline:medium none; text-decoration:none;}
+.kcy-button input:hover {-moz-box-shadow:0 0 5px rgba(255, 255, 255, 0.5);-webkit-box-shadow:0 0 5px rgba(255, 255, 255, 0.5);box-shadow:0 0 5px rgba(255, 255, 255, 0.5); outline:medium none; text-decoration:none;}
+.kcy-sections-tab {float:left; font-size:13px;}
+.kcy-sections-tab a {text-decoration:underline;}
+.kcy-sections-tab a:hover {text-decoration:none}
+.kcy-sections-left {float:left; width:70%;}
+.kcy-sections-left-main ul {list-style:none !important; padding:0; margin:0; display:block;}
+.kcy-sections-left-main li {float:left; padding:13px 1em 10px 1em; list-style:none !important;}
+.kcy-sections-left-main li.kcy-section-selected {float:left;border-bottom:3px solid; list-style:none !important;}
+.kcy-sections-right {float:right; width:28%;}
+.kcy-sections-right-main {text-align:right !important; padding:13px 1em 10px 1em;}
+/* MAIN */
+.kcy-main-two, .kcy-main-one {float:left; width:98%; margin:0 auto; padding:10px 0;}
+/* -- one -- */
+.kcy-main-one-all {float:left; width:100%; text-align:left !important; padding-left:10px !important;}
+.kcy-main-one-all span {font-size:13px; font-weight:normal !important; padding:0 !important; margin:0 !important;}
+/* --left -- */
+.kcy-main-two-left {float:left; width:125px; text-align:center !important;}
+.kcy-main-two-left h1 {font-size:1.4em; font-weight:normal !important; padding:0 !important; margin:0 !important;}
+.kcy-main-two-left span {font-size:13px; font-weight:normal !important; padding:0 !important; margin:0 !important;}
+/*-- right -- */
+.kcy-main-two-right {float:left; text-align:left !important;}
+.kcy-main-two-right span {font-size:13px; font-weight:normal !important; padding:0 !important; margin:0 !important;}
+.kcy-pushers {padding-top: 8px;}
+.kcy-pick {float: left;margin-right: 4px;}
+.kcy-pick img {padding:0px}
+.kcy-tooltip {background:#fff; text-align:center !important; text-align:center; background:#fff;height:30px; width:30px;}
+.kcy-tooltip span {font-size:1.5em;}
+.kcy-tooltip a {text-decoration:none !important; color:#f2f2f2;}
+.kcy-tooltip a:hover {text-decoration:none !important;}
+/* FOOTER */
+.kcy-footer {text-align:right !important; font-size:10px; padding:6px 0;}
+/* TOOLTIP */
+#kcy-tooltip {position:absolute;text-align:center;padding:0 !important;margin:0 !important;z-index:1000;}
+#kcy-tooltip p {margin:0 !important;padding:6px 4px !important;color:#fff;background:#000;-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);box-shadow:0 0 5px rgba(0, 0, 0, 0.5); outline:medium none; font:14px verdana,arial,serif;}
+#kcy-tooltip p span {color:#CCC;font-size:11px;}</style><div class="kcy-container"><div class="kcy-top-tab kcy-wrapper kcy-rounded-all"> <div class="kcy-push"> <div class="kcy-button"> <input type="button" onclick="KCY_WIDGETID.shareWidget(&#39;&#39;);" value="IMPULSA" class="kcy-rounded-all"> </div> </div> <div class="kcy-sections-tab kcy-rounded-top"> <div class="kcy-sections-left"> <div class="kcy-sections-left-main"> <ul> <li class="kcy-section-selected" id="kcyPagelnkID"><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.showTab(&#39;Page&#39;); return false;">Impulsores</a></li> <li id="kcyDomainlnkID"><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.showTab(&#39;Domain&#39;); return false;">Comunidad</a></li> </ul> </div> </div> <div class="kcy-sections-right"> <div class="kcy-sections-right-main"> <a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.showHelp(); return false">¿Ayuda?</a> </div> </div> </div> <div class="kcy-main-tab kcy-wrapper kcy-rounded-all"> <div class="kcy-main-two kcy-wrapper"> <div class="kcy-main-two-left"><h1>----</h1><span>sin clicks</span></div> <div class="kcy-main-two-right" id="kcyPagePanelID"> <span><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openComm(&#39;url&#39;); return false;">0 personas</a> han traído clicks a esta página</span> <div class="kcy-row"> <div class="kcy-pushers kcy-wrapper"> <div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a title="¡Si impulsas esta página, puede que tu foto se muestre aquí!" href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openWidget(); return false;"><span>+</span></a></div></div> </div> </div> </div> <div class="kcy-main-two-right" style="display:none" id="kcyDomainPanelID"> <span><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" onclick="KCY_WIDGETID.openComm(&#39;domain&#39;); return false;">120 personas</a> han traído clicks a este dominio</span> <div class="kcy-row"> <div class="kcy-pushers kcy-wrapper"> <div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;alejandropg&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;alejandropg&#39;,&#39;3,091&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/alejandropg"><img width="30" height="30" alt="alejandropg" title="alejandropg - 3,091 clicks" src="./Introducción a XPath_files/saved_resource"></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;jmsanchez&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;jmsanchez&#39;,&#39;2,294&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/jmsanchez"><img width="30" height="30" alt="jmsanchez" title="jmsanchez - 2,294 clicks" src="./Introducción a XPath_files/saved_resource(1)"></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;davidbonilla&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;davidbonilla&#39;,&#39;911&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/davidbonilla"><img width="30" height="30" alt="davidbonilla" title="davidbonilla - 911 clicks" src="./Introducción a XPath_files/1392.jpg"></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;alcuvi&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;alcuvi&#39;,&#39;445&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/alcuvi"><img width="30" height="30" alt="alcuvi" title="alcuvi - 445 clicks" src="./Introducción a XPath_files/saved_resource(2)"></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;gracieladiter&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;gracieladiter&#39;,&#39;391&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/gracieladiter"><img width="30" height="30" alt="gracieladiter" title="gracieladiter - 391 clicks" src="./Introducción a XPath_files/saved_resource(3)"></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;dgomezg&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;dgomezg&#39;,&#39;364&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/dgomezg"><img width="30" height="30" alt="dgomezg" title="dgomezg - 364 clicks" src="./Introducción a XPath_files/saved_resource(4)"></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;jalonso&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;jalonso&#39;,&#39;295&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/jalonso"><img width="30" height="30" alt="jalonso" title="jalonso - 295 clicks" src="./Introducción a XPath_files/2104.jpg"></a></div></div><div class="kcy-pick"><div class="kcy-tooltip"><a onclick="KCY_WIDGETID.openWidget(&#39;rcanales&#39;); return false;" onmouseover="KCY_WIDGETID.showTooltip(0,this,&#39;rcanales&#39;,&#39;261&#39;);" onmouseout="KCY_WIDGETID.hideTooltip()" title="" href="http://karmacracy.com/rcanales"><img width="30" height="30" alt="rcanales" title="rcanales - 261 clicks" src="./Introducción a XPath_files/1830.png"></a></div></div> </div> </div> </div> </div> </div> </div> <div class="kcy-footer kcy-wrapper"> <span>powered by <a href="http://karmacracy.com/" target="_blank">karmacracy</a></span> </div></div><!--uncached--></div><script defer="defer" src="./Introducción a XPath_files/saved_resource(5)"></script>    </div>
+			<div class="clear">
+			<div class="bloque_pie">
+			<div id="pie-left" class="wrapper"></div> 
+				<div id="footer">
+					<p id="copyright">Copyright 2003-2014 © All Rights Reserved | <a href="http://www.adictosaltrabajo.com/textolegal.php" target="_blank">Texto legal y condiciones de uso</a> |
+					<a href="http://www.adictosaltrabajo.com/banners.php" target="_blank">Banners</a> | 
+					<a href="http://www.autentia.com/" target="_blank">Powered by Autentia</a> | 
+					<a href="http://www.autentia.com/contacto.htm" target="_blank">Contacto</a></p>
+					<p id="acronyms">
+						<a href="http://validator.w3.org/check/referer" target="_blank"><img src="./Introducción a XPath_files/xhtml.png" alt="xhtml 1.0"></a>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer?warning=no" target="_blank"><img src="./Introducción a XPath_files/css.png" alt="css"></a>
+				      	<a href="http://www.adictosaltrabajo.com/feeds.php" target="_blank"><img src="./Introducción a XPath_files/rss.png" alt="rss"></a>
+				      	<a href="http://www.adictosaltrabajo.com/feeds.php" target="_blank"><img src="./Introducción a XPath_files/atom.png" alt="atom"></a>
+				  	</p>
+				</div>
+				<div id="pie-right" class="wrapper"></div> 
+				</div>
+			</div>	
+		</div>
+		<div style="display: none; visibility: hidden; opacity: 0;" id="lbOverlay"></div>
+		<div style="display: none;" id="lbCenter">
+			<div id="lbImage"><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" id="lbPrevLink"></a><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" id="lbNextLink"></a></div>
+		</div>
+		<div style="display: none;" id="lbBottomContainer">
+			<div id="lbBottom"><a href="http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=XPATH#" id="lbCloseLink"></a><div id="lbCaption"></div>
+				<div id="lbNumber"></div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>	
+	
+
+</div><div class="cookiePolicyBanner" style="display: none;"><div class="messageBox">Este sitio web utiliza cookies para obtener datos estadísticos de la navegación de sus usuarios con el fin de mejorar la experiencia de usuario. Si continuas navegando aceptas el uso de cookies con ese fin. Puedes ampliar la información <a href="http://www.adictosaltrabajo.com/textolegal.php#cookies">aquí.</a></div><div class="buttonBox"><a class="policyComplyButton">Aceptar</a></div></div><div id="draechromeext" class="ui-resizable" style="display: none;"><div id="draechromeext1"><div id="renglon1" style="height:28px;"><div id="nw" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/nw.png&#39;);"></div><div id="nn" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/n.png&#39;);"></div><div id="ne" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/ne.png&#39;);"><img id="cerrarbtndrae" src="chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/close.png" title="cerrar" alt="x"></div></div><div id="renglon4"><div id="ww" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/w.png&#39;);"></div><div id="navegacion" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/c.png&#39;)"></div><div id="ee" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/e.png&#39;) right repeat-y;"></div></div><div id="renglon2"><div id="ww" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/w.png&#39;);"></div><div id="draechrome" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/c.png&#39;)"></div><div id="ee" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/e.png&#39;) right repeat-y;"></div></div><div id="renglon3" style="height:18px;"><div id="sw" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/sw.png&#39;);"></div><div id="ss" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/s.png&#39;);"></div><div id="se" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/se.png&#39;);" title="ajustar tamaño"></div></div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div><iframe name="oauth2relay750977132" id="oauth2relay750977132" src="./Introducción a XPath_files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

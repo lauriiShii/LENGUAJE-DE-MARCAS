@@ -1,0 +1,59 @@
+﻿/*------------------------------CSS DEL FORMULARIO HOTEL--------------------------*/
+/*caracteristicas generales*/
+body{
+	background-image:url(fonditoo.PNG);
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+	color:#B43104; /* color del texto */
+}
+/*-----------------------------FORMULARIO------------------------------------------*/
+/*caracteristicas generales del formulario*/
+#formulario{
+	position:absolute;
+    width:55%;
+	top:0px;
+	left:0px;
+	height:80%;
+	margin-top:5%;
+	margin-left:3%;
+	}
+#formulario table{
+    border:0px;
+    }
+/*caracteristicas de las letras*/
+#titulo{
+	text-align:center; /* alineacion del texto*/
+	font-size:35px; /* tamaño del texto */
+	color:#3B170B; /* color del texto */
+	font-weight: bold; /* muestra la letea en negrita */
+	color:#61210B; /*color del titulo*/
+}
+#subtitulo{
+	text-align:center;
+	font-size:20px;
+	font-style: italic; /* muestra la letra en cursiva*/
+	color:#DF3A01;
+    }
+.letras1{
+	text-align:right;
+	font-size:16px;
+	font-weight: bold;
+}
+.letras2{
+	font-size:16px;
+	color:#61210B;
+	}
+/*---------------------------------IMAGEN--------------------------------------------*/
+#img{
+    background-image:url(hotel.PNG);
+	position:absolute;
+	width:43%;
+	right:0px;
+	top:0px;
+	height:100%;
+	border-left:5px solid;
+	border-color:#DF3A01;
+	}
+/*-------------------------------CLASS CLEAR---------------------------------------*/
+.clear{clear:both;}

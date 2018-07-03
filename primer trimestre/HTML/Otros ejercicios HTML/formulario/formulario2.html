@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+	<head>
+		<title>Formulario</title>
+		<style type="text/css">
+			#bloque { width:650px; }
+			.negrita { font-weight: bold; }
+		</style>
+	</head>
+	
+	<body>
+		<div id="bloque">
+		<form action="maneja_formulario.php" method="post">   
+			<fieldset>     
+				<legend class="negrita">Datos personales</legend>     
+				<table>
+					<tr>
+						<td class="negrita">
+							DNI
+						</td>
+						<td>
+							<input type="text" name="dni" value="" size="6" maxlength="9">   
+						</td>
+						<td class="negrita">
+							Sexo:
+						</td>
+					</tr>
+					<tr>
+						<td class="negrita">
+							Nombre
+						</td>
+						<td>
+							<input type="text" name="nombre" value="" size="30">
+						</td>
+						<td>
+							<input type="radio" name="sexo" value="hombre" checked="checked">
+							Hombre 
+						</td>
+					</tr>
+					<tr>
+						<td class="negrita">
+							Apellidos
+						</td>	
+						<td>	
+							<input type="text" name="apellidos" size="60" value=""> 
+						</td>
+						<td>
+							<input type="radio" name="sexo" value="mujer">
+							Mujer
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			
+			<fieldset>     
+				<legend class="negrita">Dirección</legend>     
+				<table>
+					<tr>
+						<td class="negrita">
+							Calle/Avda:
+						</td>
+						<td colspan="2">
+							<input type="text" name="calle" size="58" value="">
+						</td>
+					</tr>
+					<tr>
+						<td class="negrita">
+							Población
+						</td>	
+						<td class="negrita">	
+							<input type="text" name="Poblacion" size="30" value=""> 
+							<label>Provincia:</label> 
+						</td>
+						<td>
+							<select id="Provincia" name="Provincia">   
+								<option value="" selected="selected">Almería</option>   
+								<option value="Huelva">Huelva</option>
+								<option value="Sevilla">Sevilla</option>
+								<option value="Córdoba">Córdoba</option>   
+								<option value="Cádiz">Cádiz</option>   
+								<option value="Málaga">Málaga</option>
+								<option value="Granada">Granada</option>
+								<option value="Jaén">Jaén</option>
+							</select> 
+						</td>
+					</tr>
+				</table>
+						
+				
+			</fieldset>
+				
+			<fieldset>     
+				<legend class="negrita">Práctica en grupo</legend>     
+				<table>
+					<tr>
+						<td class="negrita">
+							Archivo:&nbsp &nbsp &nbsp
+							<input type="file" name="browse"> 
+						</td>	
+					</tr>
+					<tr>
+						<td>
+							<input name="Archivo_comprimido" type="checkbox" value="comprimido"> 
+							Archivo comprimido	
+							<input name="Archivo_encriptado" type="checkbox" value="encriptado"> 
+							Archivo encriptado
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" class="negrita">
+							<label for="descripcion">Descripción de la práctica</label>
+							<textarea id="descripcion" name="descripcion" cols="60" 
+							rows="10"></textarea>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<center><input type="submit" value="Submit Query"></center> 
+		</form>	
+		</div>
+						 
+	</body>
+		
+</html>
+

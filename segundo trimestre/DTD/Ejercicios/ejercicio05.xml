@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE modelos SYSTEM "ejercicio05.dtd">
+
+<modelos>
+	<modelo referencia="10">
+		<descripcion>
+			El motor es de tipo<tipoMotor>Diesel</tipoMotor>, con una potencia de<potencia>90 cv</potencia>. Consume alrededor de<consumoMedio velocidad="100">4 Litros</consumoMedio>.
+		</descripcion>
+	</modelo>
+	<modelo referencia="20" modeloRel="10">
+		<modeloRel relacionadoCon="10"/>
+		<descripcion>
+			<tipoMotor>Gasolina</tipoMotor>
+			<potencia>115 cv</potencia>
+			<consumoMedio velocidad="100">4,9 Litros</consumoMedio>
+		</descripcion>
+	</modelo>
+	<modelo referencia="30">
+		<modeloRel relacionadoCon="10"/>
+		<modeloRel relacionadoCon="20"/>
+		<motor relacionadoCon="10"/>
+		<motor relacionadoCon="20"/>
+		<motor relacionadoCon="30"/>
+	</modelo>
+</modelos>

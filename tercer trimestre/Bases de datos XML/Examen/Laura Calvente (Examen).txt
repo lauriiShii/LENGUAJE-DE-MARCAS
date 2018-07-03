@@ -1,0 +1,63 @@
+(: EJERCICIO 01 :)
+
+//profesor[@nombre and @apellido]
+
+(: EJERCICIO 02 :)
+
+//carrera/materias/materiales/libro/edit/../@codigo
+
+(: EJERCICIO 03 :)
+
+//carrera/materias/profesor/jtp/../..
+
+(: EJERCICIO 04 :)
+
+//carrera/materias/materiales/libro[2]/..
+
+(:EJERCICIO 05:)
+
+
+
+(: EJERCICIO 06 :)
+
+for $a in doc("universidad") //libro
+let $c := $a/autor
+
+return
+
+<libro>{ $a/titulo, <autores>{ max(count($c)) }</autores>}</libro>
+
+(: EJERCICIO 07:)
+
+<xhtml>
+
+<head>
+</head>
+
+<body>
+
+  <h1>Materiales</h1>
+  
+  <table>
+    <tr>
+      <td>MATERIA</td>
+      <td>LIBROS</td>
+      <td>ARTICULOS</td>
+      <td>WIWIPEDIA</td>
+    </tr>
+
+{for $c in doc("universidad")//materia/profesor[@nombre= "Carlos" 
+and @apellido= "Correa"]//profesor
+
+return
+<tr>
+  <td>{data($c/../materia/@nombre)}</td>
+  <td>{data($c/../materia/materiales/libro/titulo)}</td>
+  <td>{data($c/../materia/materiales/articulo/titulo)}</td>
+  <td>{href($c/../materia/materiales/wikipedia/url}</td>
+</tr>
+}
+</table>
+</body>
+
+</xhtml>

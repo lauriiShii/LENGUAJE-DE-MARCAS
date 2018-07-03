@@ -1,0 +1,15 @@
+<contactos>
+
+	<contacto>
+		<nombre>Daniel</nombre>
+		<apellido1>Muñoz</apellido1>
+		<apellido2>Perez</apellido2>
+		<direccion>C//Padre Pandero nº19</direccion>
+		<telefonos>
+			<casa>856126235</casa>
+			<movil>671213454</movil>
+			<trabajo>902000001</trabajo>
+		</telefonos>
+	</contacto>
+
+</contactos>

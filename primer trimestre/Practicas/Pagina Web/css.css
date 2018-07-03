@@ -1,0 +1,276 @@
+
+/*--------------------------------------CSS de FRIKIJUEGOS.COM ----------------------------------*/
+/*caracteristicas universales para toda la pagina*/
+*{
+    font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+    }
+	
+body{
+	 border-top:8px solid;
+	 border-color:#04B4AE;
+	 background-color:#424242;
+	 background:linear-gradient( #424242, #424242, #084B8A);
+   }
+
+   /*-----------------------------------------CABEZERA---------------------------------------*/
+/*carazteristicas generales de la cabezera*/
+#cabecera{
+    height:300px;
+	width:100%;
+    overflow:hidden;
+	margin-bottom:2%;
+	background:linear-gradient( #084B8A, #424242, #424242);
+	position:static;
+	}
+	
+/*posicionamiento del logo*/
+#cabecera img{ 	
+   position:relative; 
+   height:100%;
+   }
+   
+/*--------------------------------------------MENU------------------------------------------*/
+/*damos propiedades generales*/	 
+#contenedor_menu {
+    margin-left:17%;
+    margin-bottom:3%;
+    background-color:#084B8A; 
+    width:65%; 
+    height:16%;
+    border-radius:8px;
+    position:static;
+    }
+ 	
+.menu li { 
+    list-style:none;
+    }	
+.menu a{
+    background-color:#084B8A;
+	border-radius:8px;
+	color:white;
+	text-decoration:none; 
+	padding:7%;
+	display:block;
+	}
+	
+.menu li a:hover {
+    background-color:#04B4AE; 
+	border-radius:8px;
+	text-decoration:underline;
+	}		
+/*damos estilo a los items directos que tenemos dentro de nuestro menu*/
+	
+.menu > li {
+    float:left;
+	width:20%;
+    text-align:center;
+	}
+	
+.menu li ul {
+    display:none;
+	position:absolute;
+	width:13%;
+	}
+	
+.menu li:hover > ul {
+	display:block;
+	z-index:1; 
+	}
+		
+.menu li ul li {
+	position:relative;
+	}
+	
+.menu li ul li ul {
+    left:100%;
+	top:0px;
+	width:100%;
+	}
+	
+/*---------------------------------------------CUERPO------------------------------------------*/
+/*propiedades generales del cuerpo*/
+#cuerpo{
+    width:100%;
+	position:static;
+    }
+#cuerpo img:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    }
+#cuerpo img {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    }
+
+/*-------COLUMNA------*/
+/*propiedades generales del lateral*/
+#lado_izquierdo{
+    float:left;
+    width:20%;
+    margin-left:6%;
+    }
+#mapa{
+	margin-bottom:30px;
+	margin-top:10px;
+	border-radius:10px;
+	border-color:#0080FF;
+	color:#0080FF;
+	border:5px solid;
+	overflow-x:auto; 	
+	box-shadow: 10px 10px 5px #2E2E2E;
+	background-color:#E0ECF8;
+    height:500px;
+    }
+#calendario{
+	margin-bottom:30px;
+	margin-top:10px;
+	border-radius:10px;
+	border-color:#0080FF;
+	color:#0080FF;
+	border:5px solid;
+	overflow-x:auto; 	
+	box-shadow: 10px 10px 5px #2E2E2E;
+	background-color:#E0ECF8;
+    height: 180px;
+    }
+
+/*-------CONTENIDO------*/
+#contenido{
+	float:right;
+    width:60%;
+    margin-right:8%;
+    }
+
+/*-------------CAJAS (CONTENEDOR)----------*/
+/*propiedades generales de cada caja que aparece*/
+.contenedor{
+	margin-bottom:30px;
+	margin-top:10px;
+    width:95%;
+	border-radius:10px;
+	border-color:#0080FF;
+	color:#0080FF;
+	border:5px solid;
+	overflow-x:auto; 	
+	box-shadow: 10px 10px 5px #2E2E2E;
+	background-color:#E0ECF8;
+	}
+	
+/*propiedades de las letras de las letras de las cajas*/
+.contenedor p{
+	text-indent:15px;
+	margin:5%;
+	color:#61210B;
+	text-align:left;
+	}
+
+/*propiedades de los botones registrarse e iniciar*/
+.boton{
+    color:brown;
+	border:5px solid;
+	border-radius:10px;
+	border-color:#8A0829;
+	margin:3%;
+	font-size:190%;
+	text-decoration:none;
+	}
+.boton:hover{
+	border-radius:10px;  /*para que la marca marron sea obalada y mas ancha al pasar el raton*/
+	border:10px solid;
+    }
+/*--------------------INICIO y RGISTRO--------------------*/
+#inicio{
+    width:400px;
+    height:200px;
+    }
+
+#registro{
+    width:700px;
+    height:300px;   
+    }
+#registro h1 {
+    text-align: center;
+    color:#8A0829;
+    }
+#registro a {
+    font-size:25px;
+    color:#8A0829;
+    }
+#inicio a {
+    font-size:25px;
+    color:#8A0829;
+    }
+
+#datosPersonales {
+    float:left;
+    width: 290px;
+}
+
+#datosPersonales label {
+    text-align: right;
+    float:left;
+    width: 100px;
+    padding-top: 6px;
+}
+
+#datosPersonales input {
+    margin-left:10px;
+    margin-top: 5px;
+}
+
+#datosRegistro {
+    float:right;
+    width: 400px;
+}
+
+#datosRegistro label {
+    margin-left: 0;
+    text-align: right;
+    float:left;
+    width: 200px;
+    padding-top: 6px;
+}
+
+#datosRegistro input {
+    margin-left:10px;
+    margin-top: 5px;
+}
+
+
+#registro legend {
+    font-weight: bold;
+}
+/*---------------------------------------------------PIE------------------------------------------*/
+/*------PIE NORMAL------*/
+/*propiedades generales del pie*/
+#pie{
+	width:70%;
+	margin-left:14%;
+	padding-bottom:20px;
+ 	position:static; 
+	 }	 
+
+#pie a {
+	margin-left:3%;
+	margin-bottom:3%;
+	margin-top:4%;
+	background:none;
+	}
+	
+/*-----PIE FIJO---------*/
+/*propiedades generales del pie fijo*/
+#pie_fijo{
+    height:20px;
+	width:100%;
+	background-color:#04B4AE;
+	text-align:center;
+	color:white;
+	margin:0%;
+	position:fixed;
+	bottom:0%;
+	}
+	
+/*------------------------------------------------CLASS CLEAR---------------------------------------*/
+.clear{clear:both;}

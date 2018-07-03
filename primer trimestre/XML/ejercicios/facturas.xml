@@ -1,0 +1,33 @@
+<facturas>
+
+   <factura codigo="1">
+     <fecha>1/3/2014</fecha>
+     <cliente>  
+       <dni>23432123A</dni>
+       <nombre>Pepe</nombre>
+       <direccion cp="11234" poblacion="Algeciras">
+           c/ pedro jimenez
+           <numero>1</numero>
+       </direccion>
+       <productos>
+       
+         
+         <producto iva="4">
+           <nombre>peras</nombre>
+           <cantidad>3</cantidad>
+           <medida>kg</medida>
+           <precio moneda="€">2</precio>
+         </producto>
+       
+            
+       </productos>
+
+       <descuento_medido "%">20</descuento_medido> 
+
+
+     </cliente>
+   </factura>
+
+</facturas>
+
+

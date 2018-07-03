@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE museos SYSTEM "ejercicio06.dtd">
+
+<museos>
+	<museo id="1">
+		<nombre>Museo del prado</nombre>
+		<horario>
+			<regular horaInicio="10.00" horaFin="20.00">De lunes a sabado</regular>
+			<festivos horaInicio="10.00" horaFin="19.00">Domingos y festivos</festivos>
+			
+		</horario>
+	</museo>
+</museos>

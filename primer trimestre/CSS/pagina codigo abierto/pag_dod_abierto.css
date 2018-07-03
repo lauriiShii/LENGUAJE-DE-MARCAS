@@ -1,0 +1,52 @@
+#contenido{font-family: Arial; 	
+           font-size:14;
+		   background-color:#F6E3CE; 
+		   width:850px; 
+		   margin:5px auto;
+		   border: 4px green solid;}
+#cabecera{background-color:orange; 
+          height:35px; 
+		  font-size:30px; 
+		  text-align:center; 
+		  font-weight: bold; 
+		  color:brown;}
+#menu{margin-left:10px; 
+      margin-top:10px;
+	  text-align:justify;
+	  float: left;
+	  width: 105px;}
+#menu table {border:2px solid orange; 
+           color:brown;
+		   background-color:#FBF8EF;}
+#texto_izquierda{float: right;
+	             width: 200px;
+		         text-align:justify;
+				 margin:10px}
+#texto_izquierda h1{height:20px;
+				   font-weight: bold; 
+		           color:brown;
+				   font-size:18;}
+#centro{float: left;
+	    width: 60%;
+	    margin-bottom: 10px;
+		text-align:justify;}
+#texto1 h1{color:green;}
+#texto2 img{float:left;}
+#texto3{color:brown; 
+		font-weight: bold;
+		text-align:justify;}
+#texto3 p {text-align:center;
+          text-align:center;
+		  font-style:oblique;}
+#texto3 table{background-color:#FBF8EF; 
+            border: solid 2px orange;
+			color: black;
+			width:100%;
+		    text-align:center;}
+#texto3 table tr th {background-color:#F5DA81}
+#footer{clear: both;
+	    text-align: center;
+	    height: 30px;  
+		color:brown;
+		font-size: 15;
+		background-color:orange;}

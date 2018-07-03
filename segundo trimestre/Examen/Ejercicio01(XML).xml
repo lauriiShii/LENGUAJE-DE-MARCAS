@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOPTIPE empresa SYSTEM "Ejercicio01(DTD).dtd">
+<Empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio01(XSD).xsd">
+    <Cruceros>
+        <Crucero id="2-44" tipo="mediterraneo">
+            <Nombre>Crucero por la peninsula</Nombre>
+            <Fecha fecha="20/09/2014">
+                <Precio>682</Precio>
+            </Fecha>
+            <Fecha fecha="10/08/2014">
+                <Precio>745</Precio>
+            </Fecha>
+            <Escalas>
+                <dia numDia="1" ciudad="Bilbao"/>
+                <dia numDia="2" ciudad="Vigo"/>
+                <dia numDia="3" ciudad="Lisboa"/>
+                <dia numDia="4" ciudad="Tunez"/>
+                <dia numDia="5" ciudad="CasaBlanca"/>
+                <dia numDia="6" ciudad="Gibraltar"/>
+                <dia numDia="7" ciudad="Malaga"/>
+            </Escalas>
+        </Crucero>
+        <Crucero id="2-44" tipo="mediterraneo">
+            <Nombre>Crucero por la peninsula</Nombre>
+            <Fecha fecha="12/07/2014">
+                <Precio>450</Precio>
+            </Fecha>
+            <Fecha fecha="10/08/2014">
+                <Precio>745</Precio>
+            </Fecha>
+            <Escalas>
+                <dia numDia="1" ciudad="Barcelona"/>
+                <dia numDia="2" ciudad="Villafranche"/>
+                <dia numDia="3" ciudad="Marsella"/>
+                <dia numDia="4" ciudad="Barcelona"/>
+            </Escalas>
+        </Crucero>
+    </Cruceros>
+
+    <Opiniones>
+        <Opinion idref="2-44" fecha="25/10/2014" puntuacion="10">
+            <Autor>
+                <Nombre>Maria</Nombre>
+                <Apellido>Garcia</Apellido>
+                <FechaNacimiento dia="17" mes="Junio" año="1949"/>
+            </Autor>
+            <Descripcion>El barco es hermoso, a mi familia y a mi nos gusto mucho el servicio</Descripcion>
+        </Opinion>
+        <Opinion idref="2-44" fecha="13/11/2014" puntuacion="10">
+            <Autor>
+                <Nombre>Angela</Nombre>
+                <Apellido>Constanza</Apellido>
+                <FechaNacimiento dia="08" mes="Enero" año="1970"/>
+            </Autor>
+            <Descripcion>La comodidad en el barco es excelente, el confort en cuanto a habitaciones y sitios de reposo son espetaculares</Descripcion>
+        </Opinion>
+        <Opinion idref="2-44" fecha="12/12/2014" puntuacion="9">
+            <Autor>
+                <Nombre>Pablo</Nombre>
+                <Apellido>Lopez</Apellido>
+                <FechaNacimiento dia="25" mes="Febrero" año="1960"/>
+            </Autor>
+            <Descripcion>Buen servicio, buena animacion</Descripcion>
+        </Opinion>
+        <Opinion idref="1-43" fecha="30/01/2015" puntuacion="8">
+            <Autor>
+                <Nombre>Marcela</Nombre>
+                <Apellido>Sanchez</Apellido>
+                <FechaNacimiento dia="04" mes="Septiembre" año="1978"/>
+            </Autor>
+            <Descripcion>Comidas exquisitas. Baño dañado. Piscina excelente</Descripcion>
+        </Opinion>
+    </Opiniones>
+</Empresa>

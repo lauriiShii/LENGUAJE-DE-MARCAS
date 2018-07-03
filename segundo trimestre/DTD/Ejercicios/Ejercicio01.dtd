@@ -1,0 +1,4 @@
+<!ELEMENT facturas (factura)+>
+<!ELEMENT factura (telefono, fax, fPago, moneda, iva, productos)>
+    <!ATTLIST factura numFac ID>
+    <!ATTLIST factura numCli #REQUIRED>

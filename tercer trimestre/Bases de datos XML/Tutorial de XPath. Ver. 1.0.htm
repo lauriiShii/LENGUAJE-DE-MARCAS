@@ -1,0 +1,906 @@
+
+<!-- saved from url=(0050)http://geneura.ugr.es/~victor/cursillos/xml/XPath/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Tutorial de XPath. Ver. 1.0</title>
+<link href="./Tutorial de XPath. Ver. 1.0_files/tutoriales_feb_2001.css" type="text/css" rel="stylesheet">
+<style type="text/css"></style></head>
+<body>
+<table width="100%" align="center" border="0">
+<tbody><tr>
+<td valign="top"><font size="+2"><b>Tutorial de XPath</b></font>
+<br>
+<font size="+1">Versión: 1.0,
+<em>Enero, 2001</em></font>
+<br>
+<hr align="left" noshade="yes" width="25%">
+Autor:
+     Victor Manuel Rivas Santos
+     <br>
+<font size="-2">
+
+Web: <a href="http://wwwdi.ujaen.es/~vrivas">http://wwwdi.ujaen.es/~vrivas</a>,
+Mail: <a href="mailto:vrivas.at.ujaen.es">vrivas.at.ujaen.es</a>
+<br>
+</font></td><td valign="bottom" align="right"><a onmousedown="document.images[0].src=&#39;http://geneura.ugr.es/~gustavo/images/inicio-pulsado.gif&#39;" onmouseout="document.images[0].src=&#39;http://geneura.ugr.es/~gustavo/images/inicio-inactivo.gif&#39;" onmouseover="document.images[0].src=&#39;http://geneura.ugr.es/~gustavo/images/inicio-activo.gif&#39;" href="http://wwwdi.ujaen.es/~vrivas"><img alt="inicio" border="0" src="./Tutorial de XPath. Ver. 1.0_files/inicio-inactivo.gif"></a><a onmousedown="document.images[1].src=&#39;http://geneura.ugr.es/~gustavo/images/geneura-pulsado.gif&#39;" onmouseout="document.images[1].src=&#39;http://geneura.ugr.es/~gustavo/images/geneura-inactivo.gif&#39;" onmouseover="document.images[1].src=&#39;http://geneura.ugr.es/~gustavo/images/geneura-activo.gif&#39;" href="http://geneura.ugr.es/"><img alt="GeNeura" border="0" src="./Tutorial de XPath. Ver. 1.0_files/geneura-inactivo.gif"></a><a onmousedown="document.images[2].src=&#39;http://geneura.ugr.es/~gustavo/images/cursos-pulsado.gif&#39;" onmouseout="document.images[2].src=&#39;http://geneura.ugr.es/~gustavo/images/cursos-inactivo.gif&#39;" onmouseover="document.images[2].src=&#39;http://geneura.ugr.es/~gustavo/images/cursos-activo.gif&#39;" href="http://geneura.ugr.es/cursos"><img alt="cursos" border="0" src="./Tutorial de XPath. Ver. 1.0_files/cursos-inactivo.gif"></a>
+<br>
+<br>
+<b>(C)
+     GeNeura Team
+     </b>
+<br>
+<font size="-2">
+Web: <a href="http://www.geneura.org/">http://www.geneura.org</a>,
+Mail: <a href="mailto:tutti.at.geneura.ugr.es">tutti.at.geneura.ugr.es</a>
+<br>
+</font></td>
+</tr>
+</tbody></table>
+<hr noshade="yes" width="100%">
+<h2>1. Introducción</h2>
+<h3 class="C1">Qué es y para qué sirve</h3>
+<p align="justify">    
+  Todo el procesamiento realizado con un fichero XML está basado en la posibilidad de direccionar o acceder a cada una de las partes que lo componen, de modo que podamos tratar cada uno de los elementos de forma diferenciada.
+</p>
+<p align="justify">    
+El tratamiento del fichero XML comienza por la localización del mismo a lo largo del conjunto de documentos existentes en el mundo. Para llevar a cabo esta localización de forma unívoca, se utilizan los <b>URI</b> (<em>Unifom Resource Identifiers</em>), de los cuales los <b>URL</b> (<em>Unifom Resource Locators</em>) son sin duda los más conocidos.
+</p>
+<p align="justify">    
+Una vez localizado el documento XML, la forma de seleccionar información dentro de él es mediante el uso de <b>XPath</b>, que es la abreviación de lo que se conoce como <em>XML Path Language</em>. Con XPath podremos seleccionar y hacer referencia a texto, elementos, atributos y cualquier otra información contenida dentro de un fichero XML.
+</p>
+<p align="justify">    
+XPath en sí es un lenguaje sofisticado y complejo, pero distinto de los lenguajes procedurales que solemos usar (C, C++, Basic, Java...). Además, como casi todo en el mundo de XML, aún está en estado de desarrollo, por lo que no es fácil encontrar herramientas que incorporen todas sus funcionalidades.
+</p>
+<p align="justify">    
+XPath es a su vez la base sobre la que se han especificado nuevas herramientas que aprovehcar para el tratamiento de documentos XML. Herramientas tales como <b>XPointer</b>, <b>XLink</b> y <b>XQL</b> (el lenguaje que maneja los documentos XML como si de una base de datos se tratase), que también están en estado de desarrollo, pero que sin duda cambiarán el modo en que actualmente concebimos la navegación por la Web. Así, XPath sirve para decir cómo debe procesar una hoja de estilo el contenido de una página XML, pero también para poder poner enlaces o cargar en un navegador zonas determinadas de una página XML, en vez de toda la página.
+</p>
+<h2>2. El modelo de datos de XPath</h2>
+<h3 class="C1">Construcción del Árbol de Nodos</h3>
+<p align="justify">    
+Un documento XML es procesado por un analizador (o <em>parser</em>) construyendo un <b>árbol de nodos</b>. Este árbol comienza con un elemento raíz, que se diversifica a lo largo de los elementos que cuelgan de él y acaba en nodos hoja, que contienen solo texto, comentarios, intrucciones de proceso o incluso que están vacíos y solo tienen atributos
+</p>
+<p align="justify">    
+La forma en que XPath selecciona partes del documento XML se basa precisamente en la representación arbórea que se genera del documento. De hecho, los "operadores" de que consta este lenguaje nos recordarán la terminología que se utiliza a la hora de hablar de árboles en informática: raíz, hijo, ancestro, descendiente, etc...
+</p>
+<p align="justify">    
+Un caso especial de nodo son los nodos <b>atributo</b>. Un nodo puede tener tantos atributos como desee, y para cada uno se le creará un nodo atributo. No obstante, dichos nodos atributo NO se consideran como hijos suyos, sino más bien como etiquetas añadidas al nodo elemento.
+</p>
+<p align="justify">    
+A continuación se muestra un ejemplo de cómo se convierte en árbol un documento XML. Este mismo ejemplo será usado a lo largo de todo el tutorial. En primer lugar se muestra el documento XML y a continuación el árbol que genera.
+</p>
+<p align="justify">    
+<font color="#105010" size="-1"><b>Página XML</b>
+<br>
+<br>
+</font>:
+</p><pre class="codigo">
+&lt;libro&gt;
+
+  &lt;titulo&gt;Dos por tres calles&lt;/titulo&gt;
+
+  &lt;autor&gt;Josefa Santos&lt;/autor&gt;
+
+  &lt;capitulo num="1"&gt;
+    La primera calle
+
+    &lt;parrafo&gt;
+	Era una sombría noche del mes de agosto...
+     &lt;/parrafo&gt;
+
+    &lt;parrafo destacar="si"&gt;
+	Ella, inocente cual 
+        &lt;enlace href="http://www.enlace.es"&gt;mariposa&lt;/enlace&gt; 
+        que surca el cielo en busca de libaciones...
+    &lt;/parrafo&gt;
+
+  &lt;/capitulo&gt;
+
+  &lt;capitulo num="2" public="si"&gt;
+    La segunda calle
+
+    &lt;parrafo&gt;Era una obscura noche del mes de septiembre...&lt;/parrafo&gt;
+
+    &lt;parrafo&gt;
+	Ella, inocente cual 
+	&lt;enlace href="http://www.abejilla.es"&gt;abejilla&lt;/enlace&gt; 
+	que surca el viento en busca del néctar de las flores...
+    &lt;/parrafo&gt;
+
+  &lt;/capitulo&gt;
+
+  &lt;apendice num="a" public="si"&gt;
+    La tercera calle
+
+    &lt;parrafo&gt;
+	Era una densa noche del mes de diciembre...
+    &lt;/parrafo&gt;
+
+    &lt;parrafo&gt;
+	Ella, cándida cual 
+	&lt;enlace href="http://www.pajarillo.es"&gt;abejilla&lt;/enlace&gt; 
+	que surca el espacio en busca de bichejos para comer...
+    &lt;/parrafo&gt;
+  &lt;/apendice&gt;
+&lt;/libro&gt;
+	
+
+</pre>
+<p></p>
+<p align="justify">    
+<font color="#105010" size="-1"><b>Árbol generado</b>
+<br>
+<br>
+</font>:
+</p><pre class="codigo">
+/
+|
++---libro
+      |
+      +---titulo
+      |     |
+      |     +---(texto)Dos por tres calles
+      |
+      +---autor
+      |     |
+      |     +---(texto)Josefa Santos
+      |
+      +---capitulo [num=1]
+      |      |
+      |      +---(texto)La primera calle
+      |      |
+      |      +---parrafo
+      |      |     |
+      |      |     +---(texto)Era una sombría noche ...
+      |      +---parrafo
+      |            |
+      |            +---(texto)Ella, cual inocente mariposa...
+      |
+      +---capitulo [num=2]
+             |
+             +---(texto)La segunda calle
+             |
+             +---parrafo
+             |     |
+             |     +---(texto)Era una obscura noche ...
+             +---parrafo
+                   |
+                   +---(texto)Ella, cual inocente abeja...
+
+</pre>
+<p></p>
+<h3 class="C1">Tipos de Nodos</h3>
+<p align="justify">    
+Existen distintos tipos de nodos en un árbol generado a partir de un documento XML, a saber: <b>raíz</b>, <b>elemento</b>, <b>atributo</b>, <b>texto</b>, <b>comentario</b> e <b>instrucción de procesamiento</b> (respectivamente; <em>root, elements, attribute, text, comment</em> y <em>processing instruction</em>).
+</p>
+<h3 class="C2">Nodo Raíz</h3>
+<p align="justify">    
+Se identifica por <code>/</code>. No se debe confundir el nodo raíz con el elemento raíz del documento. Así, si el documento XML de nuestro ejemplo 
+
+tiene por elemento raíz a <code>libro</code>, éste será el primer nodo que cuelgue del nodo raíz del árbol, el cual es: <code>/</code>.
+</p>
+<p align="justify">    
+Insisto: <code>/</code> hace referencia al nodo raíz del árbol, pero no al elemento raíz del documento XML, por más que un documento XML solo pueda tener un elemento raíz. De hecho, podemos afirmar que el nodo raíz del árbol <b>contiene</b> al elemento raíz del documento.
+</p>
+<h3 class="C2">Nodo Elemento</h3>
+<p align="justify">    
+	Cualquier elemento de un documento XML se convierte en un nodo elemento dentro del árbol. Cada elemento tiene su nodo padre. El nodo padre de cualquier elemento es, a su vez, un elemento, excepto el elemento raíz, cuyo padre es el nodo raíz. Los nodos elemento tienen a su vez hijos, que son: nodos elemento, nodos texto, nodos comentario y nodos de intrucciones de proceso. Los nodos elemento también tienen propiedades tales como su nombre, sus atributos e información sobre los "espacios de nombre" que tiene activos.
+</p>
+<p align="justify">    
+	Cualquier elemento de un documento XML se convierte en un nodo elemento dentro del árbol. Cada elemento tiene su nodo padre. El nodo padre de cualquier elemento es, a su vez, un elemento, excepto el elemento raíz, cuyo padre es el nodo raíz. Los nodos elemento tienen a su vez hijos, que son: nodos elemento, nodos texto, nodos comentario y nodos de intrucciones de proceso. Los nodos elemento también tienen propiedades tales como su nombre, sus atributos e información sobre los "espacios de nombre" que tiene activos.
+</p>
+<p align="justify">    
+Una propiedad interesante de los nodos elemento es que pueden tener identificadores únicos (para ello deben ir acompañados de un DTD que especifique dicho atributotoma valores únicos), esto permite referenciar a dichos elementos de una forma mucho más directa.
+</p>
+<h3 class="C2">Nodos texto</h3>
+<p align="justify">    
+Por texto vamos a hacer refrenecia a todos los caracteres del documento que no está marcados con alguna etiqueta. Un nodo texto no tiene hijos, es decir, los distintos caracteres que lo forman no se consideran hijos suyos.
+</p>
+<h3 class="C2">Nodos atributo</h3>
+<p align="justify">    
+Como ya hemos indicado, los nodo atributo no son tanto hijos del nodo elemento que los contiene como etiquetas añadidas a dicho nodo elemento. Cada nodo atributo consta de un nombre, un valor (que es siempre una cadena) y un posible "espacio de nombres". 
+</p>
+<p align="justify">    
+Aquellos atributos que tienen por valor el valor por defecto asignado en el DTD se tratarán como si el valor se le hubiese al escribir el documento XML. Al contrario, no se crea nodo para atributos no especificados en el documento XML, y con la propiedad <code>#IMPLIED</code> definida en su DTD. Tampoco se crean nodos atributo para las deficiones de los espacios de nombre. Todo esto es normal si tenemos en cuenta que no es necesario tener un DTD para procesar un documento XML.
+</p>
+<h3 class="C2">Nodos comentario y de instrucciones de proceso</h3>
+<p align="justify">    
+Aparte de los nodos indicados, en el árbol también se generan nodos para cada nodo con comentarios y con intrucciones de proceso. Al contenido de estos nodos se puede acceder con la propiedad <code>string-value</code>.
+</p>
+<h2>3. Los <em>Location Paths</em>
+</h2>
+<h3 class="C1">Conceptos Básicos</h3>
+<h3 class="C2">Expresiones</h3>
+<p align="justify">    
+Una "instrucción" en lenguaje XPath se denomina una <b>expresión</b>. Y pongo entre comillas lo de "instrucción" porque XPath es un lenguaje declarativo, por lo que las intrucciones no son exactamente como estamos acostumbrados a ver.
+</p>
+<p align="justify">    
+Dichas expresiones pueden incluir cierta variedad de operaciones sobre distintos tipos de operanods. En nuestro caso nos vamos a ceñir a dos tipos de oprandos: llamadas a funciones y <em>location paths</em> (algo así como caminos de localización).
+</p>
+<p align="justify">    
+Un <em>location path</em> es la más importante de los tipos de expresiones que se pueden especificar en notación XPath. La sintaxis de un <em>location path</em> es simliar a la usada a la hora de describir los directorios que forman una unidad de disco en Unix o Linux (y similar a la de los sistemas basados en MS-DOS y Windows, si exceptuamos la unidad de disco -<code>C:, A:</code>- y que las barras usadas son <code>/</code> en vez de las típicas <code>\</code> de estos últimos sistemas operativos).
+</p>
+<p align="justify">    
+Sin embargo, solo la sintaxis es lo similar al sistema de archivos. El significado de las expresiones es totalmente diferente.
+</p>
+<p align="justify">    
+Por ejemplo, el siguiente <em>path</em> en Unix:
+</p>
+<p class="ejemplo">/usr/home/pepeillo/docs</p>
+<p align="justify">    
+hace referencia a un único directorio: <code>docs</code> el cual cuelga de el conjunto de directorios <code>/usr/home/pepeillo</code>.
+</p>
+<p align="justify">    
+Sin embargo, la siguiente expresión en XPath:
+</p>
+<p class="ejemplo">/libro/capitulo/parrafo</p>
+<p align="justify">    
+hace referencia a TODOS los elementos <code>parrafo</code> que cuelguen directamente de CUALQUIER elemento <code>capitulo</code> que cuelgue de CUALQUIER elemento <code>libro</code> que, finalmente, cuelguen del nodo raíz, <code>/</code>. Bueno, el último "TODOS" sobra dado que solo puede haber un elemento raíz: <code>libro</code>.
+</p>
+<p align="justify">    
+Hay que tener en cuenta que una expresión en XPath no devuelve los elementos que cumplen con el patrón que representa dicha expresión, sino que devuelve una <b>referencia</b> a dichos elementos; es decir, una expresión XPath nos devuelve una lista de apuntadores a los elementos que encajan en el patrón. Dicha lista puede estar vacía o contener uno o más nodos.
+</p>
+<h3 class="C2">Nodo contexto</h3>
+<p align="justify">    
+Un <em>location path</em> siempre tiene un punto de partida llamado <b>nodo contexto</b>. Para enterdernos es como el directorio actual si nos referimos a un sistema de ficheros. Así, si estando en Unix, damos una orden <code>ls</code> obtendremos los ficheros que existen en el directorio actual, mientras que si decimos <code>ls /usr/bin</code> obtendremos el listado de los ficheros existentes en el directorio <code>/usr/bin</code> con independencia del directorio en que estemos colocados al dar la orden.
+</p>
+<p align="justify">    
+En los <em>location path</em> ocurre lo mismo. A menos que se indique un camino explícito, se entenderá que el <em>location path</em> parte del nodo que en cada momento se esté procesando.
+</p>
+<p align="justify">    
+El concepto de "nodo contexto" es imprescindible para comprender cómo se lleva a cabo la elección de los nodos que ajustan con el patrón indicado en el <em>location path</em>. para explicar esto, veamos cómo actuaría un motor de evaluación de expresiones XPath al leer la siguiente expresión aplicada al documento XML que manejamos desde el principio del turtorial:
+</p>
+<p class="ejemplo">
+/libro/capitulo/parrafo
+</p>
+<p align="justify">    
+(<b>Aviso</b>: lo que viene a continuación requiere de pausada lectura, descansito para ir al frigorífico a por algo de beber y pequeño masaje en los ojos... como mínimo)
+</p>
+<p align="justify">    
+En primer lugar comienza por leer <code>/</code>, lo cual le dice que debe seleccionar el nodo raíz, independientemente del nodo contexto que en ese momento exista. En el momento en que el evaluador de XPath localiza el nodo raíz, éste pasa a ser el nodo contexto de dicha expresión.
+</p>
+<p align="justify">    
+Siguiendo con nuestro ejemplo, el analizador leería ahora <code>libro</code>, lo cual le dice que seleccione TODOS los elementos que cuelgan del nodo contexto (que atendiendo al párrafo anterior es el nodo raíz) que se llamen <code>libro</code>. Bueno... en este caso solo hay uno... porque (otra vez) solo puede haber un elemento raíz.
+</p>
+<p align="justify">    
+Sigamos avanzando con nuestro ejemplo. A continuación el analizador leería  <code>capitulo</code>, lo cual le dice que seleccione TODOS los elementos que cuelgan del nodo contexto (que atendiendo al párrafo anterior es el nodo <code>libro</code>). 
+</p>
+<p align="justify">    
+En un disco sería imposible que hubiera dos directorios con el mismo nombre colgando de un mismo directorio padre. Sin embargo, en nuestro documento XML podemos ver como hay dos elementos <code>capitulo</code> colgando del elemento raíz <code>libro</code>. Por tanto, en estos momentos hay dos elementos que encajan con el patrón <code>/libro/capitulo</code>.
+</p>
+<p align="justify">    
+¡Y ahora viene lo mejor! El analizador continua leyendo la expresión XPath que le hemos dado y llega a <code>parrafo</code>. Con ello le estamos diciendo que seleccione TODOS los elementos <code>parrafo</code> que cuelgan del nodo contexto...¡¡pero NO hay un nodo contexto, sino DOS!! Bueno, no pasa nada, cada uno de los nodos de ese conjunto de nodos va a tener su momento de gloria, de forma que el evaluador de expresiones lo va a recorrer uno por uno haciendo que, mientras evalúa un determinado nodo, ése sea el nodo contexto de ese momento.
+</p>
+<p align="justify">    
+En otras palabras, para localizar todos los elementos <code>parrafo</code> tal y como deseamos, se procesa el primer elemento <code>capitulo</code> y de él se extraen todos los <code>parrafo</code> que contenga. A continuación se pasa al próximo elemento <code>capitulo</code> del cual se vuelven a extraer todos los de tipo <code>parrafo</code> que tenga... y así sucesivamente. El resultado final es un nuevo conjunto de nodos (o para ser más precisos, conjunto de punteros a nodo) que encajan con el patrón buscado.
+</p>
+<h3 class="C2">Predicados</h3>
+<p align="justify">    
+Por lo poco que llevamos visto, podemos pensar que XPath es un gran mecanismo para seleccionar muchos nodos a la vez, lo cual es muy útil. ¿Pero qué pasa si solo queremos seleccionar un nodo que cumple ciertas características? ¿o más de un nodo que cumple con un patrón pero no todos los que lo cumplen, sino solo aquellos con un atributo que les hemos añadido para saber que los puede ver todo  el mundo? Bueno, pues para todo esto se utilizan los <b>predicados</b>.
+</p>
+<p align="justify">    
+Los predicados se incluyen dentro de un <em>location path</em> utilizando los corchetes, como poe ejemplo:
+</p>
+<p class="ejemplo">
+/libro/capitulo[@num="1"]/parrafo
+</p>
+<p align="justify">    
+Mediante el anterior <em>location path</em> estamos indicando que se escojan todos los elementos <code>parrafo</code> de todos los elementos <code>capitulo</code> que tengan un atributo llamado <code>num</code> al cual se le haya asignado el valor <code>"1"</code> (recordemos que en XML todos los atributos tienen valores de tipo cadena).
+</p>
+<p align="justify">    
+Atendiendo a nuestro ejemplo, solo hay un <code>capitulo</code> que cumpla dichas condiciones, por lo que solo los elementos <code>parrado</code> que él contiene serán seleccionados.
+</p>
+<p align="justify">    
+Posteriormente, veremos qué tipo de cosas se pueden poner en un predicado.
+</p>
+<h3 class="C1">
+<em>Axes</em>(¿Hachas?¿Ejes?)</h3>
+<p align="justify">    
+La verdad es que no sabía muy bien como traducir el término <em>axes</em> que significa algo así como cercenar o podar, aunque también hacha. Lo voy a traducir por <b>hacha</b> que seguro que después de un par de párrafos se convierte en algo normal.
+</p>
+<p align="justify">    Digamos que un <b>hacha</b> incluída en un <em>location path</em> realiza una selección de nodos dentro del árbol (o mejor dicho, dentro del subárbol que cuelga del nodo o conjunto de nodos contexto) de acuerdo con algún patrón.¡¡Bingo!!, cada vez que hemos usado la barra <code>/</code> (salvo para denominar el nodo raíz) estábamos usando un hacha.
+</p>
+<p align="justify">    
+Veamos las distintas hachas que podemos usar para recorrer el arbolito.
+</p>
+<h3 class="C2">Cómo hago los ejemplos</h3>
+<p align="justify">    
+
+Antes de empezar, será bueno decir cómo vamos a ver el
+resultado de los ejemplos que se citana a continuación. En
+primer lugar podríamos usar alguna herramienta de
+visualización de expresiones XPath. Dichas herramientas
+permiten especificarles un fichero XML, generan el árbol
+asociado al mismo y posteriormente nos dejan introducir expresiones
+XPath y las evalúan dando el resultado. Una de ellas es la
+realizada (en Java) por <a href="mailto:kyfung@wireoptional.com">Khun
+Yee Fung</a>, denominada <em>XPath VisualTool</em>. El sitio original
+para bajársela es <a href="http://www.wireoptional.com/XML/xslt.html">http://www.wireoptional.com/XML/xslt.html</a>
+(está al final de la página), aunque también la
+puedes encontrar aquí comprimido en <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/xpathtool20000714.zip">formato zip</a>. Yo la he probado y no me
+ha convencido mucho, la verdad.
+
+</p>
+<p align="justify"> 
+Por ello, el método que voy a usar es
+utilizar las <em>Extensible Stylesheet Language Transformations</em>
+(o <em>XSLT</em>), cuya explicación escapa al ámbito de
+éste tutorial, pero de las que se puede hallar más
+información en <a href="http://geneura.ugr.es/~jmerelo/XSLT">http://geneura.ugr.es/~jmerelo/XSLT</a>.
+
+</p>
+<p align="justify"> 
+Para poder usarlas, en primer lugar, necesitamos
+un analizador de <em>XSLT</em> como <b>Xalan</b> o <b>XP</b> y por
+supuesto uno de XML, como <b>Xerces</b> o <b>XT</b>. Si tenemos
+instalado <b>Cocoon</b>, entonces ya tenemos tanto <em>Xalan</em> como
+<em>Xerces</em>.
+</p>
+<p align="justify"> 
+Lo siguiente es llamar a <em>Xalan</em>
+indicándole qué fichero .xml debe tomar, qué
+fichero .xsl debe aplicar y qué fichero .html (en nuestro caso)
+debe generar. Yo me he creado un ficherito <em>bash</em> que lo he
+llamado <code>xsl</code> para reducir el proceso. Tiene la siguiente
+pinta:
+</p>
+<p class="ejemplo">
+
+#! /bin/bash  /usr/local/jdk1.2.2/bin/java -cp /usr/local/xalan-j_1_2_2/xalan.jar:/usr/local/xalan-j_1_2_2/xerces.jar \
+    org.apache.xalan.xslt.Process -in $1 -xsl $2 -out $3
+
+</p>
+<p align="justify"> 
+Hay que tener en cuenta que posiblemente el
+ejecutable <code>java</code> esté en otro directorio, e igual
+ocurrirá con <code>Xerces</code> y <code>Xalan</code>. Esto me
+permite hacer llamadas como la siguiente:
+</p>
+<p class="ejemplo">
+xsl ejemplo.xml ejemplo.xsl ejemplo.html
+</p>
+<p align="justify">    
+El fichero .xml que vamos a usar es el anteriormente indicado (el de los libros, capítulos, etc), al cual vamos a llamar <code>ejemplo.xml</code>. El fichero .xsl tiene el siguiente formato:
+</p><pre class="codigo">
+&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;!--
+==========================================================================
+| File..........: ejemplos.xsl
+| Author........: <a href="http://wwwdi.ujaen.es/~vrivas">Victor Manuel Rivas Santos</a>, <a href="mailto:vrivas@ujaen.es">vrivas@ujaen.es</a>
+| 		  (C) GeNeura Team, 2000
+|		  <a href="http://geneura.ugr.es/">http://www.geneura.org</a>, <a href="mailto:todos@geneura.ugr.es">todos@geneura.ugr.es</a>
+| Date..........: 26-Dec-2000
+| Description...: XSL for  tutorials
+==========================================================================
+--&gt;
+
+&lt;xsl:stylesheet version="1.0" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+&lt;xsl:template match="libro"&gt;
+&lt;HTML&gt;
+  &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplos en XPath&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+  &lt;BODY&gt;
+    &lt;H1&gt;Resultados:&lt;/H1&gt;
+    &lt;PRE&gt;
+       &lt;xsl:apply-templates select="<font color="#ff0000">/libro/capitulo</font>/text()"/&gt;
+    &lt;/PRE&gt;
+  &lt;/BODY&gt;
+&lt;/HTML&gt;
+&lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+
+
+</pre>
+<p></p>
+<p align="justify">    
+Lo que vamos a hacer cada vez que veamos un ejemplo es substituir la parte en <font color="#ff0000">rojo</font> por el ejemplo (dejándole el <code>/text()</code> final para que muestre el contenido de los elementos seleccionados). Una vez substituido, lo grabamos como <code>ejemplo.xsl</code>, y llamamos al ficherillo <code>xsl</code> dándole los ficheros según:
+</p>
+<p class="ejemplo">
+xsl ejemplo.xml ejemplo.xsl ejemplo.html
+</p>
+<p align="justify">    
+Y a continuación visualizamos en <b>cualquier navegador</b> la página <code>ejemplo.html</code>. Fácil, ¿no?
+</p>
+<p>
+      En la sección <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/#ejercicios">4. Ejerccios</a>, puedes acceder a una página web que te permitirá hacer ejercicios de XPath mucho más fácilmente.
+</p>
+<h3 class="C2">
+<em>Child</em>
+</h3>
+<p align="justify">    
+Es el hacha utilizada por defecto. Se corresponde con la barra, <code>/</code> (aunque tiene una forma más larga que es: <code>/child::</code>).
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>Seleccionar todos los <code>titulo</code> de un <code>libro</code>:
+</b>
+<br>
+<br>
+</font>
+/libro/titulo
+</p>
+<h3 class="C2">
+<em>Attribute</em>
+</h3>
+<p align="justify">    
+Se corresponde con el signo de la arroba, <code>@</code> (o en su forma larga que es: <code>attribute::</code>).
+</p>
+<p align="justify">    
+Mediante este operador podemos seleccionar aquellos nodos atributos que deseemos, especialmente indicando el nombre. Nótese, que para seleccionar los nodos elemento que muestran dichos atributos, lo que se ha de usar es un predicado (como se ha indicado ya anteriormente)</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Para seleccionar el atributo <code>num</code> que posean los elementos <code>capitulo</code>
+</b>
+<br>
+<br>
+</font>
+
+/libro/capitulo/@num
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Para seleccionar todos los elementos hijo de los <code>capitulo</code> que posean el atributo <code>public</code>
+</b>
+<br>
+<br>
+</font>
+
+/libro/capitulo[@public]/*
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Para seleccionar todos los elementos hijo de <code>parrafo</code> cuyo atributo <code>destacar</code> sea igual a "si".
+</b>
+<br>
+<br>
+</font>
+
+/libro/titulo/parrafo[@destacar="si"]
+</p>
+<h3 class="C2">
+<em>Descendant</em>
+</h3>
+<p align="justify">    
+Se especifica poniendo una doble barra: <code>//</code> (en su forma larga: <code>descendant::</code>).
+</p>
+<p align="justify">    
+Sirve para seleccionar TODOS los nodos que descendiendan del conjunto de nodos contexto. Es decir, no solo los hijos de los nodos contexto, sino también los hijos de los hijos, y los hijos de estos, etc.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Para seleccionar todos los <code>parrafo</code> de un <code>libro</code>:
+</b>
+<br>
+<br>
+</font>
+
+/libro//parrafo
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Para seleccionar todos los descendientes de <code>parrafo</code> que tienen un atributo <code>href</code>.
+</b>
+<br>
+<br>
+</font>
+
+//parrafo//*[@href]
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Para ver el valor del atributo <code>href</code> del caso anterior:.
+</b>
+<br>
+<br>
+</font>
+
+//parrafo//*[@href]/@href
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Para seleccionar todos los elementos descendientes de <code>capitulo</code>
+</b>
+<br>
+<br>
+</font>
+
+/libro/titulo//*
+</p>
+<h3 class="C2">
+<em>Self</em>
+</h3>
+<p align="justify">    
+Se especifica mediante el <code>.</code>.
+</p>
+<p align="justify">    
+Es muy útil pues sirve para seleccionar el nodo contexto. Por ejemplo, supongamos que deseamos seleccionar todos los <code>parrafo</code> descendientes del nodo contexto. No podemos escribir <code>//parrafo</code>, dado que seleccionaría todos los descendientes del nodo raíz. Por ello, la forma correcta es: <code>.//parrafo</code>
+</p>
+<h3 class="C2">
+<em>Parent</em>
+</h3>
+<p align="justify">    
+Al igual que en los sistemas de ficheros, se utilizan los dos puntos para identificarlo: <code>..</code>
+</p>
+<p align="justify">    
+El comportamiento de este hacha es un poco extraño al principio dado que realiza un paso hacia atrás en el árbol de nodos
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los nodos que tienen algún hijo de tipo <code>parrafo</code>:
+</b>
+<br>
+<br>
+</font>
+//parrafo/..
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los nodos <code>capitulo</code> que tienen algún hijo de tipo <code>parrafo</code>:
+</b>
+<br>
+<br>
+</font>
+//parrafo/../../capitulo
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+O bien:
+</b>
+<br>
+<br>
+</font>
+//capitulo/parrafo/..
+</p>
+<h3 class="C2">
+<em>Ancestor</em>
+</h3>
+<p align="justify">    
+De todas las hachas que podemos usar, esta es la única que no tiene ninguna forma de abreviación, sino que hay que ponerla como <code>ancestor::</code>
+</p>
+<p align="justify">    
+<code>Ancestor</code> es a <code>parent</code> lo que <code>descendant</code> es a <code>child</code>. Es decir, devuelve todos los elementos de los cuales el nodo contexto es descendiente.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los elementos que tienen entre sus descendientes algún <code>parrafo</code>
+</b>
+<br>
+<br>
+</font>
+//ancestor::parrafo/ancestor::*
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los capitulos que tienen entre sus descendientes alguno con el atributo <code>href</code>
+</b>
+<br>
+<br>
+</font>
+//*[@href]/ancestor::capitulo
+</p>
+<h3 class="C1">
+<em>Nodos Test</em>
+</h3>
+<p align="justify">    
+Los <b>nodos test</b> son algo así como funciones que nos van a ayudar a restringir un poquito lo que nos devuelve una expresión XPath. Ya hemos visto algunos de estos nodos test en los ejemplos anteriores. Pero ahora vamos a verlos con más detenimiento.
+</p>
+<p align="justify">    
+En primer lugar hemos de distinguir entre las hachas de contenido (<em>content axis</em>) de las que no lo son. Las <b>hachas de contenio</b> son básicamente todas las vistas excepto <code>attibute</code> y <code>namespace</code> (es como <code>attribute</code> pero para obtener el "espacio de nombres" asociado al elemento). 
+</p>
+<h3 class="C2">Nodos test aplicables a TODAS las hachas</h3>
+<h3 class="C2">*</h3>
+<p align="justify">    
+El nodo test <code>*</code> devuelve todos los nodos de tipo prinicpal (es decir, elemento, atributo o espacio de nombres), pero no nodos de texto, comentarios, y de instrucciones de proceso.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los nodos principales descendientes de los <code>parrafo</code>:
+</b>
+<br>
+<br>
+</font>
+//parrafo/*
+</p>
+<h3 class="C2">node()</h3>
+<p align="justify">    
+El nodo test <code>nod()</code> devuelve todos los nodos de todos los tipos.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los nodos descendientes de los <code>parrafo</code>:
+</b>
+<br>
+<br>
+</font>
+//parrafo/node()
+</p>
+<h3 class="C2">Nodos Test aplicables SOLO a la hachas de contenido</h3>
+<h3 class="C2">text()</h3>
+<p align="justify">    
+Cualquier nodo de tipo texto.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar el texto de todos los nodos  <code>parrafo</code>:
+</b>
+<br>
+<br>
+</font>
+//parrafo/text()
+</p>
+<p class="ejemplo">
+
+<font color="#105010" size="-1"><b>
+Seleccionar TODO el texto que cuelga de todos los nodos  <code>parrafo</code>:
+</b>
+<br>
+<br>
+</font>
+//parrafo//text()
+</p>
+<h3 class="C2">comment()</h3>
+<p align="justify">    
+Cualquier nodo de tipo comentario.
+</p>
+<h3 class="C2">processing-instruction()</h3>
+<p align="justify">    
+Cualquier nodo de tipo de instrucción de proceso, independientemente de su destino.
+</p>
+<h3 class="C2">processing-instruction( destino )</h3>
+<p align="justify">    
+Cualquier nodo de tipo de instrucción de proceso relativo al destino especificado.
+</p>
+<h3 class="C2">processing-instruction( cursor )</h3>
+<p align="justify">    
+Cualquier nodo de tipo de instrucción de proceso con el destino <code>cursor</code>
+
+</p>
+<h3 class="C1">
+<em>Predicados</em>
+</h3>
+<p align="justify">    
+Ya hemos hablado algo de los predicados en párrafos anteriores. Básicamente, un <b>predicado</b> permite restringir el conjunto de nodos seleccionados por un hacha a aquellos que cumplen cierta condición. Dicha condición es una expresión XPath y se expecifíca entre corchetes.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los elementos que tengan el atributo <code>num</code>:
+</b>
+<br>
+<br>
+</font>
+//*[@num]
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los <code>capitulo</code> que tengan un <code>parrafo</code> que tenga algún elemento con atributo <code>href</code>:
+</b>
+<br>
+<br>
+</font>
+//capitulo[parrafo/*[@href]]
+</p>
+<p align="justify">    
+Los predicados se pueden suceder uno a otro haciendo el efecto de la operación AND. Como en el siguiente ejemplo.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los <code>capitulo</code> que tengan un <code>parrafo</code> que tenga algún elemento con atributo <code>href</code> y que ellos mismos (los <code>capitulo</code> tengan el atributo <code>public</code> a valor <code>si</code>:
+</b>
+<br>
+<br>
+</font>
+//capitulo[parrafo/*[@href]][@public='si']
+</p>
+<p align="justify">    
+Aunque también se puede hacer uso del operador <code>and</code> encenrrando entre paréntesis los distintos predicados logicos.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Ejemplo similar al anterior
+</b>
+<br>
+<br>
+</font>
+//capitulo[ (parrafo/*[@href]) and (@public='si')]
+</p>
+<p align="justify">    
+También se puede hacer uso de la operación <code>or</code>. 
+</p>
+<p align="justify">    
+Esiste otro tipo de operacion or que utiliza la barra vertical: <code>|</code> separando no dos predicados, sino dos expresiones XPath.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los <code>capitulo</code> que tengan un <code>parrafo</code> que tenga algún elemento con atributo <code>href</code> o todos los <code>apendice</code>:
+</b>
+<br>
+<br>
+</font>
+//capitulo[parrafo/*[@href]]|//apendice
+</p>
+<p align="justify">    
+Por último, también podemos especificar con <code>not</code> la negación de alguna de las negaciones del predicado.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los <code>capitulo</code> que no tengan el atributo <code>public</code>
+</b>
+<br>
+<br>
+</font>
+//capitulo[not(@public)]
+</p>
+<h3 class="C2">Predicados con funciones de cardinalidad</h3>
+<p align="justify">    
+Existen, por último, ciertas funciones que nos van a servir para restringir el conjunto de nodos devueltos en una expresión XPath basándose en la posición del elemento devuelto. Tales funciones son: <b>position()</b>, <b>last()</b> e <b>id()</b>.
+</p>
+<h3 class="C2">
+<em>position()</em>
+</h3>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar el segundo <code>capitulo</code>:
+</b>
+<br>
+<br>
+</font>
+//capitulo[position()=2]
+</p>
+<p align="justify">    
+Esta función se puede simular poniendo simplemente el número entre corchetes.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Mismo ejemplo anterior: seleccionar el segundo <code>capitulo</code>:
+</b>
+<br>
+<br>
+</font>
+//capitulo[2]
+</p>
+<h3 class="C2">
+<em>last()</em>
+</h3>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar el último <code>capitulo</code>:
+</b>
+<br>
+<br>
+</font>
+//capitulo[last()]
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar todos los <code>capitulo</code> menos el último:
+</b>
+<br>
+<br>
+</font>
+//capitulo[not(position()=last())]
+</p>
+<p align="justify">    
+Estas funciones se pueden usar con expresiones matemáticas, como en el siguiente ejemplo.
+</p>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar el penúltimo <code>capitulo</code>:
+</b>
+<br>
+<br>
+</font>
+//capitulo[last()-1]
+</p>
+<h3 class="C2">
+<em>id()</em>
+</h3>
+<p class="ejemplo">
+<font color="#105010" size="-1"><b>
+Seleccionar los <code>parrafo</code> hijos del elemento con <code>id="capitulo_1"</code>:
+</b>
+<br>
+<br>
+</font>
+id( "capitulo_1" )/parrafo
+</p>
+<p align="justify">    
+Hay que tener en cuenta un detalle. Solo se podrá usar en aquellos ficheros XML que sean validados por un DTD en el que se especifique que el atributo <code>id</code> es único.
+</p>
+
+<a name="ejercicios">
+<h2>4. Ejercicios</h2>
+</a><p align="justify"><a name="ejercicios">    
+Hemos creado una dirección web en la que puedes hacer ejercicios de XPath:
+</a><a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/ejercicios_xpath.html">ejercicios_xpath.html</a>
+</p>
+<p>
+El fichero XML sobre el que tratan los ejercicios es: <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/ejercicios_xpath_xml.html">ejercicios_xpath_xml.html</a>. Deberías tenerlo a la vista para poder hacer los ejercicios.
+</p>
+
+<h2>5. Referencias</h2>
+<h3 class="C1">Libros</h3>
+<p align="justify">    
+Para realizar este tutorial me he basado en el siguiente libro:
+
+</p><p>- 
+  
+    <b>Charles F. Goldbarg</b>, 
+    <b>Paul Prescod</b>.
+
+   
+   <em>The XML handbook</em>. 
+   
+Ed. Prentice Hall PTR, 
+   2000. 
+
+(ISBN: 0-13-014714-1)
+
+   
+(En  Inglés)
+
+</p>
+<p></p>
+<p align="justify">    
+El siguiente es también bastante bueno:
+
+</p><p>- 
+  
+    <b>Elliotte Rusty Harold</b>.
+
+   
+   <em>XML Bible</em>. 
+   
+Ed. Hungry Minds, Inc, 
+   1999.
+   
+(ISBN: 0764532367)
+
+   
+(En  Inglés)
+
+</p>
+<p></p>
+<h3 class="C1">Direcciones WEB</h3>
+<p align="justify">    
+Las siguientes direcciones también pueden ser de gran ayuda:
+
+</p><p>* 
+  Utilidades para XPath en el sitio de XMLSoftware: <a href="http://www.xmlsoftware.com/xpath/">http://www.xmlsoftware.com/xpath/</a>
+</p>
+<p>* 
+  Recomendaciones del W3C sobre XPath (en Septiembre de 1999):
+  <a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>
+</p>
+<p>* 
+  Un par de páginas (en PDF) con una Referencia Rápida sobre XSLT y XPath. La versión original está en <a href="http://www.mulberrytech.com/quickref/">http://www.mulberrytech.com/quickref/</a>, aunque también te lo puedes descargar desde aquí en <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/XSLTquickref.pdf">formato pdf</a> o en <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/XSLTquickref.ps">formato postscript</a>. 
+</p>
+<p>* 
+  Un tutorial en plan presentación con diapositivas:
+  <a href="http://www.brics.dk/~amoeller/XML/">http://www.brics.dk/~amoeller/XML/</a>
+</p>
+<p>* 
+  Ejemplos de expresiones en XPath :
+  <a href="http://www.zvon.org/HTMLonly/XPathTutorial/General/examples.html">http://www.zvon.org/HTMLonly/XPathTutorial/General/examples.html</a>
+</p>
+<p>* 
+  Tutorial de XPath :
+  Sitio original: <a href="http://www.zvon.org/">http://www.zvon.org/</a>. Aquí lo tienes comprimido en <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/referencias/XPathTutorial.zip">formato zip</a>.
+</p>
+<p>* 
+  Una utilidad para visulizar el resultado de expresiones XPath. Realizada en Java por  <a href="mailto:kyfung@wireoptional.com">Khun Yee Fung</a>. El sitio original para bajársela es <a href="http://www.wireoptional.com/XML/xslt.html">http://www.wireoptional.com/XML/xslt.html</a> (está al final de la página), aunque también la puedes encontrar aquí comprimido en <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/xpathtool20000714.zip">formato zip</a>.
+</p>
+
+<p>* 
+Se puede practicar también con las expresiones XPath utlizando analizadores de XML y XSL, como por ejemplo: <em>Xerces</em> y <em>Xalan</em>, del <em>Apache Project</em> (<a href="http://xml.apache.org/">http://xml.apache.org/</a>). O con <em>XT</em> y <em>XP</em>, del sitio <a href="http://www.jclark.com/xml/">http://www.jclark.com/xml/</a>. Las copias locales son las que siguen.
+</p>
+<p>* 
+<a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/software/Xerces-J-bin.1.3.0.zip">Xerces</a> (inclue su <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/software/Xerces-J-bin.1.3.0.zip.sig">firma PGP</a>) y <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/software/xalan-j_2_0_0.zip">Xalan</a> (inclue su <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/software/xalan-j_2_0_0.zip.sig">firma PGP</a>).
+</p>
+<p>* 
+<a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/software/xt.zip">XT</a>  y <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/software/xp.zip">XP</a>. También existe una versión directamente ejecutable para Windows 95, <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/software/xt-win32.zip">xt-win32.zip</a>, que se ejecuta según el patrón <code>xt source stylesheet result name=value...</code>.
+</p>
+<p></p>
+
+
+<div id="draechromeext" class="ui-resizable" style="display: none;"><div id="draechromeext1"><div id="renglon1" style="height:28px;"><div id="nw" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/nw.png&#39;);"></div><div id="nn" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/n.png&#39;);"></div><div id="ne" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/ne.png&#39;);"><img id="cerrarbtndrae" src="chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/close.png" title="cerrar" alt="x"></div></div><div id="renglon4"><div id="ww" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/w.png&#39;);"></div><div id="navegacion" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/c.png&#39;)"></div><div id="ee" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/e.png&#39;) right repeat-y;"></div></div><div id="renglon2"><div id="ww" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/w.png&#39;);"></div><div id="draechrome" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/c.png&#39;)"></div><div id="ee" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/e.png&#39;) right repeat-y;"></div></div><div id="renglon3" style="height:18px;"><div id="sw" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/sw.png&#39;);"></div><div id="ss" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/s.png&#39;);"></div><div id="se" style="background: url(&#39;chrome-extension://naobmfbfjlpgllonjblddocijdfaebla/se.png&#39;);" title="ajustar tamaño"></div></div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></body></html>

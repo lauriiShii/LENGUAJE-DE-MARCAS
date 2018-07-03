@@ -1,0 +1,63 @@
+<ciclo_formativo nombre="ASIR">
+
+	<modulos>
+
+		<modulo nombre="Lenguaje de Marcas y Sistemas de Gestion de Información" horas_semanales="4" caracter="obligatorio">
+			<fecha_comienzo>15 de septiembre de 2010</fecha_comienzo>
+			<fecha_fin>30 de junio de 2011</fecha_fin>
+				<alumnos_marcas>
+	
+					<alumno_marcas nif="16965696L">
+						<faltas>
+							<justificadas>sin informacion</justificadas>
+							<injustificadas>sin informacion</injustificadas>
+						</faltas>
+						<nota>sin informacion</nota>
+					</alumno_marcas>
+					
+					<alumno_marcas nif="98765432H">
+						<faltas>
+							<justificadas>0</justificadas>
+							<injustificadas>0</injustificadas>
+						</faltas>
+						<nota>apto</nota>
+					</alumno_marcas>
+	
+				</alumnos_marcas>
+		</modulo>
+		
+	</modulos>
+	
+	<alumnos_ciclo>
+		
+		<alumno_ciclo nif="16965696L">
+			<nombre>Ana</nombre>
+			<apellido1>Fernández</apellido1>
+			<apellido2>Gutiérrez</apellido2>
+			<telefono>789654321</telefono>
+			<email>ana.fdezgtrrez@hotmail.com</email>
+			<direccion>
+				<calle tipo="calle">El perceber</calle>
+				<numero>13</numero>
+				<ciudad>Santander</ciudad>
+				<cp>39302</cp>
+			</direccion>
+		</alumno_ciclo>
+					
+		<alumno_ciclo nif="98765432H">
+			<nombre>Pepito</nombre>
+			<apellido1>Grillo</apellido1>
+			<apellido2></apellido2>				
+			<telefono>656566555</telefono>
+			<email>yhyh@yahoo.com</email>
+			<direccion>
+				<calle tipo="Avenida">El pez</calle>
+				<numero>5</numero>
+				<ciudad>Suances</ciudad>
+				<cp>39401</cp>
+			</direccion>
+		</alumno_ciclo>
+		
+	</alumnos_ciclo>
+
+</ciclo_formativo>
